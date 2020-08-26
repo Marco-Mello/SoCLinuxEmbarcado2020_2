@@ -1,5 +1,5 @@
 Assembler report for Lab1_FPGA_RTL
-Wed Aug 26 16:47:00 2020
+Wed Aug 26 18:55:51 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -37,7 +37,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Wed Aug 26 16:47:00 2020 ;
+; Assembler Status      ; Successful - Wed Aug 26 18:55:51 2020 ;
 ; Revision Name         ; Lab1_FPGA_RTL                         ;
 ; Top-level Entity Name ; Lab1_FPGA_RTL                         ;
 ; Family                ; Cyclone V                             ;
@@ -52,13 +52,13 @@ refer to the applicable agreement for further details.
 +--------+---------+---------------+
 
 
-+-----------------------------------------------------+
-; Assembler Generated Files                           ;
-+-----------------------------------------------------+
-; File Name                                           ;
-+-----------------------------------------------------+
-; /home/labarqcomp/SoC/output_files/Lab1_FPGA_RTL.sof ;
-+-----------------------------------------------------+
++---------------------------------------------------------------------------------------+
+; Assembler Generated Files                                                             ;
++---------------------------------------------------------------------------------------+
+; File Name                                                                             ;
++---------------------------------------------------------------------------------------+
+; /home/labarqcomp/SoCLinuxEmbarcado2020_2/Lab1_FPGA_RTL/output_files/Lab1_FPGA_RTL.sof ;
++---------------------------------------------------------------------------------------+
 
 
 +---------------------------------------------+
@@ -66,8 +66,8 @@ refer to the applicable agreement for further details.
 +----------------+----------------------------+
 ; Option         ; Setting                    ;
 +----------------+----------------------------+
-; JTAG usercode  ; 0x00AFEF1F                 ;
-; Checksum       ; 0x00AFEF1F                 ;
+; JTAG usercode  ; 0x00AFF1AD                 ;
+; Checksum       ; 0x00AFF1AD                 ;
 +----------------+----------------------------+
 
 
@@ -77,13 +77,13 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
-    Info: Processing started: Wed Aug 26 16:46:47 2020
+    Info: Processing started: Wed Aug 26 18:55:38 2020
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off Lab1_FPGA_RTL -c Lab1_FPGA_RTL
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 980 megabytes
-    Info: Processing ended: Wed Aug 26 16:47:00 2020
+    Info: Peak virtual memory: 974 megabytes
+    Info: Processing ended: Wed Aug 26 18:55:51 2020
     Info: Elapsed time: 00:00:13
     Info: Total CPU time (on all processors): 00:00:07
 

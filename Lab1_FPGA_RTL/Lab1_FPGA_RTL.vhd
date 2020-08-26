@@ -8,7 +8,7 @@ entity Lab1_FPGA_RTL is
 
     -- I/Os
     fpga_led_pio  : out std_logic_vector(5 downto 0);
-    fpga_SW_pio  : in std_logic_vector(1 downto 0)
+    fpga_SW_pio  : in std_logic_vector(7 downto 0)
 
     );
 end entity Lab1_FPGA_RTL;
@@ -16,7 +16,7 @@ end entity Lab1_FPGA_RTL;
 architecture rtl of Lab1_FPGA_RTL is
 
 -- signal
-  signal blink : std_logic_vector (0 downto 0);
+  signal blink : std_logic;
   constant  speed1 : integer := 10000000;
   constant  speed2 : integer := 20000000;
   constant  speed3 : integer := 30000000;
@@ -27,8 +27,9 @@ begin
     port map( clk => fpga_clk_50,
               reset_n => '1',
               ena =>'1',
-              duty => "10000001",   
-              pwm_out => blink(0));
+              duty => fpga_SW_pio,   
+              pwm_out(0) => blink);
+              
 
   process(fpga_clk_50) 
     variable counter : integer range 0 to 25000000 := 0;
@@ -54,11 +55,11 @@ begin
       -- end if;
   end process;
 
-  fpga_led_pio(0) <= blink(0);
-  fpga_led_pio(1) <= blink(0);
-  fpga_led_pio(2) <= blink(0);
-  fpga_led_pio(3) <= blink(0);
-  fpga_led_pio(4) <= blink(0);
-  fpga_led_pio(5) <= blink(0);
+  fpga_led_pio(0) <= blink;
+  fpga_led_pio(1) <= blink;
+  fpga_led_pio(2) <= blink;
+  fpga_led_pio(3) <= blink;
+  fpga_led_pio(4) <= blink;
+  fpga_led_pio(5) <= blink;
 
 end rtl;

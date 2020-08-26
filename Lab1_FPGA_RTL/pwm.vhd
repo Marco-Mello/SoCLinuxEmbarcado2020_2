@@ -38,7 +38,7 @@ ENTITY pwm IS
       reset_n   : IN  STD_LOGIC;                                    --asynchronous reset
       ena       : IN  STD_LOGIC;                                    --latches in new duty cycle
       duty      : IN  STD_LOGIC_VECTOR(bits_resolution-1 DOWNTO 0); --duty cycle
-      pwm_out   : OUT STD_LOGIC_VECTOR(phases-1 DOWNTO 0);          --pwm outputs
+      pwm_out   : OUT STD_LOGIC_VECTOR(phases-1 downto 0);          --pwm outputs
       pwm_n_out : OUT STD_LOGIC_VECTOR(phases-1 DOWNTO 0));         --pwm inverse outputs
 END pwm;
 

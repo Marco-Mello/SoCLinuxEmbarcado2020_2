@@ -6,7 +6,7 @@ JedecChain;
 	P ActionCode(Ign)
 		Device PartName(SOCVHPS) MfrSpec(OpMask(0));
 	P ActionCode(Cfg)
-		Device PartName(5CSXFC6D6F31) Path("/home/labarqcomp/SoC/output_files/") File("Lab1_FPGA_RTL.sof") MfrSpec(OpMask(1));
+		Device PartName(5CSXFC6D6F31) Path("/home/labarqcomp/SoCLinuxEmbarcado2020_2/Lab1_FPGA_RTL/output_files/") File("Lab1_FPGA_RTL.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 
