@@ -1,0 +1,17 @@
+Quartus Prime Archive log --	/home/labarqcomp/SoCLinuxEmbarcado2020_2/Lab1_FPGA_RTL/Lab1_FPGA_RTL.qarlog
+
+Archive:	/home/labarqcomp/SoCLinuxEmbarcado2020_2/Lab1_FPGA_RTL/Lab1_FPGA_RTL.qar
+Date:		Wed Aug 26 19:01:54 2020
+Quartus Prime		18.1.0 Build 625 09/12/2018 SJ Standard Edition
+
+	=========== Files Selected: ===========
+/home/labarqcomp/SoCLinuxEmbarcado2020_2/Lab1_FPGA_RTL/Lab1_FPGA_RTL.qpf
+/home/labarqcomp/SoCLinuxEmbarcado2020_2/Lab1_FPGA_RTL/Lab1_FPGA_RTL.qsf
+/home/labarqcomp/SoCLinuxEmbarcado2020_2/Lab1_FPGA_RTL/Lab1_FPGA_RTL.sdc
+/home/labarqcomp/SoCLinuxEmbarcado2020_2/Lab1_FPGA_RTL/Lab1_FPGA_RTL.vhd
+/home/labarqcomp/SoCLinuxEmbarcado2020_2/Lab1_FPGA_RTL/pwm.vhd
+/home/labarqcomp/intelFPGA/18.1/quartus/linux64/assignment_defaults.qdf
+	======= Total: 6 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
