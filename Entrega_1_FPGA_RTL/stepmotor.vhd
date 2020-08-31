@@ -1,4 +1,4 @@
-
+--
 -- Rafael C.
 -- ref:
 --   - https://www.intel.com/content/www/us/en/programmable/quartushelp/13.0/mergedProjects/hdl/vhdl/vhdl_pro_state_machines.htm
@@ -14,7 +14,7 @@ entity stepmotor is
         clk   : in  std_logic;
 
         -- controls
-        en		 : in std_logic;                     -- 1 on/ 0 of
+        en      : in std_logic;                     -- 1 on/ 0 of
         dir     : in std_logic;                     -- 1 clock wise
         vel     : in std_logic_vector(1 downto 0);  -- 00: low / 11: fast
 
@@ -31,36 +31,45 @@ architecture rtl of stepmotor is
    signal topCounter : integer range 0 to 50000000;
   
 begin
-	
+
+
+
   process(clk)
   begin
-	
     if (rising_edge(clk)) then
       CASE state IS
       WHEN s0=>
-        if (enable = '1' and dir = '0' and en ='1') then
-          state <= s1;
-		  else
-			 state <= s3;
-        end if;
+			if (enable = '1' and en = '1') then
+				if(dir = '1') then 	
+					state <= s1;
+				else 
+					state <= s3;
+				end if;
+			end if;
       WHEN s1=>
-        if (enable = '1' and dir = '0' and en ='1') then
-          state <= s2;
-		  else
-			 state <= s0;
-        end if;
+        if (enable = '1' and en = '1') then
+				if(dir = '1') then 	
+					state <= s2;
+				else 
+					state <= s0;
+				end if;
+			end if;
       WHEN s2=>
-        if (enable = '1'and dir = '0' and en ='1') then
-          state <= s3;
-		  else
-			 state <= s1;
-        end if;
+        if (enable = '1' and en = '1') then
+				if(dir = '1') then 	
+					state <= s3;
+				else 
+					state <= s1;
+				end if;
+			end if;
       WHEN s3=>
-        if (enable = '1'and dir = '0' and en ='1') then
-          state <= s0;
-		  else
-			 state <= s2;
-        end if;
+        if (enable = '1' and en = '1') then
+				if(dir = '1') then 	
+					state <= s0;
+				else 
+					state <= s2;
+				end if;
+			end if;
       when others=>
         state <= s0;
       END CASE;
@@ -83,10 +92,10 @@ begin
       END CASE;
    END PROCESS;
 
-  topCounter <= 10000000 when vel = "00" else
-					  5000000 when vel = "01" else
-					  2500000 when vel = "10" else
-                 1000000;
+  topCounter <= 5000000 when vel = "00" else
+					 2500000 when vel = "01" else
+					 1250000 when vel = "10" else
+                100000;
 
   process(clk)
     variable counter : integer range 0 to 50000000 := 0;
