@@ -20,11 +20,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "stepmotor_en",
+					"name" : "stepmotor_dir",
 					"strict" : false
 				},
 				{
-					"name" : "stepmotor_dir",
+					"name" : "stepmotor_en",
 					"strict" : false
 				},
 				{

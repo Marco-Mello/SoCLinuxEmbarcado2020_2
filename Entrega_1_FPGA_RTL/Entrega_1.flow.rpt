@@ -1,5 +1,5 @@
 Flow report for Entrega_1
-Mon Aug 31 18:00:57 2020
+Mon Aug 31 19:08:36 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -40,15 +40,15 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Flow Summary                                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Flow Status                     ; Successful - Mon Aug 31 18:00:48 2020           ;
+; Flow Status                     ; Successful - Mon Aug 31 19:08:28 2020           ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                   ; Entrega_1                                       ;
 ; Top-level Entity Name           ; toplevel                                        ;
 ; Family                          ; Cyclone V                                       ;
 ; Device                          ; 5CSXFC6D6F31C6                                  ;
 ; Timing Models                   ; Final                                           ;
-; Logic utilization (in ALMs)     ; 29 / 41,910 ( < 1 % )                           ;
-; Total registers                 ; 31                                              ;
+; Logic utilization (in ALMs)     ; 41 / 41,910 ( < 1 % )                           ;
+; Total registers                 ; 43                                              ;
 ; Total pins                      ; 9 / 499 ( 2 % )                                 ;
 ; Total virtual pins              ; 0                                               ;
 ; Total block memory bits         ; 0 / 5,662,720 ( 0 % )                           ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 08/31/2020 17:59:43 ;
+; Start date & time ; 08/31/2020 19:07:19 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Entrega_1           ;
 +-------------------+---------------------+
@@ -78,14 +78,16 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 141812757669333.159890758327559        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 141812757669333.159891163905285        ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
+; NUM_PARALLEL_PROCESSORS             ; All                                    ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; toplevel    ; Top        ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; toplevel    ; Top        ;
 ; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; toplevel    ; Top        ;
 ; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --          ; --         ;
 ; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --         ;
+; SMART_RECOMPILE                     ; On                                     ; Off           ; --          ; --         ;
 ; TOP_LEVEL_ENTITY                    ; toplevel                               ; Entrega_1     ; --          ; --         ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 
@@ -95,11 +97,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:15     ; 1.0                     ; 1047 MB             ; 00:00:31                           ;
-; Fitter               ; 00:00:39     ; 1.0                     ; 2434 MB             ; 00:00:56                           ;
-; Assembler            ; 00:00:12     ; 1.0                     ; 977 MB              ; 00:00:06                           ;
-; Timing Analyzer      ; 00:00:08     ; 1.1                     ; 1208 MB             ; 00:00:05                           ;
-; Total                ; 00:01:14     ; --                      ; --                  ; 00:01:38                           ;
+; Analysis & Synthesis ; 00:00:17     ; 1.0                     ; 1046 MB             ; 00:00:34                           ;
+; Fitter               ; 00:00:40     ; 1.0                     ; 2437 MB             ; 00:00:58                           ;
+; Assembler            ; 00:00:13     ; 1.0                     ; 974 MB              ; 00:00:07                           ;
+; Timing Analyzer      ; 00:00:08     ; 1.1                     ; 1206 MB             ; 00:00:05                           ;
+; Total                ; 00:01:18     ; --                      ; --                  ; 00:01:44                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

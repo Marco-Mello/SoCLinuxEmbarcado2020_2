@@ -29,17 +29,18 @@ architecture rtl of stepmotor is
    SIGNAL state  : STATE_TYPE := s0;
    signal enable : std_logic  := '0';
    signal topCounter : integer range 0 to 50000000;
+	
   
 begin
 
-
-
   process(clk)
+  variable passos : integer range 0 to 4075 := 2037;
   begin
     if (rising_edge(clk)) then
       CASE state IS
       WHEN s0=>
-			if (enable = '1' and en = '1') then
+			if (enable = '1' and en = '1' and not(passos = 0)) then
+				passos := passos -1 ;
 				if(dir = '1') then 	
 					state <= s1;
 				else 
@@ -47,7 +48,8 @@ begin
 				end if;
 			end if;
       WHEN s1=>
-        if (enable = '1' and en = '1') then
+        if (enable = '1' and en = '1' and not(passos = 0)) then
+				passos := passos -1 ;
 				if(dir = '1') then 	
 					state <= s2;
 				else 
@@ -55,7 +57,8 @@ begin
 				end if;
 			end if;
       WHEN s2=>
-        if (enable = '1' and en = '1') then
+        if (enable = '1' and en = '1' and not(passos = 0)) then
+				passos := passos -1 ;
 				if(dir = '1') then 	
 					state <= s3;
 				else 
@@ -63,7 +66,8 @@ begin
 				end if;
 			end if;
       WHEN s3=>
-        if (enable = '1' and en = '1') then
+        if (enable = '1' and en = '1' and not(passos = 0)) then
+		  passos := passos -1 ;
 				if(dir = '1') then 	
 					state <= s0;
 				else 
