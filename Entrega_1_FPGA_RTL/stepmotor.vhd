@@ -29,12 +29,12 @@ architecture rtl of stepmotor is
    SIGNAL state  : STATE_TYPE := s0;
    signal enable : std_logic  := '0';
    signal topCounter : integer range 0 to 50000000;
-	
+	signal delay : integer range -50000000 to 50000000 := 50000000;
   
 begin
 
   process(clk)
-  variable passos : integer range 0 to 4075 := 2037;
+  variable passos : integer range 0 to 50000000 := 50000000; -- 2037 = 1 volta
   begin
     if (rising_edge(clk)) then
       CASE state IS
@@ -96,22 +96,42 @@ begin
       END CASE;
    END PROCESS;
 
-  topCounter <= 5000000 when vel = "00" else
-					 2500000 when vel = "01" else
-					 1250000 when vel = "10" else
-                100000;
+--  topCounter <= 5000000 when vel = "00" else
+--					 2500000 when vel = "01" else
+--					 1250000 when vel = "10" else
+--                100000;
+  PROCESS (vel)
+     BEGIN
+      CASE vel IS
+        WHEN "00" =>
+          topCounter <= 5000000;
+        WHEN "01" =>
+          topCounter <= 2500000;
+        WHEN "10" =>
+          topCounter <= 1250000;
+        WHEN "11" =>
+          topCounter <= 100000;
+			when others =>
+         null ;
+      END CASE;
+   END PROCESS;
+
 
   process(clk)
     variable counter : integer range 0 to 50000000 := 0;
+
   begin
     if (rising_edge(clk)) then
-      if (counter < topCounter) then
-        counter := counter + 1;
-        enable  <= '0';
-      else
+      if (counter < topCounter + delay) then
+			counter := counter + 1;
+			if ( delay >= 0) then
+			delay <= delay - 1000;
+			end if;
+			enable  <= '0';
+		else
         counter := 0;
         enable  <= '1';
-      end if;
+	   end if;
     end if;
   end process;
 
