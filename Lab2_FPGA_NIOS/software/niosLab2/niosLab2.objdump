@@ -43,35 +43,35 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING
  12 .debug_frame  00001298  00000000  00000000  00026b44  2**2
                   CONTENTS, READONLY, DEBUGGING
- 13 .debug_str    00001fdd  00000000  00000000  00027ddc  2**0
+ 13 .debug_str    00002023  00000000  00000000  00027ddc  2**0
                   CONTENTS, READONLY, DEBUGGING
- 14 .debug_loc    00004ada  00000000  00000000  00029db9  2**0
+ 14 .debug_loc    00004ada  00000000  00000000  00029dff  2**0
                   CONTENTS, READONLY, DEBUGGING
- 15 .debug_alt_sim_info 00000040  00000000  00000000  0002e894  2**2
+ 15 .debug_alt_sim_info 00000040  00000000  00000000  0002e8dc  2**2
                   CONTENTS, READONLY, DEBUGGING
- 16 .debug_ranges 000005d0  00000000  00000000  0002e8d8  2**3
+ 16 .debug_ranges 000005d0  00000000  00000000  0002e920  2**3
                   CONTENTS, READONLY, DEBUGGING
- 17 .thread_model 00000003  00000000  00000000  00030e66  2**0
+ 17 .thread_model 00000003  00000000  00000000  00030eae  2**0
                   CONTENTS, READONLY
- 18 .cpu          0000000c  00000000  00000000  00030e69  2**0
+ 18 .cpu          0000000c  00000000  00000000  00030eb1  2**0
                   CONTENTS, READONLY
- 19 .qsys         00000001  00000000  00000000  00030e75  2**0
+ 19 .qsys         00000001  00000000  00000000  00030ebd  2**0
                   CONTENTS, READONLY
- 20 .simulation_enabled 00000001  00000000  00000000  00030e76  2**0
+ 20 .simulation_enabled 00000001  00000000  00000000  00030ebe  2**0
                   CONTENTS, READONLY
- 21 .stderr_dev   0000000b  00000000  00000000  00030e77  2**0
+ 21 .stderr_dev   0000000b  00000000  00000000  00030ebf  2**0
                   CONTENTS, READONLY
- 22 .stdin_dev    0000000b  00000000  00000000  00030e82  2**0
+ 22 .stdin_dev    0000000b  00000000  00000000  00030eca  2**0
                   CONTENTS, READONLY
- 23 .stdout_dev   0000000b  00000000  00000000  00030e8d  2**0
+ 23 .stdout_dev   0000000b  00000000  00000000  00030ed5  2**0
                   CONTENTS, READONLY
- 24 .sopc_system_name 00000007  00000000  00000000  00030e98  2**0
+ 24 .sopc_system_name 00000007  00000000  00000000  00030ee0  2**0
                   CONTENTS, READONLY
- 25 .quartus_project_dir 0000003f  00000000  00000000  00030e9f  2**0
+ 25 .quartus_project_dir 00000037  00000000  00000000  00030ee7  2**0
                   CONTENTS, READONLY
- 26 .jdi          00004d8f  00000000  00000000  00030ede  2**0
+ 26 .jdi          00004d8f  00000000  00000000  00030f1e  2**0
                   CONTENTS, READONLY
- 27 .sopcinfo     0003288c  00000000  00000000  00035c6d  2**0
+ 27 .sopcinfo     0003288c  00000000  00000000  00035cad  2**0
                   CONTENTS, READONLY
 SYMBOL TABLE:
 00008000 l    d  .entry	00000000 .entry
@@ -318,80 +318,30 @@ SYMBOL TABLE:
 Disassembly of section .entry:
 
 00008000 <__reset>:
- * Jump to the _start entry point in the .text section if reset code
- * is allowed or if optimizing for RTL simulation.
- */
-#if defined(ALT_ALLOW_CODE_AT_RESET) || defined(ALT_SIM_OPTIMIZE)
-    /* Jump to the _start entry point in the .text section. */
-    movhi r1, %hi(_start)
     8000:	00400034 	movhi	at,0
-    ori r1, r1, %lo(_start)
     8004:	08600814 	ori	at,at,32800
-    jmp r1
     8008:	0800683a 	jmp	at
 	...
 
 Disassembly of section .text:
 
 00008020 <_start>:
-
-    /*
-     * Now that the caches are initialized, set up the stack pointer and global pointer.
-     * The values provided by the linker are assumed to be correctly aligned.
-     */
-    movhi sp, %hi(__alt_stack_pointer)
     8020:	06c00074 	movhi	sp,1
-    ori sp, sp, %lo(__alt_stack_pointer)
     8024:	dec00014 	ori	sp,sp,0
-    movhi gp, %hi(_gp)
     8028:	06800074 	movhi	gp,1
-    ori gp, gp, %lo(_gp)
     802c:	d694cb14 	ori	gp,gp,21292
- */
-#ifndef ALT_SIM_OPTIMIZE
-    /* Log that the BSS is about to be cleared. */
-    ALT_LOG_PUTS(alt_log_msg_bss)
-
-    movhi r2, %hi(__bss_start)
     8030:	00800034 	movhi	r2,0
-    ori r2, r2, %lo(__bss_start)
     8034:	10b76114 	ori	r2,r2,56708
-
-    movhi r3, %hi(__bss_end)
     8038:	00c00034 	movhi	r3,0
-    ori r3, r3, %lo(__bss_end)
     803c:	18f77314 	ori	r3,r3,56780
-
-    beq r2, r3, 1f
     8040:	10c00326 	beq	r2,r3,8050 <_start+0x30>
-
-0:
-    stw zero, (r2)
     8044:	10000015 	stw	zero,0(r2)
-    addi r2, r2, 4
     8048:	10800104 	addi	r2,r2,4
-    bltu r2, r3, 0b
     804c:	10fffd36 	bltu	r2,r3,8044 <_start+0x24>
-     * section aren't defined until alt_load() has been called).
-     */
-    mov   et, zero
-#endif
-
-    call alt_load
     8050:	000b2900 	call	b290 <alt_load>
-
-    /* Log that alt_main is about to be called. */
-    ALT_LOG_PUTS(alt_log_msg_alt_main)
-
-    /* Call the C entry point. It should never return. */
-    call alt_main
     8054:	000b42c0 	call	b42c <alt_main>
 
 00008058 <alt_after_alt_main>:
-
-    /* Wait in infinite loop in case alt_main does return. */
-alt_after_alt_main:
-    br alt_after_alt_main
     8058:	003fff06 	br	8058 <alt_after_alt_main>
 
 0000805c <delay>:
@@ -3879,27 +3829,16 @@ int ALT_ISATTY (int file)
     b224:	f800283a 	ret
 
 0000b228 <alt_load_section>:
- */
-
-static void ALT_INLINE alt_load_section (alt_u32* from, 
-                                         alt_u32* to, 
-                                         alt_u32* end)
-{
     b228:	defffc04 	addi	sp,sp,-16
     b22c:	df000315 	stw	fp,12(sp)
     b230:	df000304 	addi	fp,sp,12
     b234:	e13ffd15 	stw	r4,-12(fp)
     b238:	e17ffe15 	stw	r5,-8(fp)
     b23c:	e1bfff15 	stw	r6,-4(fp)
-  if (to != from)
     b240:	e0fffe17 	ldw	r3,-8(fp)
     b244:	e0bffd17 	ldw	r2,-12(fp)
     b248:	18800c26 	beq	r3,r2,b27c <alt_load_section+0x54>
-  {
-    while( to != end )
     b24c:	00000806 	br	b270 <alt_load_section+0x48>
-    {
-      *to++ = *from++;
     b250:	e0bffe17 	ldw	r2,-8(fp)
     b254:	10c00104 	addi	r3,r2,4
     b258:	e0fffe15 	stw	r3,-8(fp)
@@ -3908,20 +3847,9 @@ static void ALT_INLINE alt_load_section (alt_u32* from,
     b264:	e13ffd15 	stw	r4,-12(fp)
     b268:	18c00017 	ldw	r3,0(r3)
     b26c:	10c00015 	stw	r3,0(r2)
-                                         alt_u32* to, 
-                                         alt_u32* end)
-{
-  if (to != from)
-  {
-    while( to != end )
     b270:	e0fffe17 	ldw	r3,-8(fp)
     b274:	e0bfff17 	ldw	r2,-4(fp)
     b278:	18bff51e 	bne	r3,r2,b250 <alt_load_section+0x28>
-    {
-      *to++ = *from++;
-    }
-  }
-}
     b27c:	0001883a 	nop
     b280:	e037883a 	mov	sp,fp
     b284:	df000017 	ldw	fp,0(sp)
@@ -3929,21 +3857,10 @@ static void ALT_INLINE alt_load_section (alt_u32* from,
     b28c:	f800283a 	ret
 
 0000b290 <alt_load>:
- * there is no bootloader, so this application is responsible for loading to
- * RAM any sections that are required.
- */  
-
-void alt_load (void)
-{
     b290:	defffe04 	addi	sp,sp,-8
     b294:	dfc00115 	stw	ra,4(sp)
     b298:	df000015 	stw	fp,0(sp)
     b29c:	d839883a 	mov	fp,sp
-  /* 
-   * Copy the .rwdata section. 
-   */
-
-  alt_load_section (&__flash_rwdata_start, 
     b2a0:	01800074 	movhi	r6,1
     b2a4:	31b4d604 	addi	r6,r6,-11432
     b2a8:	01400074 	movhi	r5,1
@@ -3951,12 +3868,6 @@ void alt_load (void)
     b2b0:	01000074 	movhi	r4,1
     b2b4:	2134d604 	addi	r4,r4,-11432
     b2b8:	000b2280 	call	b228 <alt_load_section>
-
-  /*
-   * Copy the exception handler.
-   */
-
-  alt_load_section (&__flash_exceptions_start, 
     b2bc:	01800074 	movhi	r6,1
     b2c0:	31a00804 	addi	r6,r6,-32736
     b2c4:	01400074 	movhi	r5,1
@@ -3964,12 +3875,6 @@ void alt_load (void)
     b2cc:	01000074 	movhi	r4,1
     b2d0:	21200804 	addi	r4,r4,-32736
     b2d4:	000b2280 	call	b228 <alt_load_section>
-
-  /*
-   * Copy the .rodata section.
-   */
-
-  alt_load_section (&__flash_rodata_start, 
     b2d8:	01800074 	movhi	r6,1
     b2dc:	31b24b04 	addi	r6,r6,-14036
     b2e0:	01400074 	movhi	r5,1
@@ -3977,16 +3882,8 @@ void alt_load (void)
     b2e8:	01000074 	movhi	r4,1
     b2ec:	21323804 	addi	r4,r4,-14112
     b2f0:	000b2280 	call	b228 <alt_load_section>
-  
-  /*
-   * Now ensure that the caches are in synch.
-   */
-  
-  alt_dcache_flush_all();
     b2f4:	000bd080 	call	bd08 <alt_dcache_flush_all>
-  alt_icache_flush_all();
     b2f8:	000bec80 	call	bec8 <alt_icache_flush_all>
-}
     b2fc:	0001883a 	nop
     b300:	e037883a 	mov	sp,fp
     b304:	dfc00117 	ldw	ra,4(sp)
@@ -4203,17 +4100,10 @@ void alt_main (void)
     b4a4:	000c5600 	call	c560 <exit>
 
 0000b4a8 <__malloc_lock>:
- * configuration is single threaded, so there is nothing to do here. Note that 
- * this requires that malloc is never called by an interrupt service routine.
- */
-
-void __malloc_lock ( struct _reent *_r )
-{
     b4a8:	defffe04 	addi	sp,sp,-8
     b4ac:	df000115 	stw	fp,4(sp)
     b4b0:	df000104 	addi	fp,sp,4
     b4b4:	e13fff15 	stw	r4,-4(fp)
-}
     b4b8:	0001883a 	nop
     b4bc:	e037883a 	mov	sp,fp
     b4c0:	df000017 	ldw	fp,0(sp)
@@ -4221,17 +4111,10 @@ void __malloc_lock ( struct _reent *_r )
     b4c8:	f800283a 	ret
 
 0000b4cc <__malloc_unlock>:
-/*
- *
- */
-
-void __malloc_unlock ( struct _reent *_r )
-{
     b4cc:	defffe04 	addi	sp,sp,-8
     b4d0:	df000115 	stw	fp,4(sp)
     b4d4:	df000104 	addi	fp,sp,4
     b4d8:	e13fff15 	stw	r4,-4(fp)
-}
     b4dc:	0001883a 	nop
     b4e0:	e037883a 	mov	sp,fp
     b4e4:	df000017 	ldw	fp,0(sp)
@@ -4520,21 +4403,13 @@ static ALT_INLINE alt_irq_context ALT_ALWAYS_INLINE
     b760:	f800283a 	ret
 
 0000b764 <usleep>:
-#if defined (__GNUC__) && __GNUC__ >= 4
-int ALT_USLEEP (useconds_t us)
-#else
-unsigned int ALT_USLEEP (unsigned int us)
-#endif
-{
     b764:	defffd04 	addi	sp,sp,-12
     b768:	dfc00215 	stw	ra,8(sp)
     b76c:	df000115 	stw	fp,4(sp)
     b770:	df000104 	addi	fp,sp,4
     b774:	e13fff15 	stw	r4,-4(fp)
-  return alt_busy_sleep(us);
     b778:	e13fff17 	ldw	r4,-4(fp)
     b77c:	000bbb00 	call	bbb0 <alt_busy_sleep>
-}
     b780:	e037883a 	mov	sp,fp
     b784:	dfc00117 	ldw	ra,4(sp)
     b788:	df000017 	ldw	fp,0(sp)
@@ -4542,24 +4417,16 @@ unsigned int ALT_USLEEP (unsigned int us)
     b790:	f800283a 	ret
 
 0000b794 <alt_get_errno>:
-#undef errno
-
-extern int errno;
-
-static ALT_INLINE int* alt_get_errno(void)
-{
     b794:	defffe04 	addi	sp,sp,-8
     b798:	dfc00115 	stw	ra,4(sp)
     b79c:	df000015 	stw	fp,0(sp)
     b7a0:	d839883a 	mov	fp,sp
-  return ((alt_errno) ? alt_errno() : &errno);
     b7a4:	d0a00917 	ldw	r2,-32732(gp)
     b7a8:	10000326 	beq	r2,zero,b7b8 <alt_get_errno+0x24>
     b7ac:	d0a00917 	ldw	r2,-32732(gp)
     b7b0:	103ee83a 	callr	r2
     b7b4:	00000106 	br	b7bc <alt_get_errno+0x28>
     b7b8:	d0a29a04 	addi	r2,gp,-30104
-}
     b7bc:	e037883a 	mov	sp,fp
     b7c0:	dfc00117 	ldw	ra,4(sp)
     b7c4:	df000017 	ldw	fp,0(sp)
@@ -4567,12 +4434,6 @@ static ALT_INLINE int* alt_get_errno(void)
     b7cc:	f800283a 	ret
 
 0000b7d0 <write>:
-}
-
-#else /* !ALT_USE_DIRECT_DRIVERS */
-
-int ALT_WRITE (int file, const void *ptr, size_t len)
-{
     b7d0:	defff904 	addi	sp,sp,-28
     b7d4:	dfc00615 	stw	ra,24(sp)
     b7d8:	df000515 	stw	fp,20(sp)
@@ -4580,12 +4441,6 @@ int ALT_WRITE (int file, const void *ptr, size_t len)
     b7e0:	e13ffd15 	stw	r4,-12(fp)
     b7e4:	e17ffe15 	stw	r5,-8(fp)
     b7e8:	e1bfff15 	stw	r6,-4(fp)
-   * A common error case is that when the file descriptor was created, the call
-   * to open() failed resulting in a negative file descriptor. This is trapped
-   * below so that we don't try and process an invalid file descriptor.
-   */
-
-  fd = (file < 0) ? NULL : &alt_fd_list[file];
     b7ec:	e0bffd17 	ldw	r2,-12(fp)
     b7f0:	10000816 	blt	r2,zero,b814 <write+0x44>
     b7f4:	01400304 	movi	r5,12
@@ -4598,16 +4453,8 @@ int ALT_WRITE (int file, const void *ptr, size_t len)
     b810:	00000106 	br	b818 <write+0x48>
     b814:	0005883a 	mov	r2,zero
     b818:	e0bffb15 	stw	r2,-20(fp)
-  
-  if (fd)
     b81c:	e0bffb17 	ldw	r2,-20(fp)
     b820:	10002126 	beq	r2,zero,b8a8 <write+0xd8>
-     * If the file has not been opened with write access, or if the driver does
-     * not provide an implementation of write(), generate an error. Otherwise
-     * call the drivers write() function to process the request.
-     */
-
-    if (((fd->fd_flags & O_ACCMODE) != O_RDONLY) && fd->dev->write)
     b824:	e0bffb17 	ldw	r2,-20(fp)
     b828:	10800217 	ldw	r2,8(r2)
     b82c:	108000cc 	andi	r2,r2,3
@@ -4616,12 +4463,6 @@ int ALT_WRITE (int file, const void *ptr, size_t len)
     b838:	10800017 	ldw	r2,0(r2)
     b83c:	10800617 	ldw	r2,24(r2)
     b840:	10001426 	beq	r2,zero,b894 <write+0xc4>
-    {
-      
-      /* ALT_LOG - see altera_hal/HAL/inc/sys/alt_log_printf.h */
-      ALT_LOG_WRITE_FUNCTION(ptr,len);
-
-      if ((rval = fd->dev->write(fd, ptr, len)) < 0)
     b844:	e0bffb17 	ldw	r2,-20(fp)
     b848:	10800017 	ldw	r2,0(r2)
     b84c:	10800617 	ldw	r2,24(r2)
@@ -4633,42 +4474,25 @@ int ALT_WRITE (int file, const void *ptr, size_t len)
     b864:	e0bffc15 	stw	r2,-16(fp)
     b868:	e0bffc17 	ldw	r2,-16(fp)
     b86c:	1000070e 	bge	r2,zero,b88c <write+0xbc>
-      {
-        ALT_ERRNO = -rval;
     b870:	000b7940 	call	b794 <alt_get_errno>
     b874:	1007883a 	mov	r3,r2
     b878:	e0bffc17 	ldw	r2,-16(fp)
     b87c:	0085c83a 	sub	r2,zero,r2
     b880:	18800015 	stw	r2,0(r3)
-        return -1;
     b884:	00bfffc4 	movi	r2,-1
     b888:	00000c06 	br	b8bc <write+0xec>
-      }
-      return rval;
     b88c:	e0bffc17 	ldw	r2,-16(fp)
     b890:	00000a06 	br	b8bc <write+0xec>
-    }
-    else
-    {
-      ALT_ERRNO = EACCES;
     b894:	000b7940 	call	b794 <alt_get_errno>
     b898:	1007883a 	mov	r3,r2
     b89c:	00800344 	movi	r2,13
     b8a0:	18800015 	stw	r2,0(r3)
     b8a4:	00000406 	br	b8b8 <write+0xe8>
-    }
-  }
-  else  
-  {
-    ALT_ERRNO = EBADFD;
     b8a8:	000b7940 	call	b794 <alt_get_errno>
     b8ac:	1007883a 	mov	r3,r2
     b8b0:	00801444 	movi	r2,81
     b8b4:	18800015 	stw	r2,0(r3)
-  }
-  return -1;
     b8b8:	00bfffc4 	movi	r2,-1
-}
     b8bc:	e037883a 	mov	sp,fp
     b8c0:	dfc00117 	ldw	ra,4(sp)
     b8c4:	df000017 	ldw	fp,0(sp)
@@ -4676,24 +4500,14 @@ int ALT_WRITE (int file, const void *ptr, size_t len)
     b8cc:	f800283a 	ret
 
 0000b8d0 <alt_dev_reg>:
- */
-
-extern int alt_fs_reg  (alt_dev* dev); 
-
-static ALT_INLINE int alt_dev_reg (alt_dev* dev)
-{
     b8d0:	defffd04 	addi	sp,sp,-12
     b8d4:	dfc00215 	stw	ra,8(sp)
     b8d8:	df000115 	stw	fp,4(sp)
     b8dc:	df000104 	addi	fp,sp,4
     b8e0:	e13fff15 	stw	r4,-4(fp)
-  extern alt_llist alt_dev_list;
-
-  return alt_dev_llist_insert ((alt_dev_llist*) dev, &alt_dev_list);
     b8e4:	d1600604 	addi	r5,gp,-32744
     b8e8:	e13fff17 	ldw	r4,-4(fp)
     b8ec:	000bd640 	call	bd64 <alt_dev_llist_insert>
-}
     b8f0:	e037883a 	mov	sp,fp
     b8f4:	dfc00117 	ldw	ra,4(sp)
     b8f8:	df000017 	ldw	fp,0(sp)
@@ -4701,29 +4515,14 @@ static ALT_INLINE int alt_dev_reg (alt_dev* dev)
     b900:	f800283a 	ret
 
 0000b904 <alt_irq_init>:
- * The "base" parameter is ignored and only
- * present for backwards-compatibility.
- */
-
-void alt_irq_init ( const void* base )
-{
     b904:	defffd04 	addi	sp,sp,-12
     b908:	dfc00215 	stw	ra,8(sp)
     b90c:	df000115 	stw	fp,4(sp)
     b910:	df000104 	addi	fp,sp,4
     b914:	e13fff15 	stw	r4,-4(fp)
-    ALTERA_NIOS2_GEN2_IRQ_INIT ( NIOS2_GEN2_0, nios2_gen2_0);
     b918:	000c2cc0 	call	c2cc <altera_nios2_gen2_irq_init>
- * alt_irq_cpu_enable_interrupts() enables the CPU to start taking interrupts.
- */
-static ALT_INLINE void ALT_ALWAYS_INLINE 
-       alt_irq_cpu_enable_interrupts (void)
-{
-    NIOS2_WRITE_STATUS(NIOS2_STATUS_PIE_MSK
     b91c:	00800044 	movi	r2,1
     b920:	1001703a 	wrctl	status,r2
-    alt_irq_cpu_enable_interrupts();
-}
     b924:	0001883a 	nop
     b928:	e037883a 	mov	sp,fp
     b92c:	dfc00117 	ldw	ra,4(sp)
@@ -4732,21 +4531,13 @@ static ALT_INLINE void ALT_ALWAYS_INLINE
     b938:	f800283a 	ret
 
 0000b93c <alt_sys_init>:
- * Initialize the non-interrupt controller devices.
- * Called after alt_irq_init().
- */
-
-void alt_sys_init( void )
-{
     b93c:	defffe04 	addi	sp,sp,-8
     b940:	dfc00115 	stw	ra,4(sp)
     b944:	df000015 	stw	fp,0(sp)
     b948:	d839883a 	mov	fp,sp
-    ALTERA_AVALON_JTAG_UART_INIT ( JTAG_UART_0, jtag_uart_0);
     b94c:	01000074 	movhi	r4,1
     b950:	2134c004 	addi	r4,r4,-11520
     b954:	000b8d00 	call	b8d0 <alt_dev_reg>
-}
     b958:	0001883a 	nop
     b95c:	e037883a 	mov	sp,fp
     b960:	dfc00117 	ldw	ra,4(sp)
@@ -4755,12 +4546,6 @@ void alt_sys_init( void )
     b96c:	f800283a 	ret
 
 0000b970 <altera_avalon_jtag_uart_read_fd>:
- *
- */
-
-int 
-altera_avalon_jtag_uart_read_fd(alt_fd* fd, char* buffer, int space)
-{
     b970:	defffa04 	addi	sp,sp,-24
     b974:	dfc00515 	stw	ra,20(sp)
     b978:	df000415 	stw	fp,16(sp)
@@ -4768,12 +4553,9 @@ altera_avalon_jtag_uart_read_fd(alt_fd* fd, char* buffer, int space)
     b980:	e13ffd15 	stw	r4,-12(fp)
     b984:	e17ffe15 	stw	r5,-8(fp)
     b988:	e1bfff15 	stw	r6,-4(fp)
-    altera_avalon_jtag_uart_dev* dev = (altera_avalon_jtag_uart_dev*) fd->dev; 
     b98c:	e0bffd17 	ldw	r2,-12(fp)
     b990:	10800017 	ldw	r2,0(r2)
     b994:	e0bffc15 	stw	r2,-16(fp)
-
-    return altera_avalon_jtag_uart_read(&dev->state, buffer, space,
     b998:	e0bffc17 	ldw	r2,-16(fp)
     b99c:	10c00a04 	addi	r3,r2,40
     b9a0:	e0bffd17 	ldw	r2,-12(fp)
@@ -4783,8 +4565,6 @@ altera_avalon_jtag_uart_read_fd(alt_fd* fd, char* buffer, int space)
     b9b0:	e17ffe17 	ldw	r5,-8(fp)
     b9b4:	1809883a 	mov	r4,r3
     b9b8:	000ba300 	call	ba30 <altera_avalon_jtag_uart_read>
-      fd->fd_flags);
-}
     b9bc:	e037883a 	mov	sp,fp
     b9c0:	dfc00117 	ldw	ra,4(sp)
     b9c4:	df000017 	ldw	fp,0(sp)
@@ -4792,10 +4572,6 @@ altera_avalon_jtag_uart_read_fd(alt_fd* fd, char* buffer, int space)
     b9cc:	f800283a 	ret
 
 0000b9d0 <altera_avalon_jtag_uart_write_fd>:
-
-int 
-altera_avalon_jtag_uart_write_fd(alt_fd* fd, const char* buffer, int space)
-{
     b9d0:	defffa04 	addi	sp,sp,-24
     b9d4:	dfc00515 	stw	ra,20(sp)
     b9d8:	df000415 	stw	fp,16(sp)
@@ -4803,12 +4579,9 @@ altera_avalon_jtag_uart_write_fd(alt_fd* fd, const char* buffer, int space)
     b9e0:	e13ffd15 	stw	r4,-12(fp)
     b9e4:	e17ffe15 	stw	r5,-8(fp)
     b9e8:	e1bfff15 	stw	r6,-4(fp)
-    altera_avalon_jtag_uart_dev* dev = (altera_avalon_jtag_uart_dev*) fd->dev; 
     b9ec:	e0bffd17 	ldw	r2,-12(fp)
     b9f0:	10800017 	ldw	r2,0(r2)
     b9f4:	e0bffc15 	stw	r2,-16(fp)
-
-    return altera_avalon_jtag_uart_write(&dev->state, buffer, space,
     b9f8:	e0bffc17 	ldw	r2,-16(fp)
     b9fc:	10c00a04 	addi	r3,r2,40
     ba00:	e0bffd17 	ldw	r2,-12(fp)
@@ -4818,8 +4591,6 @@ altera_avalon_jtag_uart_write_fd(alt_fd* fd, const char* buffer, int space)
     ba10:	e17ffe17 	ldw	r5,-8(fp)
     ba14:	1809883a 	mov	r4,r3
     ba18:	000bb1c0 	call	bb1c <altera_avalon_jtag_uart_write>
-      fd->fd_flags);
-}
     ba1c:	e037883a 	mov	sp,fp
     ba20:	dfc00117 	ldw	ra,4(sp)
     ba24:	df000017 	ldw	fp,0(sp)
@@ -4827,12 +4598,6 @@ altera_avalon_jtag_uart_write_fd(alt_fd* fd, const char* buffer, int space)
     ba2c:	f800283a 	ret
 
 0000ba30 <altera_avalon_jtag_uart_read>:
- */
-
-int 
-altera_avalon_jtag_uart_read(altera_avalon_jtag_uart_state* sp, 
-  char* buffer, int space, int flags)
-{
     ba30:	defff704 	addi	sp,sp,-36
     ba34:	df000815 	stw	fp,32(sp)
     ba38:	df000804 	addi	fp,sp,32
@@ -4840,104 +4605,60 @@ altera_avalon_jtag_uart_read(altera_avalon_jtag_uart_state* sp,
     ba40:	e17ffd15 	stw	r5,-12(fp)
     ba44:	e1bffe15 	stw	r6,-8(fp)
     ba48:	e1ffff15 	stw	r7,-4(fp)
-  unsigned int base = sp->base;
     ba4c:	e0bffc17 	ldw	r2,-16(fp)
     ba50:	10800017 	ldw	r2,0(r2)
     ba54:	e0bff915 	stw	r2,-28(fp)
-
-  char * ptr = buffer;
     ba58:	e0bffd17 	ldw	r2,-12(fp)
     ba5c:	e0bff815 	stw	r2,-32(fp)
-  char * end = buffer + space;
     ba60:	e0bffe17 	ldw	r2,-8(fp)
     ba64:	e0fffd17 	ldw	r3,-12(fp)
     ba68:	1885883a 	add	r2,r3,r2
     ba6c:	e0bffa15 	stw	r2,-24(fp)
-
-  while (ptr < end)
     ba70:	00001206 	br	babc <altera_avalon_jtag_uart_read+0x8c>
-  {
-    unsigned int data = IORD_ALTERA_AVALON_JTAG_UART_DATA(base);
     ba74:	e0bff917 	ldw	r2,-28(fp)
     ba78:	10800037 	ldwio	r2,0(r2)
     ba7c:	e0bffb15 	stw	r2,-20(fp)
-
-    if (data & ALTERA_AVALON_JTAG_UART_DATA_RVALID_MSK)
     ba80:	e0bffb17 	ldw	r2,-20(fp)
     ba84:	10a0000c 	andi	r2,r2,32768
     ba88:	10000626 	beq	r2,zero,baa4 <altera_avalon_jtag_uart_read+0x74>
-      *ptr++ = (data & ALTERA_AVALON_JTAG_UART_DATA_DATA_MSK) >> ALTERA_AVALON_JTAG_UART_DATA_DATA_OFST;
     ba8c:	e0bff817 	ldw	r2,-32(fp)
     ba90:	10c00044 	addi	r3,r2,1
     ba94:	e0fff815 	stw	r3,-32(fp)
     ba98:	e0fffb17 	ldw	r3,-20(fp)
     ba9c:	10c00005 	stb	r3,0(r2)
     baa0:	00000606 	br	babc <altera_avalon_jtag_uart_read+0x8c>
-    else if (ptr != buffer)
     baa4:	e0fff817 	ldw	r3,-32(fp)
     baa8:	e0bffd17 	ldw	r2,-12(fp)
     baac:	1880071e 	bne	r3,r2,bacc <altera_avalon_jtag_uart_read+0x9c>
-      break;
-    else if(flags & O_NONBLOCK)
     bab0:	e0bfff17 	ldw	r2,-4(fp)
     bab4:	1090000c 	andi	r2,r2,16384
     bab8:	1000061e 	bne	r2,zero,bad4 <altera_avalon_jtag_uart_read+0xa4>
-  unsigned int base = sp->base;
-
-  char * ptr = buffer;
-  char * end = buffer + space;
-
-  while (ptr < end)
     babc:	e0fff817 	ldw	r3,-32(fp)
     bac0:	e0bffa17 	ldw	r2,-24(fp)
     bac4:	18bfeb36 	bltu	r3,r2,ba74 <altera_avalon_jtag_uart_read+0x44>
     bac8:	00000306 	br	bad8 <altera_avalon_jtag_uart_read+0xa8>
-    unsigned int data = IORD_ALTERA_AVALON_JTAG_UART_DATA(base);
-
-    if (data & ALTERA_AVALON_JTAG_UART_DATA_RVALID_MSK)
-      *ptr++ = (data & ALTERA_AVALON_JTAG_UART_DATA_DATA_MSK) >> ALTERA_AVALON_JTAG_UART_DATA_DATA_OFST;
-    else if (ptr != buffer)
-      break;
     bacc:	0001883a 	nop
     bad0:	00000106 	br	bad8 <altera_avalon_jtag_uart_read+0xa8>
-    else if(flags & O_NONBLOCK)
-      break;   
     bad4:	0001883a 	nop
-    
-  }
-
-  if (ptr != buffer)
     bad8:	e0fff817 	ldw	r3,-32(fp)
     badc:	e0bffd17 	ldw	r2,-12(fp)
     bae0:	18800426 	beq	r3,r2,baf4 <altera_avalon_jtag_uart_read+0xc4>
-    return ptr - buffer;
     bae4:	e0fff817 	ldw	r3,-32(fp)
     bae8:	e0bffd17 	ldw	r2,-12(fp)
     baec:	1885c83a 	sub	r2,r3,r2
     baf0:	00000606 	br	bb0c <altera_avalon_jtag_uart_read+0xdc>
-  else if (flags & O_NONBLOCK)
     baf4:	e0bfff17 	ldw	r2,-4(fp)
     baf8:	1090000c 	andi	r2,r2,16384
     bafc:	10000226 	beq	r2,zero,bb08 <altera_avalon_jtag_uart_read+0xd8>
-    return -EWOULDBLOCK;
     bb00:	00bffd44 	movi	r2,-11
     bb04:	00000106 	br	bb0c <altera_avalon_jtag_uart_read+0xdc>
-  else
-    return -EIO;
     bb08:	00bffec4 	movi	r2,-5
-}
     bb0c:	e037883a 	mov	sp,fp
     bb10:	df000017 	ldw	fp,0(sp)
     bb14:	dec00104 	addi	sp,sp,4
     bb18:	f800283a 	ret
 
 0000bb1c <altera_avalon_jtag_uart_write>:
- * one FIFOs worth of data.  But you said you didn't want to use interrupts :-)
- */
-
-int altera_avalon_jtag_uart_write(altera_avalon_jtag_uart_state* sp, 
-  const char * ptr, int count, int flags)
-{
     bb1c:	defff904 	addi	sp,sp,-28
     bb20:	df000615 	stw	fp,24(sp)
     bb24:	df000604 	addi	fp,sp,24
@@ -4945,26 +4666,19 @@ int altera_avalon_jtag_uart_write(altera_avalon_jtag_uart_state* sp,
     bb2c:	e17ffd15 	stw	r5,-12(fp)
     bb30:	e1bffe15 	stw	r6,-8(fp)
     bb34:	e1ffff15 	stw	r7,-4(fp)
-  unsigned int base = sp->base;
     bb38:	e0bffc17 	ldw	r2,-16(fp)
     bb3c:	10800017 	ldw	r2,0(r2)
     bb40:	e0bffa15 	stw	r2,-24(fp)
-
-  const char * end = ptr + count;
     bb44:	e0bffe17 	ldw	r2,-8(fp)
     bb48:	e0fffd17 	ldw	r3,-12(fp)
     bb4c:	1885883a 	add	r2,r3,r2
     bb50:	e0bffb15 	stw	r2,-20(fp)
-
-  while (ptr < end)
     bb54:	00000e06 	br	bb90 <altera_avalon_jtag_uart_write+0x74>
-    if ((IORD_ALTERA_AVALON_JTAG_UART_CONTROL(base) & ALTERA_AVALON_JTAG_UART_CONTROL_WSPACE_MSK) != 0)
     bb58:	e0bffa17 	ldw	r2,-24(fp)
     bb5c:	10800104 	addi	r2,r2,4
     bb60:	10800037 	ldwio	r2,0(r2)
     bb64:	10bfffec 	andhi	r2,r2,65535
     bb68:	10000926 	beq	r2,zero,bb90 <altera_avalon_jtag_uart_write+0x74>
-      IOWR_ALTERA_AVALON_JTAG_UART_DATA(base, *ptr++);
     bb6c:	e0fffa17 	ldw	r3,-24(fp)
     bb70:	e0bffd17 	ldw	r2,-12(fp)
     bb74:	11000044 	addi	r4,r2,1
@@ -4974,21 +4688,10 @@ int altera_avalon_jtag_uart_write(altera_avalon_jtag_uart_state* sp,
     bb84:	1080201c 	xori	r2,r2,128
     bb88:	10bfe004 	addi	r2,r2,-128
     bb8c:	18800035 	stwio	r2,0(r3)
-{
-  unsigned int base = sp->base;
-
-  const char * end = ptr + count;
-
-  while (ptr < end)
     bb90:	e0fffd17 	ldw	r3,-12(fp)
     bb94:	e0bffb17 	ldw	r2,-20(fp)
     bb98:	18bfef36 	bltu	r3,r2,bb58 <altera_avalon_jtag_uart_write+0x3c>
-    if ((IORD_ALTERA_AVALON_JTAG_UART_CONTROL(base) & ALTERA_AVALON_JTAG_UART_CONTROL_WSPACE_MSK) != 0)
-      IOWR_ALTERA_AVALON_JTAG_UART_DATA(base, *ptr++);
-
-  return count;
     bb9c:	e0bffe17 	ldw	r2,-8(fp)
-}
     bba0:	e037883a 	mov	sp,fp
     bba4:	df000017 	ldw	fp,0(sp)
     bba8:	dec00104 	addi	sp,sp,4
@@ -5189,24 +4892,16 @@ void alt_dcache_flush_all (void)
     bd24:	f800283a 	ret
 
 0000bd28 <alt_get_errno>:
-#undef errno
-
-extern int errno;
-
-static ALT_INLINE int* alt_get_errno(void)
-{
     bd28:	defffe04 	addi	sp,sp,-8
     bd2c:	dfc00115 	stw	ra,4(sp)
     bd30:	df000015 	stw	fp,0(sp)
     bd34:	d839883a 	mov	fp,sp
-  return ((alt_errno) ? alt_errno() : &errno);
     bd38:	d0a00917 	ldw	r2,-32732(gp)
     bd3c:	10000326 	beq	r2,zero,bd4c <alt_get_errno+0x24>
     bd40:	d0a00917 	ldw	r2,-32732(gp)
     bd44:	103ee83a 	callr	r2
     bd48:	00000106 	br	bd50 <alt_get_errno+0x28>
     bd4c:	d0a29a04 	addi	r2,gp,-30104
-}
     bd50:	e037883a 	mov	sp,fp
     bd54:	dfc00117 	ldw	ra,4(sp)
     bd58:	df000017 	ldw	fp,0(sp)
@@ -5214,75 +4909,42 @@ static ALT_INLINE int* alt_get_errno(void)
     bd60:	f800283a 	ret
 
 0000bd64 <alt_dev_llist_insert>:
-/*
- *
- */
-
-int alt_dev_llist_insert (alt_dev_llist* dev, alt_llist* list)
-{
     bd64:	defffa04 	addi	sp,sp,-24
     bd68:	dfc00515 	stw	ra,20(sp)
     bd6c:	df000415 	stw	fp,16(sp)
     bd70:	df000404 	addi	fp,sp,16
     bd74:	e13ffe15 	stw	r4,-8(fp)
     bd78:	e17fff15 	stw	r5,-4(fp)
-  /*
-   * check that the device exists, and that it has a valid name.
-   */
-
-  if (!dev || !dev->name)
     bd7c:	e0bffe17 	ldw	r2,-8(fp)
     bd80:	10000326 	beq	r2,zero,bd90 <alt_dev_llist_insert+0x2c>
     bd84:	e0bffe17 	ldw	r2,-8(fp)
     bd88:	10800217 	ldw	r2,8(r2)
     bd8c:	1000061e 	bne	r2,zero,bda8 <alt_dev_llist_insert+0x44>
-  {
-    ALT_ERRNO = EINVAL;
     bd90:	000bd280 	call	bd28 <alt_get_errno>
     bd94:	1007883a 	mov	r3,r2
     bd98:	00800584 	movi	r2,22
     bd9c:	18800015 	stw	r2,0(r3)
-    return -EINVAL;
     bda0:	00bffa84 	movi	r2,-22
     bda4:	00001306 	br	bdf4 <alt_dev_llist_insert+0x90>
-  
-  /*
-   * register the device.
-   */
-  
-  alt_llist_insert(list, &dev->llist);
     bda8:	e0bffe17 	ldw	r2,-8(fp)
     bdac:	e0ffff17 	ldw	r3,-4(fp)
     bdb0:	e0fffc15 	stw	r3,-16(fp)
     bdb4:	e0bffd15 	stw	r2,-12(fp)
- */
-
-static ALT_INLINE void ALT_ALWAYS_INLINE alt_llist_insert(alt_llist* list, 
-                alt_llist* entry)
-{
-  entry->previous = list;
     bdb8:	e0bffd17 	ldw	r2,-12(fp)
     bdbc:	e0fffc17 	ldw	r3,-16(fp)
     bdc0:	10c00115 	stw	r3,4(r2)
-  entry->next     = list->next;
     bdc4:	e0bffc17 	ldw	r2,-16(fp)
     bdc8:	10c00017 	ldw	r3,0(r2)
     bdcc:	e0bffd17 	ldw	r2,-12(fp)
     bdd0:	10c00015 	stw	r3,0(r2)
-
-  list->next->previous = entry;
     bdd4:	e0bffc17 	ldw	r2,-16(fp)
     bdd8:	10800017 	ldw	r2,0(r2)
     bddc:	e0fffd17 	ldw	r3,-12(fp)
     bde0:	10c00115 	stw	r3,4(r2)
-  list->next           = entry;
     bde4:	e0bffc17 	ldw	r2,-16(fp)
     bde8:	e0fffd17 	ldw	r3,-12(fp)
     bdec:	10c00015 	stw	r3,0(r2)
-
-  return 0;  
     bdf0:	0005883a 	mov	r2,zero
-}
     bdf4:	e037883a 	mov	sp,fp
     bdf8:	dfc00117 	ldw	ra,4(sp)
     bdfc:	df000017 	ldw	fp,0(sp)
@@ -5290,33 +4952,17 @@ static ALT_INLINE void ALT_ALWAYS_INLINE alt_llist_insert(alt_llist* list,
     be04:	f800283a 	ret
 
 0000be08 <_do_ctors>:
-/*
- * Run the C++ static constructors.
- */
-
-void _do_ctors(void)
-{
     be08:	defffd04 	addi	sp,sp,-12
     be0c:	dfc00215 	stw	ra,8(sp)
     be10:	df000115 	stw	fp,4(sp)
     be14:	df000104 	addi	fp,sp,4
-  constructor* ctor;
-
-  for (ctor = &__CTOR_END__[-1]; ctor >= __CTOR_LIST__; ctor--)
     be18:	00800074 	movhi	r2,1
     be1c:	10b23704 	addi	r2,r2,-14116
     be20:	e0bfff15 	stw	r2,-4(fp)
     be24:	00000606 	br	be40 <_do_ctors+0x38>
-        (*ctor) (); 
     be28:	e0bfff17 	ldw	r2,-4(fp)
     be2c:	10800017 	ldw	r2,0(r2)
     be30:	103ee83a 	callr	r2
-
-void _do_ctors(void)
-{
-  constructor* ctor;
-
-  for (ctor = &__CTOR_END__[-1]; ctor >= __CTOR_LIST__; ctor--)
     be34:	e0bfff17 	ldw	r2,-4(fp)
     be38:	10bfff04 	addi	r2,r2,-4
     be3c:	e0bfff15 	stw	r2,-4(fp)
@@ -5324,8 +4970,6 @@ void _do_ctors(void)
     be44:	00800074 	movhi	r2,1
     be48:	10b23804 	addi	r2,r2,-14112
     be4c:	18bff62e 	bgeu	r3,r2,be28 <_do_ctors+0x20>
-        (*ctor) (); 
-}
     be50:	0001883a 	nop
     be54:	e037883a 	mov	sp,fp
     be58:	dfc00117 	ldw	ra,4(sp)
@@ -5334,33 +4978,17 @@ void _do_ctors(void)
     be64:	f800283a 	ret
 
 0000be68 <_do_dtors>:
-/*
- * Run the C++ static destructors.
- */
-
-void _do_dtors(void)
-{
     be68:	defffd04 	addi	sp,sp,-12
     be6c:	dfc00215 	stw	ra,8(sp)
     be70:	df000115 	stw	fp,4(sp)
     be74:	df000104 	addi	fp,sp,4
-  destructor* dtor;
-
-  for (dtor = &__DTOR_END__[-1]; dtor >= __DTOR_LIST__; dtor--)
     be78:	00800074 	movhi	r2,1
     be7c:	10b23704 	addi	r2,r2,-14116
     be80:	e0bfff15 	stw	r2,-4(fp)
     be84:	00000606 	br	bea0 <_do_dtors+0x38>
-        (*dtor) (); 
     be88:	e0bfff17 	ldw	r2,-4(fp)
     be8c:	10800017 	ldw	r2,0(r2)
     be90:	103ee83a 	callr	r2
-
-void _do_dtors(void)
-{
-  destructor* dtor;
-
-  for (dtor = &__DTOR_END__[-1]; dtor >= __DTOR_LIST__; dtor--)
     be94:	e0bfff17 	ldw	r2,-4(fp)
     be98:	10bfff04 	addi	r2,r2,-4
     be9c:	e0bfff15 	stw	r2,-4(fp)
@@ -5368,8 +4996,6 @@ void _do_dtors(void)
     bea4:	00800074 	movhi	r2,1
     bea8:	10b23804 	addi	r2,r2,-14112
     beac:	18bff62e 	bgeu	r3,r2,be88 <_do_dtors+0x20>
-        (*dtor) (); 
-}
     beb0:	0001883a 	nop
     beb4:	e037883a 	mov	sp,fp
     beb8:	dfc00117 	ldw	ra,4(sp)
@@ -5815,18 +5441,10 @@ int ALT_OPEN (const char* file, int flags, int mode)
     c2c8:	f800283a 	ret
 
 0000c2cc <altera_nios2_gen2_irq_init>:
-/*
- * To initialize the internal interrupt controller, just clear the IENABLE
- * register so that all possible IRQs are disabled.
- */
-void altera_nios2_gen2_irq_init(void) 
-{
     c2cc:	deffff04 	addi	sp,sp,-4
     c2d0:	df000015 	stw	fp,0(sp)
     c2d4:	d839883a 	mov	fp,sp
-    NIOS2_WRITE_IENABLE(0);
     c2d8:	000170fa 	wrctl	ienable,zero
-}
     c2dc:	0001883a 	nop
     c2e0:	e037883a 	mov	sp,fp
     c2e4:	df000017 	ldw	fp,0(sp)
