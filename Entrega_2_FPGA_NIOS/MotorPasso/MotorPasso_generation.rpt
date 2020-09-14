@@ -1,18 +1,18 @@
 Info: Starting: Create block symbol file (.bsf)
-Info: qsys-generate C:\Users\M3LL0\Desktop\SoCLinuxEmbarcado2020_2\Entrega_2_FPGA_NIOS\MotorPasso.qsys --block-symbol-file --output-directory=C:\Users\M3LL0\Desktop\SoCLinuxEmbarcado2020_2\Entrega_2_FPGA_NIOS\MotorPasso --family="Cyclone V" --part=5CSXFC6D6F31C6
+Info: qsys-generate /home/labarqcomp/SoCLinuxEmbarcado2020_2/Entrega_2_FPGA_NIOS/MotorPasso.qsys --block-symbol-file --output-directory=/home/labarqcomp/SoCLinuxEmbarcado2020_2/Entrega_2_FPGA_NIOS/MotorPasso --family="Cyclone V" --part=5CSXFC6D6F31C6
 Progress: Loading Entrega_2_FPGA_NIOS/MotorPasso.qsys
 Progress: Reading input file
-Progress: Adding clk_0 [clock_source 20.1]
+Progress: Adding clk_0 [clock_source 18.1]
 Progress: Parameterizing module clk_0
-Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 20.1]
+Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 18.1]
 Progress: Parameterizing module jtag_uart_0
-Progress: Adding nios2_gen2_0 [altera_nios2_gen2 20.1]
+Progress: Adding nios2_gen2_0 [altera_nios2_gen2 18.1]
 Progress: Parameterizing module nios2_gen2_0
-Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 20.1]
+Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 18.1]
 Progress: Parameterizing module onchip_memory2_0
-Progress: Adding pio_0 [altera_avalon_pio 20.1]
+Progress: Adding pio_0 [altera_avalon_pio 18.1]
 Progress: Parameterizing module pio_0
-Progress: Adding pio_1 [altera_avalon_pio 20.1]
+Progress: Adding pio_1 [altera_avalon_pio 18.1]
 Progress: Parameterizing module pio_1
 Progress: Building connections
 Progress: Parameterizing connections
@@ -24,20 +24,20 @@ Info: qsys-generate succeeded.
 Info: Finished: Create block symbol file (.bsf)
 Info: 
 Info: Starting: Create HDL design files for synthesis
-Info: qsys-generate C:\Users\M3LL0\Desktop\SoCLinuxEmbarcado2020_2\Entrega_2_FPGA_NIOS\MotorPasso.qsys --synthesis=VERILOG --output-directory=C:\Users\M3LL0\Desktop\SoCLinuxEmbarcado2020_2\Entrega_2_FPGA_NIOS\MotorPasso\synthesis --family="Cyclone V" --part=5CSXFC6D6F31C6
+Info: qsys-generate /home/labarqcomp/SoCLinuxEmbarcado2020_2/Entrega_2_FPGA_NIOS/MotorPasso.qsys --synthesis=VERILOG --output-directory=/home/labarqcomp/SoCLinuxEmbarcado2020_2/Entrega_2_FPGA_NIOS/MotorPasso/synthesis --family="Cyclone V" --part=5CSXFC6D6F31C6
 Progress: Loading Entrega_2_FPGA_NIOS/MotorPasso.qsys
 Progress: Reading input file
-Progress: Adding clk_0 [clock_source 20.1]
+Progress: Adding clk_0 [clock_source 18.1]
 Progress: Parameterizing module clk_0
-Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 20.1]
+Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 18.1]
 Progress: Parameterizing module jtag_uart_0
-Progress: Adding nios2_gen2_0 [altera_nios2_gen2 20.1]
+Progress: Adding nios2_gen2_0 [altera_nios2_gen2 18.1]
 Progress: Parameterizing module nios2_gen2_0
-Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 20.1]
+Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 18.1]
 Progress: Parameterizing module onchip_memory2_0
-Progress: Adding pio_0 [altera_avalon_pio 20.1]
+Progress: Adding pio_0 [altera_avalon_pio 18.1]
 Progress: Parameterizing module pio_0
-Progress: Adding pio_1 [altera_avalon_pio 20.1]
+Progress: Adding pio_1 [altera_avalon_pio 18.1]
 Progress: Parameterizing module pio_1
 Progress: Building connections
 Progress: Parameterizing connections
@@ -47,20 +47,20 @@ Info: MotorPasso.jtag_uart_0: JTAG UART IP input clock need to be at least doubl
 Info: MotorPasso.pio_0: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
 Info: MotorPasso: Generating MotorPasso "MotorPasso" for QUARTUS_SYNTH
 Info: jtag_uart_0: Starting RTL generation for module 'MotorPasso_jtag_uart_0'
-Info: jtag_uart_0:   Generation command is [exec C:/intelfpga/20.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga/20.1/quartus/bin64/perl/lib -I C:/intelfpga/20.1/quartus/sopc_builder/bin/europa -I C:/intelfpga/20.1/quartus/sopc_builder/bin -I C:/intelfpga/20.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/intelfpga/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=MotorPasso_jtag_uart_0 --dir=C:/Users/M3LL0/AppData/Local/Temp/alt8519_6122748629442609261.dir/0002_jtag_uart_0_gen/ --quartus_dir=C:/intelfpga/20.1/quartus --verilog --config=C:/Users/M3LL0/AppData/Local/Temp/alt8519_6122748629442609261.dir/0002_jtag_uart_0_gen//MotorPasso_jtag_uart_0_component_configuration.pl  --do_build_sim=0  ]
+Info: jtag_uart_0:   Generation command is [exec /home/labarqcomp/intelFPGA/18.1/quartus/linux64/perl/bin/perl -I /home/labarqcomp/intelFPGA/18.1/quartus/linux64/perl/lib -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin/europa -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin/perl_lib -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin -I /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=MotorPasso_jtag_uart_0 --dir=/tmp/alt8519_317345865789222678.dir/0002_jtag_uart_0_gen/ --quartus_dir=/home/labarqcomp/intelFPGA/18.1/quartus --verilog --config=/tmp/alt8519_317345865789222678.dir/0002_jtag_uart_0_gen//MotorPasso_jtag_uart_0_component_configuration.pl  --do_build_sim=0  ]
 Info: jtag_uart_0: Done RTL generation for module 'MotorPasso_jtag_uart_0'
 Info: jtag_uart_0: "MotorPasso" instantiated altera_avalon_jtag_uart "jtag_uart_0"
 Info: nios2_gen2_0: "MotorPasso" instantiated altera_nios2_gen2 "nios2_gen2_0"
 Info: onchip_memory2_0: Starting RTL generation for module 'MotorPasso_onchip_memory2_0'
-Info: onchip_memory2_0:   Generation command is [exec C:/intelfpga/20.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga/20.1/quartus/bin64/perl/lib -I C:/intelfpga/20.1/quartus/sopc_builder/bin/europa -I C:/intelfpga/20.1/quartus/sopc_builder/bin -I C:/intelfpga/20.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=MotorPasso_onchip_memory2_0 --dir=C:/Users/M3LL0/AppData/Local/Temp/alt8519_6122748629442609261.dir/0003_onchip_memory2_0_gen/ --quartus_dir=C:/intelfpga/20.1/quartus --verilog --config=C:/Users/M3LL0/AppData/Local/Temp/alt8519_6122748629442609261.dir/0003_onchip_memory2_0_gen//MotorPasso_onchip_memory2_0_component_configuration.pl  --do_build_sim=0  ]
+Info: onchip_memory2_0:   Generation command is [exec /home/labarqcomp/intelFPGA/18.1/quartus/linux64/perl/bin/perl -I /home/labarqcomp/intelFPGA/18.1/quartus/linux64/perl/lib -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin/europa -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin/perl_lib -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin -I /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=MotorPasso_onchip_memory2_0 --dir=/tmp/alt8519_317345865789222678.dir/0003_onchip_memory2_0_gen/ --quartus_dir=/home/labarqcomp/intelFPGA/18.1/quartus --verilog --config=/tmp/alt8519_317345865789222678.dir/0003_onchip_memory2_0_gen//MotorPasso_onchip_memory2_0_component_configuration.pl  --do_build_sim=0  ]
 Info: onchip_memory2_0: Done RTL generation for module 'MotorPasso_onchip_memory2_0'
 Info: onchip_memory2_0: "MotorPasso" instantiated altera_avalon_onchip_memory2 "onchip_memory2_0"
 Info: pio_0: Starting RTL generation for module 'MotorPasso_pio_0'
-Info: pio_0:   Generation command is [exec C:/intelfpga/20.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga/20.1/quartus/bin64/perl/lib -I C:/intelfpga/20.1/quartus/sopc_builder/bin/europa -I C:/intelfpga/20.1/quartus/sopc_builder/bin -I C:/intelfpga/20.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=MotorPasso_pio_0 --dir=C:/Users/M3LL0/AppData/Local/Temp/alt8519_6122748629442609261.dir/0004_pio_0_gen/ --quartus_dir=C:/intelfpga/20.1/quartus --verilog --config=C:/Users/M3LL0/AppData/Local/Temp/alt8519_6122748629442609261.dir/0004_pio_0_gen//MotorPasso_pio_0_component_configuration.pl  --do_build_sim=0  ]
+Info: pio_0:   Generation command is [exec /home/labarqcomp/intelFPGA/18.1/quartus/linux64/perl/bin/perl -I /home/labarqcomp/intelFPGA/18.1/quartus/linux64/perl/lib -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin/europa -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin/perl_lib -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin -I /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=MotorPasso_pio_0 --dir=/tmp/alt8519_317345865789222678.dir/0004_pio_0_gen/ --quartus_dir=/home/labarqcomp/intelFPGA/18.1/quartus --verilog --config=/tmp/alt8519_317345865789222678.dir/0004_pio_0_gen//MotorPasso_pio_0_component_configuration.pl  --do_build_sim=0  ]
 Info: pio_0: Done RTL generation for module 'MotorPasso_pio_0'
 Info: pio_0: "MotorPasso" instantiated altera_avalon_pio "pio_0"
 Info: pio_1: Starting RTL generation for module 'MotorPasso_pio_1'
-Info: pio_1:   Generation command is [exec C:/intelfpga/20.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga/20.1/quartus/bin64/perl/lib -I C:/intelfpga/20.1/quartus/sopc_builder/bin/europa -I C:/intelfpga/20.1/quartus/sopc_builder/bin -I C:/intelfpga/20.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=MotorPasso_pio_1 --dir=C:/Users/M3LL0/AppData/Local/Temp/alt8519_6122748629442609261.dir/0005_pio_1_gen/ --quartus_dir=C:/intelfpga/20.1/quartus --verilog --config=C:/Users/M3LL0/AppData/Local/Temp/alt8519_6122748629442609261.dir/0005_pio_1_gen//MotorPasso_pio_1_component_configuration.pl  --do_build_sim=0  ]
+Info: pio_1:   Generation command is [exec /home/labarqcomp/intelFPGA/18.1/quartus/linux64/perl/bin/perl -I /home/labarqcomp/intelFPGA/18.1/quartus/linux64/perl/lib -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin/europa -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin/perl_lib -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin -I /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=MotorPasso_pio_1 --dir=/tmp/alt8519_317345865789222678.dir/0005_pio_1_gen/ --quartus_dir=/home/labarqcomp/intelFPGA/18.1/quartus --verilog --config=/tmp/alt8519_317345865789222678.dir/0005_pio_1_gen//MotorPasso_pio_1_component_configuration.pl  --do_build_sim=0  ]
 Info: pio_1: Done RTL generation for module 'MotorPasso_pio_1'
 Info: pio_1: "MotorPasso" instantiated altera_avalon_pio "pio_1"
 Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
@@ -72,13 +72,16 @@ Info: mm_interconnect_0: "MotorPasso" instantiated altera_mm_interconnect "mm_in
 Info: irq_mapper: "MotorPasso" instantiated altera_irq_mapper "irq_mapper"
 Info: rst_controller: "MotorPasso" instantiated altera_reset_controller "rst_controller"
 Info: cpu: Starting RTL generation for module 'MotorPasso_nios2_gen2_0_cpu'
-Info: cpu:   Generation command is [exec C:/intelFPGA/20.1/quartus/bin64//perl/bin/perl.exe -I C:/intelFPGA/20.1/quartus/bin64//perl/lib -I C:/intelfpga/20.1/quartus/sopc_builder/bin/europa -I C:/intelfpga/20.1/quartus/sopc_builder/bin -I C:/intelfpga/20.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I C:/intelfpga/20.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I C:/intelfpga/20.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I C:/intelfpga/20.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- C:/intelfpga/20.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.pl --name=MotorPasso_nios2_gen2_0_cpu --dir=C:/Users/M3LL0/AppData/Local/Temp/alt8519_6122748629442609261.dir/0008_cpu_gen/ --quartus_bindir=C:/intelFPGA/20.1/quartus/bin64/ --verilog --config=C:/Users/M3LL0/AppData/Local/Temp/alt8519_6122748629442609261.dir/0008_cpu_gen//MotorPasso_nios2_gen2_0_cpu_processor_configuration.pl  --do_build_sim=0  ]
-Info: cpu: # 2020.09.14 18:22:24 (*) Starting Nios II generation
-Info: cpu: # 2020.09.14 18:22:24 (*)   Elaborating CPU configuration settings
-Info: cpu: # 2020.09.14 18:22:24 (*)   Creating all objects for CPU
-Info: cpu: # 2020.09.14 18:22:25 (*)   Generating RTL from CPU objects
-Info: cpu: # 2020.09.14 18:22:25 (*)   Creating plain-text RTL
-Info: cpu: # 2020.09.14 18:22:25 (*) Done Nios II generation
+Info: cpu:   Generation command is [exec /home/labarqcomp/intelFPGA/18.1/quartus/linux64//eperlcmd -I /home/labarqcomp/intelFPGA/18.1/quartus/linux64//perl/lib -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin/europa -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin/perl_lib -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin -I /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=MotorPasso_nios2_gen2_0_cpu --dir=/tmp/alt8519_317345865789222678.dir/0008_cpu_gen/ --quartus_bindir=/home/labarqcomp/intelFPGA/18.1/quartus/linux64/ --verilog --config=/tmp/alt8519_317345865789222678.dir/0008_cpu_gen//MotorPasso_nios2_gen2_0_cpu_processor_configuration.pl  --do_build_sim=0  ]
+Info: cpu: # 2020.09.14 18:33:17 (*) Starting Nios II generation
+Info: cpu: # 2020.09.14 18:33:17 (*)   Checking for plaintext license.
+Info: cpu: # 2020.09.14 18:33:51 (*)   Plaintext license not found.
+Info: cpu: # 2020.09.14 18:33:51 (*)   No license required to generate encrypted Nios II/e.
+Info: cpu: # 2020.09.14 18:33:51 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2020.09.14 18:33:51 (*)   Creating all objects for CPU
+Info: cpu: # 2020.09.14 18:33:52 (*)   Generating RTL from CPU objects
+Info: cpu: # 2020.09.14 18:33:52 (*)   Creating plain-text RTL
+Info: cpu: # 2020.09.14 18:33:52 (*) Done Nios II generation
 Info: cpu: Done RTL generation for module 'MotorPasso_nios2_gen2_0_cpu'
 Info: cpu: "nios2_gen2_0" instantiated altera_nios2_gen2_unit "cpu"
 Info: nios2_gen2_0_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "nios2_gen2_0_data_master_translator"
@@ -94,12 +97,12 @@ Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "c
 Info: cmd_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux_001"
 Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
 Info: cmd_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_001"
-Info: Reusing file C:/Users/M3LL0/Desktop/SoCLinuxEmbarcado2020_2/Entrega_2_FPGA_NIOS/MotorPasso/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file /home/labarqcomp/SoCLinuxEmbarcado2020_2/Entrega_2_FPGA_NIOS/MotorPasso/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
 Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
-Info: Reusing file C:/Users/M3LL0/Desktop/SoCLinuxEmbarcado2020_2/Entrega_2_FPGA_NIOS/MotorPasso/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file /home/labarqcomp/SoCLinuxEmbarcado2020_2/Entrega_2_FPGA_NIOS/MotorPasso/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: rsp_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux_001"
-Info: Reusing file C:/Users/M3LL0/Desktop/SoCLinuxEmbarcado2020_2/Entrega_2_FPGA_NIOS/MotorPasso/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file /home/labarqcomp/SoCLinuxEmbarcado2020_2/Entrega_2_FPGA_NIOS/MotorPasso/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
 Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
 Info: MotorPasso: Done "MotorPasso" with 28 modules, 41 files
