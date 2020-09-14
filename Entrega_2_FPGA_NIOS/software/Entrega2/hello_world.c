@@ -5,6 +5,7 @@
 #include "altera_avalon_pio_regs.h"
 #include "sys/alt_irq.h"
 #include <unistd.h>
+#include <math.h>
 
 int delay(int n){
       unsigned int delay = 0 ;
