@@ -59,8 +59,8 @@ set_location_assignment PIN_AK3 -to stepmotor_pio[3]
 set_location_assignment PIN_Y16 -to stepmotor_pio[2]
 set_location_assignment PIN_AK2 -to stepmotor_pio[1]
 set_location_assignment PIN_W15 -to stepmotor_pio[0]
-set_location_assignment PIN_AB28 -to stepmotor_vel[1]
-set_location_assignment PIN_AC30 -to stepmotor_vel[0]
+set_location_assignment PIN_AC30 -to stepmotor_vel[1]
+set_location_assignment PIN_AB28 -to stepmotor_vel[0]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to fpga_clk_50
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to stepmotor_dir
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to stepmotor_en

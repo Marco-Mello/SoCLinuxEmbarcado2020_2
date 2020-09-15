@@ -1,12 +1,12 @@
 
 module MotorPasso (
-	clk_clk,
-	reset_reset_n,
 	chaves_export,
-	fases_export);	
+	clk_clk,
+	fases_export,
+	reset_reset_n);	
 
-	input		clk_clk;
-	input		reset_reset_n;
 	input	[3:0]	chaves_export;
+	input		clk_clk;
 	output	[3:0]	fases_export;
+	input		reset_reset_n;
 endmodule

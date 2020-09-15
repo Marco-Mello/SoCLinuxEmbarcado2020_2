@@ -1,5 +1,5 @@
 Flow report for Entrega_2_FPGA_NIOS
-Mon Sep 14 18:41:51 2020
+Tue Sep 15 16:47:06 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -40,18 +40,18 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Flow Summary                                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Flow Status                     ; Successful - Mon Sep 14 18:41:51 2020           ;
+; Flow Status                     ; Successful - Tue Sep 15 16:47:06 2020           ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                   ; Entrega_2_FPGA_NIOS                             ;
 ; Top-level Entity Name           ; processador_motor                               ;
 ; Family                          ; Cyclone V                                       ;
 ; Device                          ; 5CSXFC6D6F31C6                                  ;
 ; Timing Models                   ; Final                                           ;
-; Logic utilization (in ALMs)     ; 745 / 41,910 ( 2 % )                            ;
-; Total registers                 ; 991                                             ;
+; Logic utilization (in ALMs)     ; 795 / 41,910 ( 2 % )                            ;
+; Total registers                 ; 979                                             ;
 ; Total pins                      ; 9 / 499 ( 2 % )                                 ;
 ; Total virtual pins              ; 0                                               ;
-; Total block memory bits         ; 1,059,840 / 5,662,720 ( 19 % )                  ;
+; Total block memory bits         ; 2,108,416 / 5,662,720 ( 37 % )                  ;
 ; Total DSP Blocks                ; 0 / 112 ( 0 % )                                 ;
 ; Total HSSI RX PCSs              ; 0 / 9 ( 0 % )                                   ;
 ; Total HSSI PMA RX Deserializers ; 0 / 9 ( 0 % )                                   ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 09/14/2020 18:35:03 ;
+; Start date & time ; 09/15/2020 16:40:40 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Entrega_2_FPGA_NIOS ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------------+-------------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value       ; Entity Name       ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------------+-------------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 71052585013627.160011930304970         ; --                  ; --                ; --             ;
+; COMPILER_SIGNATURE_ID               ; 163580567959687.160019884005936        ; --                  ; --                ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                            ; --                  ; --                ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)              ; <None>              ; --                ; --             ;
 ; EDA_TIME_SCALE                      ; 1 ps                                   ; --                  ; --                ; eda_simulation ;
@@ -99,26 +99,26 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:01:58     ; 1.0                     ; 1165 MB             ; 00:02:10                           ;
-; Fitter               ; 00:02:27     ; 1.1                     ; 2541 MB             ; 00:02:57                           ;
-; Assembler            ; 00:01:17     ; 1.0                     ; 1013 MB             ; 00:00:10                           ;
-; Timing Analyzer      ; 00:00:53     ; 1.5                     ; 1275 MB             ; 00:00:27                           ;
-; EDA Netlist Writer   ; 00:00:37     ; 1.0                     ; 1158 MB             ; 00:00:03                           ;
-; Total                ; 00:07:12     ; --                      ; --                  ; 00:05:47                           ;
+; Analysis & Synthesis ; 00:01:54     ; 1.0                     ; 1188 MB             ; 00:01:36                           ;
+; Fitter               ; 00:02:14     ; 1.1                     ; 2590 MB             ; 00:02:18                           ;
+; Assembler            ; 00:01:23     ; 1.0                     ; 1023 MB             ; 00:00:09                           ;
+; Timing Analyzer      ; 00:00:47     ; 2.1                     ; 1290 MB             ; 00:00:19                           ;
+; EDA Netlist Writer   ; 00:00:40     ; 1.0                     ; 1203 MB             ; 00:00:03                           ;
+; Total                ; 00:06:58     ; --                      ; --                  ; 00:04:25                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+----------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                        ;
-+----------------------+------------------+----------------+------------+----------------+
-; Module Name          ; Machine Hostname ; OS Name        ; OS Version ; Processor type ;
-+----------------------+------------------+----------------+------------+----------------+
-; Analysis & Synthesis ; soc-ssd          ; Ubuntu 18.04.5 ; 18         ; x86_64         ;
-; Fitter               ; soc-ssd          ; Ubuntu 18.04.5 ; 18         ; x86_64         ;
-; Assembler            ; soc-ssd          ; Ubuntu 18.04.5 ; 18         ; x86_64         ;
-; Timing Analyzer      ; soc-ssd          ; Ubuntu 18.04.5 ; 18         ; x86_64         ;
-; EDA Netlist Writer   ; soc-ssd          ; Ubuntu 18.04.5 ; 18         ; x86_64         ;
-+----------------------+------------------+----------------+------------+----------------+
++--------------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                            ;
++----------------------+----------------------+----------------+------------+----------------+
+; Module Name          ; Machine Hostname     ; OS Name        ; OS Version ; Processor type ;
++----------------------+----------------------+----------------+------------+----------------+
+; Analysis & Synthesis ; labarqcomp-NUC8i5BEK ; Ubuntu 18.04.5 ; 18         ; x86_64         ;
+; Fitter               ; labarqcomp-NUC8i5BEK ; Ubuntu 18.04.5 ; 18         ; x86_64         ;
+; Assembler            ; labarqcomp-NUC8i5BEK ; Ubuntu 18.04.5 ; 18         ; x86_64         ;
+; Timing Analyzer      ; labarqcomp-NUC8i5BEK ; Ubuntu 18.04.5 ; 18         ; x86_64         ;
+; EDA Netlist Writer   ; labarqcomp-NUC8i5BEK ; Ubuntu 18.04.5 ; 18         ; x86_64         ;
++----------------------+----------------------+----------------+------------+----------------+
 
 
 ------------

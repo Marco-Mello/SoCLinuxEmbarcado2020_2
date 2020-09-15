@@ -25,6 +25,7 @@ module MotorPasso_onchip_memory2_0 (
                                       chipselect,
                                       clk,
                                       clken,
+                                      debugaccess,
                                       freeze,
                                       reset,
                                       reset_req,
@@ -45,6 +46,7 @@ module MotorPasso_onchip_memory2_0 (
   input            chipselect;
   input            clk;
   input            clken;
+  input            debugaccess;
   input            freeze;
   input            reset;
   input            reset_req;
@@ -55,7 +57,7 @@ module MotorPasso_onchip_memory2_0 (
 wire             clocken0;
 wire    [ 31: 0] readdata;
 wire             wren;
-  assign wren = chipselect & write;
+  assign wren = chipselect & write & debugaccess;
   assign clocken0 = clken & ~reset_req;
   altsyncram the_altsyncram
     (

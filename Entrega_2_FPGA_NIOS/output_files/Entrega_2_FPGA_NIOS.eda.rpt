@@ -1,5 +1,5 @@
 EDA Netlist Writer report for Entrega_2_FPGA_NIOS
-Mon Sep 14 18:41:51 2020
+Tue Sep 15 16:47:06 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -36,7 +36,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Mon Sep 14 18:41:51 2020 ;
+; EDA Netlist Writer Status ; Successful - Tue Sep 15 16:47:06 2020 ;
 ; Revision Name             ; Entrega_2_FPGA_NIOS                   ;
 ; Top-level Entity Name     ; processador_motor                     ;
 ; Family                    ; Cyclone V                             ;
@@ -50,7 +50,8 @@ refer to the applicable agreement for further details.
 ; Option                                                                                            ; Setting                   ;
 +---------------------------------------------------------------------------------------------------+---------------------------+
 ; Tool Name                                                                                         ; ModelSim-Altera (Verilog) ;
-; Generate functional simulation netlist                                                            ; On                        ;
+; Generate functional simulation netlist                                                            ; Off                       ;
+; Time scale                                                                                        ; 1 ps                      ;
 ; Truncate long hierarchy paths                                                                     ; Off                       ;
 ; Map illegal HDL characters                                                                        ; Off                       ;
 ; Flatten buses into individual nodes                                                               ; Off                       ;
@@ -65,13 +66,13 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------------------------------+---------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------+
-; Simulation Generated Files                                                                              ;
-+---------------------------------------------------------------------------------------------------------+
-; Generated Files                                                                                         ;
-+---------------------------------------------------------------------------------------------------------+
-; /home/labarqcomp/SoCLinuxEmbarcado2020_2/Entrega_2_FPGA_NIOS/simulation/modelsim/Entrega_2_FPGA_NIOS.vo ;
-+---------------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                                                      ;
++-----------------------------------------------------------------------------------------------------------------+
+; Generated Files                                                                                                 ;
++-----------------------------------------------------------------------------------------------------------------+
+; /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_2_FPGA_NIOS/simulation/modelsim/Entrega_2_FPGA_NIOS.vo ;
++-----------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -80,14 +81,15 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
-    Info: Processing started: Mon Sep 14 18:41:14 2020
+    Info: Processing started: Tue Sep 15 16:46:26 2020
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off Entrega_2_FPGA_NIOS -c Entrega_2_FPGA_NIOS
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (204019): Generated file Entrega_2_FPGA_NIOS.vo in folder "/home/labarqcomp/SoCLinuxEmbarcado2020_2/Entrega_2_FPGA_NIOS/simulation/modelsim/" for EDA simulation tool
-Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 1158 megabytes
-    Info: Processing ended: Mon Sep 14 18:41:51 2020
-    Info: Elapsed time: 00:00:37
+Warning (10905): Generated the EDA functional simulation netlist because it is the only supported netlist type for this device.
+Info (204019): Generated file Entrega_2_FPGA_NIOS.vo in folder "/home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_2_FPGA_NIOS/simulation/modelsim/" for EDA simulation tool
+Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 1203 megabytes
+    Info: Processing ended: Tue Sep 15 16:47:06 2020
+    Info: Elapsed time: 00:00:40
     Info: Total CPU time (on all processors): 00:00:03
 
 
