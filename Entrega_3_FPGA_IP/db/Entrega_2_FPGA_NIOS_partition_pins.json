@@ -1,0 +1,45 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "fpga_fases_pio[0]",
+					"strict" : false
+				},
+				{
+					"name" : "fpga_fases_pio[1]",
+					"strict" : false
+				},
+				{
+					"name" : "fpga_fases_pio[2]",
+					"strict" : false
+				},
+				{
+					"name" : "fpga_fases_pio[3]",
+					"strict" : false
+				},
+				{
+					"name" : "fpga_clk_50",
+					"strict" : false
+				},
+				{
+					"name" : "fpga_chaves_pio[0]",
+					"strict" : false
+				},
+				{
+					"name" : "fpga_chaves_pio[1]",
+					"strict" : false
+				},
+				{
+					"name" : "fpga_chaves_pio[2]",
+					"strict" : false
+				},
+				{
+					"name" : "fpga_chaves_pio[3]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
