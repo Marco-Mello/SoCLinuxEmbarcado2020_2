@@ -8,8 +8,8 @@
    <name preferredWidth="319" />
   </columns>
  </systemtable>
- <library expandedCategories="Project,Library" />
- <window width="1676" height="1002" x="177" y="51" />
+ <library expandedCategories="Library,Project" />
+ <window width="1938" height="1048" x="-9" y="-9" />
  <hdlexample language="VHDL" />
- <generation simulation="VHDL" />
+ <generation simulation="VHDL" block_symbol_file="0" />
 </preferences>

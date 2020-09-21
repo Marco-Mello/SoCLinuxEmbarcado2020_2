@@ -1,12 +1,12 @@
-Fitter Status : Successful - Tue Sep 15 16:44:14 2020
-Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+Fitter Status : Successful - Mon Sep 21 19:10:03 2020
+Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Standard Edition
 Revision Name : Entrega_2_FPGA_NIOS
-Top-level Entity Name : processador_motor
+Top-level Entity Name : Lab3_FPGA_IP
 Family : Cyclone V
 Device : 5CSXFC6D6F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 795 / 41,910 ( 2 % )
-Total registers : 979
+Logic utilization (in ALMs) : 800 / 41,910 ( 2 % )
+Total registers : 995
 Total pins : 9 / 499 ( 2 % )
 Total virtual pins : 0
 Total block memory bits : 2,108,416 / 5,662,720 ( 37 % )

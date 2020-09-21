@@ -1,7 +1,7 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
 
-entity passo is
+entity MotorPasso is
     port (
         -- Gloabals
         fpga_clk_50        : in  std_logic;             -- clock.clk
@@ -11,9 +11,9 @@ entity passo is
 		  fpga_chaves_pio		  : in  std_logic_vector(3 downto 0)
 		  
   );
-end entity passo;
+end entity MotorPasso;
 
-architecture passo of MotorPasso is
+architecture rtl of MotorPasso is
     component motor is
         port (
             clk_clk       : in  std_logic                    := 'X';             -- clk
@@ -27,9 +27,9 @@ architecture passo of MotorPasso is
 	 
     u0 : component motor
         port map (
-            clk_clk       => CONNECTED_TO_clk_clk,       --    clk.clk
-            chaves_export => CONNECTED_TO_chaves_export, -- chaves.export
-            fases_export  => CONNECTED_TO_fases_export,  --  fases.export
-            reset_reset_n => CONNECTED_TO_reset_reset_n  --  reset.reset_n
+            clk_clk       => fpga_clk_50,       --    clk.clk
+            chaves_export => fpga_chaves_pio, -- chaves.export
+            fases_export  => fpga_chaves_pio,  --  fases.export
+            reset_reset_n => '1'  --  reset.reset_n
         );
-end passo;
+end rtl;

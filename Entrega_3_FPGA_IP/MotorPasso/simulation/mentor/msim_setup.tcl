@@ -94,7 +94,7 @@
 # within the Quartus project, and generate a unified
 # script which supports all the Altera IP within the design.
 # ----------------------------------------
-# ACDS 18.1 625 linux 2020.09.16.19:39:21
+# ACDS 20.1 711 win32 2020.09.21.19:06:10
 
 # ----------------------------------------
 # Initialize variables
@@ -113,7 +113,7 @@ if ![info exists QSYS_SIMDIR] {
 }
 
 if ![info exists QUARTUS_INSTALL_DIR] { 
-  set QUARTUS_INSTALL_DIR "/home/labarqcomp/intelFPGA/18.1/quartus/"
+  set QUARTUS_INSTALL_DIR "C:/intelfpga/20.1/quartus/"
 }
 
 if ![info exists USER_DEFINED_COMPILE_OPTIONS] { 
@@ -141,15 +141,15 @@ if ![ string match "*-64 vsim*" [ vsim -version ] ] {
 # Copy ROM/RAM files to simulation directory
 alias file_copy {
   echo "\[exec\] file_copy"
-  file copy -force $QSYS_SIMDIR/submodules/MotorPasso_nios2_gen2_0_cpu_rf_ram_b.hex ./
-  file copy -force $QSYS_SIMDIR/submodules/MotorPasso_nios2_gen2_0_cpu_rf_ram_a.dat ./
-  file copy -force $QSYS_SIMDIR/submodules/MotorPasso_nios2_gen2_0_cpu_rf_ram_a.mif ./
-  file copy -force $QSYS_SIMDIR/submodules/MotorPasso_nios2_gen2_0_cpu_rf_ram_a.hex ./
-  file copy -force $QSYS_SIMDIR/submodules/MotorPasso_nios2_gen2_0_cpu_ociram_default_contents.mif ./
-  file copy -force $QSYS_SIMDIR/submodules/MotorPasso_nios2_gen2_0_cpu_ociram_default_contents.hex ./
   file copy -force $QSYS_SIMDIR/submodules/MotorPasso_nios2_gen2_0_cpu_ociram_default_contents.dat ./
-  file copy -force $QSYS_SIMDIR/submodules/MotorPasso_nios2_gen2_0_cpu_rf_ram_b.mif ./
+  file copy -force $QSYS_SIMDIR/submodules/MotorPasso_nios2_gen2_0_cpu_ociram_default_contents.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/MotorPasso_nios2_gen2_0_cpu_ociram_default_contents.mif ./
+  file copy -force $QSYS_SIMDIR/submodules/MotorPasso_nios2_gen2_0_cpu_rf_ram_a.dat ./
+  file copy -force $QSYS_SIMDIR/submodules/MotorPasso_nios2_gen2_0_cpu_rf_ram_a.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/MotorPasso_nios2_gen2_0_cpu_rf_ram_a.mif ./
   file copy -force $QSYS_SIMDIR/submodules/MotorPasso_nios2_gen2_0_cpu_rf_ram_b.dat ./
+  file copy -force $QSYS_SIMDIR/submodules/MotorPasso_nios2_gen2_0_cpu_rf_ram_b.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/MotorPasso_nios2_gen2_0_cpu_rf_ram_b.mif ./
   file copy -force $QSYS_SIMDIR/submodules/MotorPasso_onchip_memory2_1.hex ./
   file copy -force $QSYS_SIMDIR/submodules/MotorPasso_onchip_memory2_0.hex ./
 }
@@ -235,8 +235,6 @@ ensure_lib                                              ./libraries/irq_mapper/
 vmap       irq_mapper                                   ./libraries/irq_mapper/                                  
 ensure_lib                                              ./libraries/mm_interconnect_0/                           
 vmap       mm_interconnect_0                            ./libraries/mm_interconnect_0/                           
-ensure_lib                                              ./libraries/pio_1/                                       
-vmap       pio_1                                        ./libraries/pio_1/                                       
 ensure_lib                                              ./libraries/pio_0/                                       
 vmap       pio_0                                        ./libraries/pio_0/                                       
 ensure_lib                                              ./libraries/peripheral_LED_0/                            
@@ -314,16 +312,15 @@ alias com {
   eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_merlin_master_agent.sv"                                     -work nios2_gen2_0_data_master_agent              
   eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_merlin_slave_translator.sv"                                 -work jtag_uart_0_avalon_jtag_slave_translator    
   eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_merlin_master_translator.sv"                                -work nios2_gen2_0_data_master_translator         
-  eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/submodules/MotorPasso_nios2_gen2_0_cpu_test_bench.v"                          -work cpu                                         
   eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/submodules/MotorPasso_nios2_gen2_0_cpu.v"                                     -work cpu                                         
-  eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/submodules/MotorPasso_nios2_gen2_0_cpu_debug_slave_wrapper.v"                 -work cpu                                         
-  eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/submodules/MotorPasso_nios2_gen2_0_cpu_debug_slave_tck.v"                     -work cpu                                         
   eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/submodules/MotorPasso_nios2_gen2_0_cpu_debug_slave_sysclk.v"                  -work cpu                                         
+  eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/submodules/MotorPasso_nios2_gen2_0_cpu_debug_slave_tck.v"                     -work cpu                                         
+  eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/submodules/MotorPasso_nios2_gen2_0_cpu_debug_slave_wrapper.v"                 -work cpu                                         
+  eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/submodules/MotorPasso_nios2_gen2_0_cpu_test_bench.v"                          -work cpu                                         
   eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/submodules/altera_reset_controller.v"                                         -work rst_controller                              
   eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/submodules/altera_reset_synchronizer.v"                                       -work rst_controller                              
   eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/MotorPasso_irq_mapper.sv"                                          -work irq_mapper                                  
   eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/submodules/MotorPasso_mm_interconnect_0.v"                                    -work mm_interconnect_0                           
-  eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS        "$QSYS_SIMDIR/submodules/MotorPasso_pio_1.vhd"                                              -work pio_1                                       
   eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS        "$QSYS_SIMDIR/submodules/MotorPasso_pio_0.vhd"                                              -work pio_0                                       
   eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS        "$QSYS_SIMDIR/submodules/peripheral_LED.vhd"                                                -work peripheral_LED_0                            
   eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS        "$QSYS_SIMDIR/submodules/MotorPasso_onchip_memory2_1.vhd"                                   -work onchip_memory2_1                            
@@ -331,20 +328,22 @@ alias com {
   eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/submodules/MotorPasso_nios2_gen2_0.v"                                         -work nios2_gen2_0                                
   eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS        "$QSYS_SIMDIR/submodules/MotorPasso_jtag_uart_0.vhd"                                        -work jtag_uart_0                                 
   eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS        "$QSYS_SIMDIR/MotorPasso.vhd"                                                                                                                 
+  eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS        "$QSYS_SIMDIR/motorpasso_rst_controller.vhd"                                                                                                  
+  eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS        "$QSYS_SIMDIR/motorpasso_rst_controller_001.vhd"                                                                                              
 }
 
 # ----------------------------------------
 # Elaborate top level design
 alias elab {
   echo "\[exec\] elab"
-  eval vsim -t ps $ELAB_OPTIONS $USER_DEFINED_ELAB_OPTIONS -L work -L work_lib -L error_adapter_0 -L avalon_st_adapter -L rsp_mux_001 -L rsp_mux -L rsp_demux -L cmd_mux_002 -L cmd_mux -L cmd_demux_001 -L cmd_demux -L router_004 -L router_002 -L router_001 -L router -L jtag_uart_0_avalon_jtag_slave_agent_rsp_fifo -L jtag_uart_0_avalon_jtag_slave_agent -L nios2_gen2_0_data_master_agent -L jtag_uart_0_avalon_jtag_slave_translator -L nios2_gen2_0_data_master_translator -L cpu -L rst_controller -L irq_mapper -L mm_interconnect_0 -L pio_1 -L pio_0 -L peripheral_LED_0 -L onchip_memory2_1 -L onchip_memory2_0 -L nios2_gen2_0 -L jtag_uart_0 -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev $TOP_LEVEL_NAME
+  eval vsim -t ps $ELAB_OPTIONS $USER_DEFINED_ELAB_OPTIONS -L work -L work_lib -L error_adapter_0 -L avalon_st_adapter -L rsp_mux_001 -L rsp_mux -L rsp_demux -L cmd_mux_002 -L cmd_mux -L cmd_demux_001 -L cmd_demux -L router_004 -L router_002 -L router_001 -L router -L jtag_uart_0_avalon_jtag_slave_agent_rsp_fifo -L jtag_uart_0_avalon_jtag_slave_agent -L nios2_gen2_0_data_master_agent -L jtag_uart_0_avalon_jtag_slave_translator -L nios2_gen2_0_data_master_translator -L cpu -L rst_controller -L irq_mapper -L mm_interconnect_0 -L pio_0 -L peripheral_LED_0 -L onchip_memory2_1 -L onchip_memory2_0 -L nios2_gen2_0 -L jtag_uart_0 -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev $TOP_LEVEL_NAME
 }
 
 # ----------------------------------------
-# Elaborate the top level design with novopt option
+# Elaborate the top level design with -voptargs=+acc option
 alias elab_debug {
   echo "\[exec\] elab_debug"
-  eval vsim -novopt -t ps $ELAB_OPTIONS $USER_DEFINED_ELAB_OPTIONS -L work -L work_lib -L error_adapter_0 -L avalon_st_adapter -L rsp_mux_001 -L rsp_mux -L rsp_demux -L cmd_mux_002 -L cmd_mux -L cmd_demux_001 -L cmd_demux -L router_004 -L router_002 -L router_001 -L router -L jtag_uart_0_avalon_jtag_slave_agent_rsp_fifo -L jtag_uart_0_avalon_jtag_slave_agent -L nios2_gen2_0_data_master_agent -L jtag_uart_0_avalon_jtag_slave_translator -L nios2_gen2_0_data_master_translator -L cpu -L rst_controller -L irq_mapper -L mm_interconnect_0 -L pio_1 -L pio_0 -L peripheral_LED_0 -L onchip_memory2_1 -L onchip_memory2_0 -L nios2_gen2_0 -L jtag_uart_0 -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev $TOP_LEVEL_NAME
+  eval vsim -voptargs=+acc -t ps $ELAB_OPTIONS $USER_DEFINED_ELAB_OPTIONS -L work -L work_lib -L error_adapter_0 -L avalon_st_adapter -L rsp_mux_001 -L rsp_mux -L rsp_demux -L cmd_mux_002 -L cmd_mux -L cmd_demux_001 -L cmd_demux -L router_004 -L router_002 -L router_001 -L router -L jtag_uart_0_avalon_jtag_slave_agent_rsp_fifo -L jtag_uart_0_avalon_jtag_slave_agent -L nios2_gen2_0_data_master_agent -L jtag_uart_0_avalon_jtag_slave_translator -L nios2_gen2_0_data_master_translator -L cpu -L rst_controller -L irq_mapper -L mm_interconnect_0 -L pio_0 -L peripheral_LED_0 -L onchip_memory2_1 -L onchip_memory2_0 -L nios2_gen2_0 -L jtag_uart_0 -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev $TOP_LEVEL_NAME
 }
 
 # ----------------------------------------
@@ -356,7 +355,7 @@ alias ld "
 "
 
 # ----------------------------------------
-# Compile all the design files and elaborate the top level design with -novopt
+# Compile all the design files and elaborate the top level design with -voptargs=+acc
 alias ld_debug "
   dev_com
   com
@@ -376,11 +375,11 @@ alias h {
   echo
   echo "elab                                              -- Elaborate top level design"
   echo
-  echo "elab_debug                                        -- Elaborate the top level design with novopt option"
+  echo "elab_debug                                        -- Elaborate the top level design with -voptargs=+acc option"
   echo
   echo "ld                                                -- Compile all the design files and elaborate the top level design"
   echo
-  echo "ld_debug                                          -- Compile all the design files and elaborate the top level design with -novopt"
+  echo "ld_debug                                          -- Compile all the design files and elaborate the top level design with -voptargs=+acc"
   echo
   echo 
   echo

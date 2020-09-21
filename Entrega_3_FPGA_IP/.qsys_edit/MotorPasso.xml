@@ -908,7 +908,7 @@
 															<placeholder>dock.single.Hierarchy</placeholder>
 														</placeholders>
 													</leaf>
-													<leaf id="0" nodeId="1375985011087">
+													<leaf id="1" nodeId="1375985011087">
 														<placeholders>
 															<placeholder>dock.single.IP\ Catalog</placeholder>
 															<placeholder>dock.single.Device\ Family</placeholder>
@@ -1035,7 +1035,7 @@
 												<node nodeId="1600178900623" orientation="HORIZONTAL" divider="0.5231839258114374">
 													<node nodeId="1600179008669" orientation="HORIZONTAL" divider="0.6393556277520203">
 														<node nodeId="1600179014605" orientation="VERTICAL" divider="0.8195020746887967">
-															<leaf id="1" nodeId="1600178900622">
+															<leaf id="2" nodeId="1600178900622">
 																<placeholders>
 																	<placeholder>dock.single.System\ Contents</placeholder>
 																</placeholders>
@@ -1049,13 +1049,13 @@
 																	</entry>
 																</placeholder-map>
 															</leaf>
-															<leaf id="3" nodeId="1600179002508">
+															<leaf id="0" nodeId="1600179002508">
 																<placeholders>
 																	<placeholder>dock.single.Messages</placeholder>
 																</placeholders>
 															</leaf>
 														</node>
-														<leaf id="2" nodeId="1600179012147">
+														<leaf id="3" nodeId="1600179012147">
 															<placeholders>
 																<placeholder>dock.single.Parameters</placeholder>
 															</placeholders>
@@ -1088,6 +1088,16 @@
 							</adjacent>
 							<children ignore="false">
 								<child>
+									<layout factory="predefined" placeholder="dock.single.Messages">
+										<replacement id="dockablesingle Messages"/>
+										<delegate id="delegate_ccontrol backup factory id">
+											<id>Messages</id>
+											<area/>
+										</delegate>
+									</layout>
+									<children ignore="false"/>
+								</child>
+								<child>
 									<layout factory="predefined" placeholder="dock.single.IP\ Catalog">
 										<replacement id="dockablesingle IP Catalog"/>
 										<delegate id="delegate_ccontrol backup factory id">
@@ -1112,16 +1122,6 @@
 										<replacement id="dockablesingle Parameters"/>
 										<delegate id="delegate_ccontrol backup factory id">
 											<id>Parameters</id>
-											<area/>
-										</delegate>
-									</layout>
-									<children ignore="false"/>
-								</child>
-								<child>
-									<layout factory="predefined" placeholder="dock.single.Messages">
-										<replacement id="dockablesingle Messages"/>
-										<delegate id="delegate_ccontrol backup factory id">
-											<id>Messages</id>
 											<area/>
 										</delegate>
 									</layout>

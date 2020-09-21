@@ -1,4 +1,4 @@
-// (C) 2001-2018 Intel Corporation. All rights reserved.
+// (C) 2001-2020 Intel Corporation. All rights reserved.
 // Your use of Intel Corporation's design tools, logic functions and other 
 // software and tools, and its AMPP partner logic functions, and any output 
 // files from any of the foregoing (including device programming or simulation 
@@ -24,9 +24,9 @@
 // agreement for further details.
 
 
-// $Id: //acds/rel/18.1std/ip/merlin/altera_merlin_router/altera_merlin_router.sv.terp#1 $
+// $Id: //acds/rel/20.1std/ip/merlin/altera_merlin_router/altera_merlin_router.sv.terp#1 $
 // $Revision: #1 $
-// $Date: 2018/07/18 $
+// $Date: 2019/10/06 $
 // $Author: psgswbuild $
 
 // -------------------------------------------------------
@@ -50,9 +50,9 @@ module MotorPasso_mm_interconnect_0_router_004_default_decode
                DEFAULT_DESTID = 0 
    )
   (output [81 - 79 : 0] default_destination_id,
-   output [7-1 : 0] default_wr_channel,
-   output [7-1 : 0] default_rd_channel,
-   output [7-1 : 0] default_src_channel
+   output [6-1 : 0] default_wr_channel,
+   output [6-1 : 0] default_rd_channel,
+   output [6-1 : 0] default_src_channel
   );
 
   assign default_destination_id = 
@@ -63,7 +63,7 @@ module MotorPasso_mm_interconnect_0_router_004_default_decode
       assign default_src_channel = '0;
     end
     else begin : default_channel_assignment
-      assign default_src_channel = 7'b1 << DEFAULT_CHANNEL;
+      assign default_src_channel = 6'b1 << DEFAULT_CHANNEL;
     end
   endgenerate
 
@@ -73,8 +73,8 @@ module MotorPasso_mm_interconnect_0_router_004_default_decode
       assign default_rd_channel = '0;
     end
     else begin : default_rw_channel_assignment
-      assign default_wr_channel = 7'b1 << DEFAULT_WR_CHANNEL;
-      assign default_rd_channel = 7'b1 << DEFAULT_RD_CHANNEL;
+      assign default_wr_channel = 6'b1 << DEFAULT_WR_CHANNEL;
+      assign default_rd_channel = 6'b1 << DEFAULT_RD_CHANNEL;
     end
   endgenerate
 
@@ -103,7 +103,7 @@ module MotorPasso_mm_interconnect_0_router_004
     // -------------------
     output                          src_valid,
     output reg [95-1    : 0] src_data,
-    output reg [7-1 : 0] src_channel,
+    output reg [6-1 : 0] src_channel,
     output                          src_startofpacket,
     output                          src_endofpacket,
     input                           src_ready
@@ -119,7 +119,7 @@ module MotorPasso_mm_interconnect_0_router_004
     localparam PKT_PROTECTION_H = 85;
     localparam PKT_PROTECTION_L = 83;
     localparam ST_DATA_W = 95;
-    localparam ST_CHANNEL_W = 7;
+    localparam ST_CHANNEL_W = 6;
     localparam DECODER_TYPE = 1;
 
     localparam PKT_TRANS_WRITE = 57;
@@ -158,7 +158,7 @@ module MotorPasso_mm_interconnect_0_router_004
     assign src_valid         = sink_valid;
     assign src_startofpacket = sink_startofpacket;
     assign src_endofpacket   = sink_endofpacket;
-    wire [7-1 : 0] default_src_channel;
+    wire [6-1 : 0] default_src_channel;
 
 
 
@@ -190,11 +190,11 @@ module MotorPasso_mm_interconnect_0_router_004
 
 
         if (destid == 0 ) begin
-            src_channel = 7'b01;
+            src_channel = 6'b01;
         end
 
         if (destid == 1  && read_transaction) begin
-            src_channel = 7'b10;
+            src_channel = 6'b10;
         end
 
 
