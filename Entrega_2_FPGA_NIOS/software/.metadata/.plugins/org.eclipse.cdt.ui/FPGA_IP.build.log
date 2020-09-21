@@ -1,0 +1,18 @@
+19:49:14 **** Incremental Build of configuration Nios II for project FPGA_IP ****
+make all 
+Info: Building ../FPGA_IP_bsp/
+make --no-print-directory -C ../FPGA_IP_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../FPGA_IP_bsp//HAL/inc -I../FPGA_IP_bsp/ -I../FPGA_IP_bsp//drivers/inc  -pipe -D__hal__ -DALT_PROVIDE_GMON -DALT_NO_INSTRUCTION_EMULATION -DALT_SIM_OPTIMIZE -DSMALL_C_LIB -DALT_SINGLE_THREADED -DALTERA_AVALON_JTAG_UART_SMALL    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -pg -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+Info: Linking RUN_ON_HDL_SIMULATOR_ONLY_FPGA_IP.elf
+nios2-elf-g++  -T'../FPGA_IP_bsp//linker.x' -msys-crt0='../FPGA_IP_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../FPGA_IP_bsp/  -msmallc  -Wl,-Map=RUN_ON_HDL_SIMULATOR_ONLY_FPGA_IP.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -pg -mgpopt=global  -o RUN_ON_HDL_SIMULATOR_ONLY_FPGA_IP.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert RUN_ON_HDL_SIMULATOR_ONLY_FPGA_IP.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --profiling_enabled true --stderr_dev none --stdin_dev none --stdout_dev none --sopc_system_name MotorPasso --quartus_project_dir "/home/labarqcomp/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP" --jdi ../..//output_files/Entrega_2_FPGA_NIOS.jdi --sopcinfo /home/labarqcomp/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/software/FPGA_IP_bsp/../../MotorPasso.sopcinfo
+Info: (RUN_ON_HDL_SIMULATOR_ONLY_FPGA_IP.elf) 6416 Bytes program size (code + initialized data).
+Info:                                         120 KBytes free for stack + heap.
+Info: Creating RUN_ON_HDL_SIMULATOR_ONLY_FPGA_IP.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source RUN_ON_HDL_SIMULATOR_ONLY_FPGA_IP.elf >RUN_ON_HDL_SIMULATOR_ONLY_FPGA_IP.objdump
+[RUN_ON_HDL_SIMULATOR_ONLY_FPGA_IP build complete]
+
+19:49:15 Build Finished (took 924ms)
+

@@ -1,0 +1,4 @@
+eclipse.preferences.version=1
+newSoftwareExampleWizardPage.defaultLocation=/home/labarqcomp/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/software/FPGA_IP
+newSoftwareExampleWizardPage.sopcinfoFile=/home/labarqcomp/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso.sopcinfo
+newSoftwareExampleWizardPage2.newBspLocation=/home/labarqcomp/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/software/FPGA_IP_bsp
