@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 18.1 625 linux 2020.09.10.11:55:42
+# ACDS 18.1 625 linux 2020.09.23.15:31:15
 
 # ----------------------------------------
 # vcsmx - auto-generated simulation script
@@ -107,7 +107,7 @@
 # within the Quartus project, and generate a unified
 # script which supports all the Altera IP within the design.
 # ----------------------------------------
-# ACDS 18.1 625 linux 2020.09.10.11:55:42
+# ACDS 18.1 625 linux 2020.09.23.15:31:15
 # ----------------------------------------
 # initialize variables
 TOP_LEVEL_NAME="MotorPasso_tb"
@@ -147,18 +147,16 @@ fi
 # ----------------------------------------
 # create compilation libraries
 mkdir -p ./libraries/work/
-mkdir -p ./libraries/altera_common_sv_packages/
 mkdir -p ./libraries/error_adapter_0/
 mkdir -p ./libraries/avalon_st_adapter/
 mkdir -p ./libraries/rsp_mux_001/
 mkdir -p ./libraries/rsp_mux/
 mkdir -p ./libraries/rsp_demux/
-mkdir -p ./libraries/cmd_mux_001/
+mkdir -p ./libraries/cmd_mux_002/
 mkdir -p ./libraries/cmd_mux/
 mkdir -p ./libraries/cmd_demux_001/
 mkdir -p ./libraries/cmd_demux/
-mkdir -p ./libraries/router_007/
-mkdir -p ./libraries/router_003/
+mkdir -p ./libraries/router_004/
 mkdir -p ./libraries/router_002/
 mkdir -p ./libraries/router_001/
 mkdir -p ./libraries/router/
@@ -171,14 +169,14 @@ mkdir -p ./libraries/cpu/
 mkdir -p ./libraries/rst_controller/
 mkdir -p ./libraries/irq_mapper/
 mkdir -p ./libraries/mm_interconnect_0/
-mkdir -p ./libraries/pio_1/
 mkdir -p ./libraries/pio_0/
+mkdir -p ./libraries/peripheral_LED_0/
 mkdir -p ./libraries/onchip_memory2_1/
 mkdir -p ./libraries/onchip_memory2_0/
 mkdir -p ./libraries/nios2_gen2_0/
 mkdir -p ./libraries/jtag_uart_0/
 mkdir -p ./libraries/MotorPasso_inst_reset_bfm/
-mkdir -p ./libraries/MotorPasso_inst_fases_bfm/
+mkdir -p ./libraries/MotorPasso_inst_leds_bfm/
 mkdir -p ./libraries/MotorPasso_inst_clk_bfm/
 mkdir -p ./libraries/MotorPasso_inst_chaves_bfm/
 mkdir -p ./libraries/MotorPasso_inst/
@@ -190,6 +188,12 @@ mkdir -p ./libraries/altera_lnsim_ver/
 mkdir -p ./libraries/cyclonev_ver/
 mkdir -p ./libraries/cyclonev_hssi_ver/
 mkdir -p ./libraries/cyclonev_pcie_hip_ver/
+mkdir -p ./libraries/altera/
+mkdir -p ./libraries/lpm/
+mkdir -p ./libraries/sgate/
+mkdir -p ./libraries/altera_mf/
+mkdir -p ./libraries/altera_lnsim/
+mkdir -p ./libraries/cyclonev/
 
 # ----------------------------------------
 # copy RAM/ROM files to simulation directory
@@ -222,27 +226,42 @@ if [ $SKIP_DEV_COM -eq 0 ]; then
   vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QUARTUS_INSTALL_DIR/eda/sim_lib/cyclonev_hssi_atoms.v"                     -work cyclonev_hssi_ver    
   vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QUARTUS_INSTALL_DIR/eda/sim_lib/synopsys/cyclonev_pcie_hip_atoms_ncrypt.v" -work cyclonev_pcie_hip_ver
   vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QUARTUS_INSTALL_DIR/eda/sim_lib/cyclonev_pcie_hip_atoms.v"                 -work cyclonev_pcie_hip_ver
+  vhdlan $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS                   "$QUARTUS_INSTALL_DIR/eda/sim_lib/altera_syn_attributes.vhd"                 -work altera               
+  vhdlan $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS                   "$QUARTUS_INSTALL_DIR/eda/sim_lib/altera_standard_functions.vhd"             -work altera               
+  vhdlan $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS                   "$QUARTUS_INSTALL_DIR/eda/sim_lib/alt_dspbuilder_package.vhd"                -work altera               
+  vhdlan $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS                   "$QUARTUS_INSTALL_DIR/eda/sim_lib/altera_europa_support_lib.vhd"             -work altera               
+  vhdlan $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS                   "$QUARTUS_INSTALL_DIR/eda/sim_lib/altera_primitives_components.vhd"          -work altera               
+  vhdlan $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS                   "$QUARTUS_INSTALL_DIR/eda/sim_lib/altera_primitives.vhd"                     -work altera               
+  vhdlan $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS                   "$QUARTUS_INSTALL_DIR/eda/sim_lib/220pack.vhd"                               -work lpm                  
+  vhdlan $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS                   "$QUARTUS_INSTALL_DIR/eda/sim_lib/220model.vhd"                              -work lpm                  
+  vhdlan $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS                   "$QUARTUS_INSTALL_DIR/eda/sim_lib/sgate_pack.vhd"                            -work sgate                
+  vhdlan $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS                   "$QUARTUS_INSTALL_DIR/eda/sim_lib/sgate.vhd"                                 -work sgate                
+  vhdlan $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS                   "$QUARTUS_INSTALL_DIR/eda/sim_lib/altera_mf_components.vhd"                  -work altera_mf            
+  vhdlan $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS                   "$QUARTUS_INSTALL_DIR/eda/sim_lib/altera_mf.vhd"                             -work altera_mf            
+  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QUARTUS_INSTALL_DIR/eda/sim_lib/altera_lnsim.sv"                           -work altera_lnsim         
+  vhdlan $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS                   "$QUARTUS_INSTALL_DIR/eda/sim_lib/altera_lnsim_components.vhd"               -work altera_lnsim         
+  vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QUARTUS_INSTALL_DIR/eda/sim_lib/synopsys/cyclonev_atoms_ncrypt.v"          -work cyclonev             
+  vhdlan $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS                   "$QUARTUS_INSTALL_DIR/eda/sim_lib/cyclonev_atoms.vhd"                        -work cyclonev             
+  vhdlan $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS                   "$QUARTUS_INSTALL_DIR/eda/sim_lib/cyclonev_components.vhd"                   -work cyclonev             
 fi
 
 # ----------------------------------------
 # compile design files in correct order
 if [ $SKIP_COM -eq 0 ]; then
-  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/verbosity_pkg.sv"                                                  -work altera_common_sv_packages                   
   vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/MotorPasso_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv" -work error_adapter_0                             
-  vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/MotorPasso_mm_interconnect_0_avalon_st_adapter.v"                  -work avalon_st_adapter                           
+  vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/MotorPasso_mm_interconnect_0_avalon_st_adapter.vhd"                -work avalon_st_adapter                           
   vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/MotorPasso_mm_interconnect_0_rsp_mux_001.sv"                       -work rsp_mux_001                                 
   vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/altera_merlin_arbitrator.sv"                                       -work rsp_mux_001                                 
   vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/MotorPasso_mm_interconnect_0_rsp_mux.sv"                           -work rsp_mux                                     
   vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/altera_merlin_arbitrator.sv"                                       -work rsp_mux                                     
   vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/MotorPasso_mm_interconnect_0_rsp_demux.sv"                         -work rsp_demux                                   
-  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/MotorPasso_mm_interconnect_0_cmd_mux_001.sv"                       -work cmd_mux_001                                 
-  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/altera_merlin_arbitrator.sv"                                       -work cmd_mux_001                                 
+  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/MotorPasso_mm_interconnect_0_cmd_mux_002.sv"                       -work cmd_mux_002                                 
+  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/altera_merlin_arbitrator.sv"                                       -work cmd_mux_002                                 
   vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/MotorPasso_mm_interconnect_0_cmd_mux.sv"                           -work cmd_mux                                     
   vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/altera_merlin_arbitrator.sv"                                       -work cmd_mux                                     
   vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/MotorPasso_mm_interconnect_0_cmd_demux_001.sv"                     -work cmd_demux_001                               
   vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/MotorPasso_mm_interconnect_0_cmd_demux.sv"                         -work cmd_demux                                   
-  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/MotorPasso_mm_interconnect_0_router_007.sv"                        -work router_007                                  
-  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/MotorPasso_mm_interconnect_0_router_003.sv"                        -work router_003                                  
+  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/MotorPasso_mm_interconnect_0_router_004.sv"                        -work router_004                                  
   vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/MotorPasso_mm_interconnect_0_router_002.sv"                        -work router_002                                  
   vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/MotorPasso_mm_interconnect_0_router_001.sv"                        -work router_001                                  
   vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/MotorPasso_mm_interconnect_0_router.sv"                            -work router                                      
@@ -261,18 +280,22 @@ if [ $SKIP_COM -eq 0 ]; then
   vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/altera_reset_synchronizer.v"                                       -work rst_controller                              
   vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/MotorPasso_irq_mapper.sv"                                          -work irq_mapper                                  
   vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/MotorPasso_mm_interconnect_0.v"                                    -work mm_interconnect_0                           
-  vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/MotorPasso_pio_1.v"                                                -work pio_1                                       
-  vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/MotorPasso_pio_0.v"                                                -work pio_0                                       
-  vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/MotorPasso_onchip_memory2_1.v"                                     -work onchip_memory2_1                            
-  vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/MotorPasso_onchip_memory2_0.v"                                     -work onchip_memory2_0                            
+  vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/MotorPasso_pio_0.vhd"                                              -work pio_0                                       
+  vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/peripheral_LED.vhd"                                                -work peripheral_LED_0                            
+  vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/MotorPasso_onchip_memory2_1.vhd"                                   -work onchip_memory2_1                            
+  vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/MotorPasso_onchip_memory2_0.vhd"                                   -work onchip_memory2_0                            
   vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0.v"                                         -work nios2_gen2_0                                
-  vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/MotorPasso_jtag_uart_0.v"                                          -work jtag_uart_0                                 
-  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/altera_avalon_reset_source.sv"                                     -work MotorPasso_inst_reset_bfm                   
-  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/altera_conduit_bfm_0002.sv"                                        -work MotorPasso_inst_fases_bfm                   
-  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/altera_avalon_clock_source.sv"                                     -work MotorPasso_inst_clk_bfm                     
-  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/altera_conduit_bfm.sv"                                             -work MotorPasso_inst_chaves_bfm                  
-  vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/MotorPasso.v"                                                      -work MotorPasso_inst                             
-  vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/MotorPasso_tb/simulation/MotorPasso_tb.v"                                                                                                                
+  vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/MotorPasso_jtag_uart_0.vhd"                                        -work jtag_uart_0                                 
+  vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/altera_avalon_reset_source.vhd"                                    -work MotorPasso_inst_reset_bfm                   
+  vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/altera_conduit_bfm_0002_vhdl_pkg.vhd"                              -work MotorPasso_inst_leds_bfm                    
+  vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/altera_conduit_bfm_0002.vhd"                                       -work MotorPasso_inst_leds_bfm                    
+  vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/altera_avalon_clock_source.vhd"                                    -work MotorPasso_inst_clk_bfm                     
+  vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/altera_conduit_bfm_vhdl_pkg.vhd"                                   -work MotorPasso_inst_chaves_bfm                  
+  vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/altera_conduit_bfm.vhd"                                            -work MotorPasso_inst_chaves_bfm                  
+  vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/MotorPasso.vhd"                                                    -work MotorPasso_inst                             
+  vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/motorpasso_rst_controller.vhd"                                     -work MotorPasso_inst                             
+  vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/motorpasso_rst_controller_001.vhd"                                 -work MotorPasso_inst                             
+  vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/MotorPasso_tb/simulation/MotorPasso_tb.vhd"                                                                                                              
 fi
 
 # ----------------------------------------

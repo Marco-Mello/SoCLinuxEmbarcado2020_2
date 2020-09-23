@@ -6,15 +6,15 @@
 module MotorPasso_tb (
 	);
 
-	wire        motorpasso_inst_clk_bfm_clk_clk;           // MotorPasso_inst_clk_bfm:clk -> [MotorPasso_inst:clk_clk, MotorPasso_inst_reset_bfm:clk]
+	wire        motorpasso_inst_clk_bfm_clk_clk;           // MotorPasso_inst_clk_bfm:clk -> [MotorPasso_inst:clk_clk, MotorPasso_inst_leds_bfm:clk, MotorPasso_inst_reset_bfm:clk]
 	wire  [3:0] motorpasso_inst_chaves_bfm_conduit_export; // MotorPasso_inst_chaves_bfm:sig_export -> MotorPasso_inst:chaves_export
-	wire  [3:0] motorpasso_inst_fases_export;              // MotorPasso_inst:fases_export -> MotorPasso_inst_fases_bfm:sig_export
+	wire  [3:0] motorpasso_inst_leds_name;                 // MotorPasso_inst:leds_name -> MotorPasso_inst_leds_bfm:sig_name
 	wire        motorpasso_inst_reset_bfm_reset_reset;     // MotorPasso_inst_reset_bfm:reset -> MotorPasso_inst:reset_reset_n
 
 	MotorPasso motorpasso_inst (
 		.chaves_export (motorpasso_inst_chaves_bfm_conduit_export), // chaves.export
 		.clk_clk       (motorpasso_inst_clk_bfm_clk_clk),           //    clk.clk
-		.fases_export  (motorpasso_inst_fases_export),              //  fases.export
+		.leds_name     (motorpasso_inst_leds_name),                 //   leds.name
 		.reset_reset_n (motorpasso_inst_reset_bfm_reset_reset)      //  reset.reset_n
 	);
 
@@ -29,8 +29,10 @@ module MotorPasso_tb (
 		.clk (motorpasso_inst_clk_bfm_clk_clk)  // clk.clk
 	);
 
-	altera_conduit_bfm_0002 motorpasso_inst_fases_bfm (
-		.sig_export (motorpasso_inst_fases_export)  // conduit.export
+	altera_conduit_bfm_0002 motorpasso_inst_leds_bfm (
+		.clk      (motorpasso_inst_clk_bfm_clk_clk), //     clk.clk
+		.sig_name (motorpasso_inst_leds_name),       // conduit.name
+		.reset    (1'b0)                             // (terminated)
 	);
 
 	altera_avalon_reset_source #(

@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 18.1 625 linux 2020.09.21.19:34:43
+# ACDS 18.1 625 linux 2020.09.23.15:16:22
 
 # ----------------------------------------
 # vcs - auto-generated simulation script
@@ -94,7 +94,7 @@
 # within the Quartus project, and generate a unified
 # script which supports all the Altera IP within the design.
 # ----------------------------------------
-# ACDS 18.1 625 linux 2020.09.21.19:34:43
+# ACDS 18.1 625 linux 2020.09.23.15:16:22
 # ----------------------------------------
 # initialize variables
 TOP_LEVEL_NAME="MotorPasso_tb"
@@ -130,17 +130,17 @@ fi
 # ----------------------------------------
 # copy RAM/ROM files to simulation directory
 if [ $SKIP_FILE_COPY -eq 0 ]; then
-  cp -f /home/labarqcomp/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu_rf_ram_a.mif ./
-  cp -f /home/labarqcomp/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu_ociram_default_contents.hex ./
-  cp -f /home/labarqcomp/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu_ociram_default_contents.mif ./
-  cp -f /home/labarqcomp/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu_rf_ram_a.hex ./
-  cp -f /home/labarqcomp/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu_rf_ram_b.mif ./
-  cp -f /home/labarqcomp/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu_rf_ram_b.hex ./
-  cp -f /home/labarqcomp/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu_ociram_default_contents.dat ./
-  cp -f /home/labarqcomp/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu_rf_ram_b.dat ./
-  cp -f /home/labarqcomp/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu_rf_ram_a.dat ./
-  cp -f /home/labarqcomp/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_onchip_memory2_1.hex ./
-  cp -f /home/labarqcomp/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_onchip_memory2_0.hex ./
+  cp -f /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu_rf_ram_a.mif ./
+  cp -f /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu_ociram_default_contents.hex ./
+  cp -f /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu_ociram_default_contents.mif ./
+  cp -f /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu_rf_ram_a.hex ./
+  cp -f /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu_rf_ram_b.mif ./
+  cp -f /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu_rf_ram_b.hex ./
+  cp -f /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu_ociram_default_contents.dat ./
+  cp -f /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu_rf_ram_b.dat ./
+  cp -f /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu_rf_ram_a.dat ./
+  cp -f /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_onchip_memory2_1.hex ./
+  cp -f /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_onchip_memory2_0.hex ./
 fi
 
 vcs -lca -timescale=1ps/1ps -sverilog +verilog2001ext+.v -ntb_opts dtm $ELAB_OPTIONS $USER_DEFINED_ELAB_OPTIONS \
@@ -156,49 +156,49 @@ vcs -lca -timescale=1ps/1ps -sverilog +verilog2001ext+.v -ntb_opts dtm $ELAB_OPT
   -v $QUARTUS_INSTALL_DIR/eda/sim_lib/cyclonev_hssi_atoms.v \
   -v $QUARTUS_INSTALL_DIR/eda/sim_lib/synopsys/cyclonev_pcie_hip_atoms_ncrypt.v \
   -v $QUARTUS_INSTALL_DIR/eda/sim_lib/cyclonev_pcie_hip_atoms.v \
-  /home/labarqcomp/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/verbosity_pkg.sv \
-  /home/labarqcomp/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv \
-  /home/labarqcomp/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_mm_interconnect_0_avalon_st_adapter.v \
-  /home/labarqcomp/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_mm_interconnect_0_rsp_mux_001.sv \
-  /home/labarqcomp/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/altera_merlin_arbitrator.sv \
-  /home/labarqcomp/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_mm_interconnect_0_rsp_mux.sv \
-  /home/labarqcomp/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_mm_interconnect_0_rsp_demux.sv \
-  /home/labarqcomp/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_mm_interconnect_0_cmd_mux_001.sv \
-  /home/labarqcomp/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_mm_interconnect_0_cmd_mux.sv \
-  /home/labarqcomp/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_mm_interconnect_0_cmd_demux_001.sv \
-  /home/labarqcomp/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_mm_interconnect_0_cmd_demux.sv \
-  /home/labarqcomp/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_mm_interconnect_0_router_007.sv \
-  /home/labarqcomp/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_mm_interconnect_0_router_003.sv \
-  /home/labarqcomp/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_mm_interconnect_0_router_002.sv \
-  /home/labarqcomp/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_mm_interconnect_0_router_001.sv \
-  /home/labarqcomp/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_mm_interconnect_0_router.sv \
-  /home/labarqcomp/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/altera_avalon_sc_fifo.v \
-  /home/labarqcomp/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/altera_merlin_slave_agent.sv \
-  /home/labarqcomp/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/altera_merlin_burst_uncompressor.sv \
-  /home/labarqcomp/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/altera_merlin_master_agent.sv \
-  /home/labarqcomp/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/altera_merlin_slave_translator.sv \
-  /home/labarqcomp/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/altera_merlin_master_translator.sv \
-  /home/labarqcomp/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu_debug_slave_tck.v \
-  /home/labarqcomp/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu_debug_slave_sysclk.v \
-  /home/labarqcomp/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu.v \
-  /home/labarqcomp/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu_test_bench.v \
-  /home/labarqcomp/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu_debug_slave_wrapper.v \
-  /home/labarqcomp/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/altera_reset_controller.v \
-  /home/labarqcomp/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/altera_reset_synchronizer.v \
-  /home/labarqcomp/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_irq_mapper.sv \
-  /home/labarqcomp/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_mm_interconnect_0.v \
-  /home/labarqcomp/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_pio_1.v \
-  /home/labarqcomp/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_pio_0.v \
-  /home/labarqcomp/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_onchip_memory2_1.v \
-  /home/labarqcomp/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_onchip_memory2_0.v \
-  /home/labarqcomp/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0.v \
-  /home/labarqcomp/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_jtag_uart_0.v \
-  /home/labarqcomp/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/altera_avalon_reset_source.sv \
-  /home/labarqcomp/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/altera_conduit_bfm_0002.sv \
-  /home/labarqcomp/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/altera_avalon_clock_source.sv \
-  /home/labarqcomp/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/altera_conduit_bfm.sv \
-  /home/labarqcomp/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso.v \
-  /home/labarqcomp/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/MotorPasso_tb.v \
+  /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/verbosity_pkg.sv \
+  /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv \
+  /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_mm_interconnect_0_avalon_st_adapter.v \
+  /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_mm_interconnect_0_rsp_mux_001.sv \
+  /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/altera_merlin_arbitrator.sv \
+  /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_mm_interconnect_0_rsp_mux.sv \
+  /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_mm_interconnect_0_rsp_demux.sv \
+  /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_mm_interconnect_0_cmd_mux_001.sv \
+  /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_mm_interconnect_0_cmd_mux.sv \
+  /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_mm_interconnect_0_cmd_demux_001.sv \
+  /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_mm_interconnect_0_cmd_demux.sv \
+  /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_mm_interconnect_0_router_007.sv \
+  /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_mm_interconnect_0_router_003.sv \
+  /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_mm_interconnect_0_router_002.sv \
+  /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_mm_interconnect_0_router_001.sv \
+  /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_mm_interconnect_0_router.sv \
+  /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/altera_avalon_sc_fifo.v \
+  /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/altera_merlin_slave_agent.sv \
+  /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/altera_merlin_burst_uncompressor.sv \
+  /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/altera_merlin_master_agent.sv \
+  /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/altera_merlin_slave_translator.sv \
+  /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/altera_merlin_master_translator.sv \
+  /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu_debug_slave_tck.v \
+  /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu_debug_slave_sysclk.v \
+  /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu.v \
+  /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu_test_bench.v \
+  /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu_debug_slave_wrapper.v \
+  /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/altera_reset_controller.v \
+  /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/altera_reset_synchronizer.v \
+  /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_irq_mapper.sv \
+  /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_mm_interconnect_0.v \
+  /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_pio_1.v \
+  /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_pio_0.v \
+  /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_onchip_memory2_1.v \
+  /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_onchip_memory2_0.v \
+  /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0.v \
+  /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_jtag_uart_0.v \
+  /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/altera_avalon_reset_source.sv \
+  /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/altera_conduit_bfm_0002.sv \
+  /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/altera_avalon_clock_source.sv \
+  /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/altera_conduit_bfm.sv \
+  /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso.v \
+  /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/MotorPasso_tb.v \
   -top $TOP_LEVEL_NAME
 # ----------------------------------------
 # simulate

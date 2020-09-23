@@ -28,29 +28,35 @@
 // This BFM's HDL is been generated through terp file in Qsys/SOPC Builder.
 // Generation parameters:
 // output_name:                                       altera_conduit_bfm_0002
-// role:width:direction:                              export:4:input
-// 0
+// role:width:direction:                              name:4:input
+// 1
 //-----------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
 module altera_conduit_bfm_0002
 (
-   sig_export
+   clk,
+   reset,
+   reset_n,
+   sig_name
 );
 
    //--------------------------------------------------------------------------
    // =head1 PINS 
    // =head2 User defined interface
    //--------------------------------------------------------------------------
-   input [3 : 0] sig_export;
+   input clk;
+   input reset;
+   input reset_n;
+   input [3 : 0] sig_name;
 
    // synthesis translate_off
    import verbosity_pkg::*;
    
-   typedef logic [3 : 0] ROLE_export_t;
+   typedef logic [3 : 0] ROLE_name_t;
 
-   logic [3 : 0] sig_export_in;
-   logic [3 : 0] sig_export_local;
+   logic [3 : 0] sig_name_in;
+   logic [3 : 0] sig_name_local;
 
    //--------------------------------------------------------------------------
    // =head1 Public Methods API
@@ -70,7 +76,8 @@ module altera_conduit_bfm_0002
    // =cut
    //--------------------------------------------------------------------------
    
-   event signal_input_export_change;
+   event signal_reset_asserted;
+   event signal_input_name_change;
    
    function automatic string get_version();  // public
       // Return BFM version string. For example, version 9.1 sp1 is "9.1sp1" 
@@ -79,24 +86,30 @@ module altera_conduit_bfm_0002
    endfunction
 
    // -------------------------------------------------------
-   // export
+   // name
    // -------------------------------------------------------
-   function automatic ROLE_export_t get_export();
+   function automatic ROLE_name_t get_name();
    
-      // Gets the export input value.
-      $sformat(message, "%m: called get_export");
+      // Gets the name input value.
+      $sformat(message, "%m: called get_name");
       print(VERBOSITY_DEBUG, message);
-      return sig_export_in;
+      return sig_name_in;
       
    endfunction
 
-   assign sig_export_in = sig_export;
+   always @(posedge clk) begin
+      sig_name_in <= sig_name;
+   end
+   
 
+   always @(posedge reset or negedge reset_n) begin
+      -> signal_reset_asserted;
+   end
 
-   always @(sig_export_in) begin
-      if (sig_export_local != sig_export_in)
-         -> signal_input_export_change;
-      sig_export_local = sig_export_in;
+   always @(sig_name_in) begin
+      if (sig_name_local != sig_name_in)
+         -> signal_input_name_change;
+      sig_name_local = sig_name_in;
    end
    
 

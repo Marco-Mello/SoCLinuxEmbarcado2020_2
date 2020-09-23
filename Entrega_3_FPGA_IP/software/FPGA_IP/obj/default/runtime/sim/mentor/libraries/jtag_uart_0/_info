@@ -1,0 +1,359 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/software/FPGA_IP/obj/default/runtime/sim/mentor
+Emotorpasso_jtag_uart_0
+Z1 w1600885836
+Z2 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z3 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z4 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z6 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z7 DPx6 altera 25 altera_europa_support_lib 0 22 C0c:iN^HNdl8^07`ST5U^3
+R0
+Z8 8/home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_jtag_uart_0.vhd
+Z9 F/home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_jtag_uart_0.vhd
+l0
+L455
+V_8FZ`dLNz2Soz53QL4cUW1
+!s100 4KC^zhf5[gjjXz9WdhQ5A2
+Z10 OV;C;10.5b;63
+32
+Z11 !s110 1600885927
+!i10b 1
+Z12 !s108 1600885926.000000
+Z13 !s90 -reportprogress|300|/home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_jtag_uart_0.vhd|-work|jtag_uart_0|
+Z14 !s107 /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_jtag_uart_0.vhd|
+!i113 1
+Z15 o-work jtag_uart_0
+Z16 tExplicit 1 CvgOpt 0
+Aeuropa
+R2
+R3
+R4
+R5
+R6
+R7
+Z17 DEx4 work 22 motorpasso_jtag_uart_0 0 22 _8FZ`dLNz2Soz53QL4cUW1
+l573
+L478
+Z18 VgS>>67YeFD8Ak@G3VdZe^3
+Z19 !s100 C;Ef;P2BW^?cZZX>TbNio3
+R10
+32
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
+vMotorPasso_jtag_uart_0
+Z20 !s110 1600885535
+!i10b 1
+!s100 IDiS3KLG7eWY@]D02hb5Y3
+I8^995oHOZ]VS=eHdNQj5m3
+Z21 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z22 w1600885381
+Z23 8/home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_jtag_uart_0.v
+Z24 F/home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_jtag_uart_0.v
+L0 331
+Z25 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z26 !s108 1600885535.000000
+Z27 !s107 /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_jtag_uart_0.v|
+Z28 !s90 -reportprogress|300|/home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_jtag_uart_0.v|-work|jtag_uart_0|
+!i113 1
+R15
+Z29 tCvgOpt 0
+n@motor@passo_jtag_uart_0
+Emotorpasso_jtag_uart_0_scfifo_r
+R1
+R2
+R3
+R4
+R5
+R6
+R7
+R0
+R8
+R9
+l0
+L313
+VN=OzXQG8U]e8NSD`l]BY82
+!s100 oKI]UM]]30YJ9N2iUzUcT0
+R10
+32
+Z30 !s110 1600885926
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
+Aeuropa
+R2
+R3
+R4
+R5
+R6
+R7
+Z31 DEx4 work 31 motorpasso_jtag_uart_0_scfifo_r 0 22 N=OzXQG8U]e8NSD`l]BY82
+l381
+L332
+Z32 VhQj3PigJjUieSbQbD4=9R3
+Z33 !s100 Ok7?ldh<S`OCbIfn<n<^U1
+R10
+32
+R30
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
+vMotorPasso_jtag_uart_0_scfifo_r
+R20
+!i10b 1
+!s100 <Vc_@W3YPOPhC`L0Fb2C>3
+Ia3NkPbeEGl@40TE7YF^BP3
+R21
+R0
+R22
+R23
+R24
+L0 243
+R25
+r1
+!s85 0
+31
+R26
+R27
+R28
+!i113 1
+R15
+R29
+n@motor@passo_jtag_uart_0_scfifo_r
+Emotorpasso_jtag_uart_0_scfifo_w
+R1
+R2
+R3
+R4
+R5
+R6
+R7
+R0
+R8
+R9
+l0
+L95
+VcW[k^N_NeRS`Y^bOAL^]Z0
+!s100 H_27aYgXdEF[A07<MmjJD0
+R10
+32
+R30
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
+Aeuropa
+R2
+R3
+R4
+R5
+R6
+R7
+Z34 DEx4 work 31 motorpasso_jtag_uart_0_scfifo_w 0 22 cW[k^N_NeRS`Y^bOAL^]Z0
+l162
+L113
+Z35 V@O0:^AA1hYUT=j^meJCJQ0
+Z36 !s100 2l01kLU;[I=PEDYUfc[Yf0
+R10
+32
+R30
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
+vMotorPasso_jtag_uart_0_scfifo_w
+R20
+!i10b 1
+!s100 bA^HmRTL]5DTKJn4YlRbk0
+Ie07<W4h8GKmO83jOz<]Wd1
+R21
+R0
+R22
+R23
+R24
+L0 78
+R25
+r1
+!s85 0
+31
+R26
+R27
+R28
+!i113 1
+R15
+R29
+n@motor@passo_jtag_uart_0_scfifo_w
+Emotorpasso_jtag_uart_0_sim_scfifo_r
+R1
+Z37 DPx9 altera_mf 20 altera_mf_components 0 22 gV:l9C^?PSb6]b5V?_jR@3
+R2
+R3
+R4
+R5
+R6
+R7
+R0
+R8
+R9
+l0
+L233
+V;?VhHl8jEa2<fo7L22Z8i2
+!s100 SG4CzjcW3XLLBKZmI4l^<1
+R10
+32
+R30
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
+Aeuropa
+R37
+R2
+R3
+R4
+R5
+R6
+R7
+Z38 DEx4 work 35 motorpasso_jtag_uart_0_sim_scfifo_r 0 22 ;?VhHl8jEa2<fo7L22Z8i2
+l257
+L249
+Z39 Vc3@QkePWE?j3e?OiP6^8G2
+Z40 !s100 j0WHH[9KoEhjg^zf?o3U00
+R10
+32
+R30
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
+vMotorPasso_jtag_uart_0_sim_scfifo_r
+R20
+!i10b 1
+!s100 07lDRFjDa5Ec@V`8:N42]0
+ISggz_CWlLNHW4LF?BlSB93
+R21
+R0
+R22
+R23
+R24
+L0 164
+R25
+r1
+!s85 0
+31
+R26
+R27
+R28
+!i113 1
+R15
+R29
+n@motor@passo_jtag_uart_0_sim_scfifo_r
+Emotorpasso_jtag_uart_0_sim_scfifo_w
+R1
+R37
+R2
+R3
+R4
+R5
+R6
+R7
+R0
+R8
+R9
+l0
+L32
+VFE9]gO5L0IL_RDS9b2;M21
+!s100 zRlYY6S?7iM<9ndo0GIe40
+R10
+32
+R30
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
+Aeuropa
+R37
+R2
+R3
+R4
+R5
+R6
+R7
+Z41 DEx4 work 35 motorpasso_jtag_uart_0_sim_scfifo_w 0 22 FE9]gO5L0IL_RDS9b2;M21
+l50
+L48
+Z42 VNeWal<=IZ6OZNJK^7I8TR2
+Z43 !s100 m>7@DPCzn3S6gfjkkGDG41
+R10
+32
+R30
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
+vMotorPasso_jtag_uart_0_sim_scfifo_w
+R20
+!i10b 1
+!s100 4JFMkVE1h:kQH[gGE8RH[3
+IzDT5P3JRR?6K8czm7PFb03
+R21
+R0
+R22
+R23
+R24
+L0 21
+R25
+r1
+!s85 0
+31
+R26
+R27
+R28
+!i113 1
+R15
+R29
+n@motor@passo_jtag_uart_0_sim_scfifo_w

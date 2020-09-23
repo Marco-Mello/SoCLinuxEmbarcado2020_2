@@ -33,7 +33,7 @@
          type = "int";
       }
    }
-   element MotorPasso_inst_fases_bfm
+   element MotorPasso_inst_leds_bfm
    {
       datum _sortIndex
       {
@@ -63,7 +63,7 @@
  <parameter name="hideFromIPCatalog" value="false" />
  <parameter name="lockedInterfaceDefinition" value="" />
  <parameter name="maxAdditionalLatency" value="1" />
- <parameter name="projectName">Entrega_2_FPGA_NIOS.qpf</parameter>
+ <parameter name="projectName">Entrega_3_FPGA_IP.qpf</parameter>
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="0" />
  <parameter name="testBenchDutName" value="MotorPasso" />
@@ -100,14 +100,14 @@
   <parameter name="CLOCK_UNIT" value="1" />
  </module>
  <module
-   name="MotorPasso_inst_fases_bfm"
+   name="MotorPasso_inst_leds_bfm"
    kind="altera_conduit_bfm"
    version="18.1"
    enabled="1">
-  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="CLOCKED_SIGNAL" value="true" />
   <parameter name="ENABLE_RESET" value="false" />
   <parameter name="SIGNAL_DIRECTIONS" value="input" />
-  <parameter name="SIGNAL_ROLES" value="export" />
+  <parameter name="SIGNAL_ROLES" value="name" />
   <parameter name="SIGNAL_WIDTHS" value="4" />
  </module>
  <module
@@ -129,6 +129,11 @@
    start="MotorPasso_inst_clk_bfm.clk"
    end="MotorPasso_inst_reset_bfm.clk" />
  <connection
+   kind="clock"
+   version="18.1"
+   start="MotorPasso_inst_clk_bfm.clk"
+   end="MotorPasso_inst_leds_bfm.clk" />
+ <connection
    kind="conduit"
    version="18.1"
    start="MotorPasso_inst_chaves_bfm.conduit"
@@ -142,8 +147,8 @@
  <connection
    kind="conduit"
    version="18.1"
-   start="MotorPasso_inst_fases_bfm.conduit"
-   end="MotorPasso_inst.fases">
+   start="MotorPasso_inst_leds_bfm.conduit"
+   end="MotorPasso_inst.leds">
   <parameter name="endPort" value="" />
   <parameter name="endPortLSB" value="0" />
   <parameter name="startPort" value="" />

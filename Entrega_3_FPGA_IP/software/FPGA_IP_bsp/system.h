@@ -4,7 +4,7 @@
  * Machine generated for CPU 'nios2_gen2_0' in SOPC Builder design 'MotorPasso'
  * SOPC Builder design path: ../../MotorPasso.sopcinfo
  *
- * Generated: Mon Sep 21 19:31:14 BRT 2020
+ * Generated: Wed Sep 23 15:11:27 BRT 2020
  */
 
 /*
