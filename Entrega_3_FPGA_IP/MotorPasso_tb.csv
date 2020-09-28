@@ -1,12 +1,23 @@
+<<<<<<< HEAD
 # system info MotorPasso_tb on 2020.09.23.18:23:17
+=======
+# system info MotorPasso_tb on 2020.09.23.15:31:15
+>>>>>>> 7245892e875a6bcfc53120e2288f75026a967ad8
 system_info:
 name,value
 DEVICE,5CSXFC6D6F31C6
 DEVICE_FAMILY,Cyclone V
+<<<<<<< HEAD
 GENERATION_ID,1600896154
 #
 #
 # Files generated for MotorPasso_tb on 2020.09.23.18:23:17
+=======
+GENERATION_ID,1600885834
+#
+#
+# Files generated for MotorPasso_tb on 2020.09.23.15:31:15
+>>>>>>> 7245892e875a6bcfc53120e2288f75026a967ad8
 files:
 filepath,kind,attributes,module,is_top
 MotorPasso/testbench/MotorPasso_tb/simulation/MotorPasso_tb.vhd,VHDL,,MotorPasso_tb,true

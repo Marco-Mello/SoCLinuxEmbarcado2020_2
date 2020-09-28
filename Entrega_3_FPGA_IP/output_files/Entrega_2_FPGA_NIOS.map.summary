@@ -1,11 +1,19 @@
+<<<<<<< HEAD
 Analysis & Synthesis Status : Successful - Mon Sep 28 19:09:09 2020
+=======
+Analysis & Synthesis Status : Successful - Wed Sep 23 15:14:48 2020
+>>>>>>> 7245892e875a6bcfc53120e2288f75026a967ad8
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 Revision Name : Entrega_2_FPGA_NIOS
 Top-level Entity Name : MotorPasso
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
 Total registers : 941
+<<<<<<< HEAD
 Total pins : 10
+=======
+Total pins : 9
+>>>>>>> 7245892e875a6bcfc53120e2288f75026a967ad8
 Total virtual pins : 0
 Total block memory bits : 2,108,416
 Total DSP Blocks : 0

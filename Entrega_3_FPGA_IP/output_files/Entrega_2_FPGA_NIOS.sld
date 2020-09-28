@@ -2,12 +2,16 @@
   <sld_infos>
     <sld_info hpath="" name="">
       <assignment_values>
+<<<<<<< HEAD
         <assignment_value text="QSYS_NAME MotorPasso HAS_SOPCINFO 1 GENERATION_ID 1601330877"/>
       </assignment_values>
     </sld_info>
     <sld_info hpath="sld_hub:auto_hub" name="auto_hub">
       <assignment_values>
         <assignment_value text="QSYS_NAME MotorPasso HAS_SOPCINFO 1 GENERATION_ID 1601330877"/>
+=======
+        <assignment_value text="QSYS_NAME MotorPasso HAS_SOPCINFO 1 GENERATION_ID 1600884821"/>
+>>>>>>> 7245892e875a6bcfc53120e2288f75026a967ad8
       </assignment_values>
     </sld_info>
     <sld_info hpath="sld_hub:auto_hub|alt_sld_fab:\instrumentation_fabric_with_node_gen:instrumentation_fabric" library="alt_sld_fab" name="instrumentation_fabric">

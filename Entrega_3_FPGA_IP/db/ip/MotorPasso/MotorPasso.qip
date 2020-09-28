@@ -2,7 +2,11 @@ set_global_assignment -entity "MotorPasso" -library "MotorPasso" -name IP_TOOL_N
 set_global_assignment -entity "MotorPasso" -library "MotorPasso" -name IP_TOOL_VERSION "18.1"
 set_global_assignment -entity "MotorPasso" -library "MotorPasso" -name IP_TOOL_ENV "Qsys"
 set_global_assignment -library "MotorPasso" -name SOPCINFO_FILE [file join $::quartus(qip_path) "../../../MotorPasso.sopcinfo"]
+<<<<<<< HEAD
 set_global_assignment -entity "MotorPasso" -library "MotorPasso" -name SLD_INFO "QSYS_NAME MotorPasso HAS_SOPCINFO 1 GENERATION_ID 1601330877"
+=======
+set_global_assignment -entity "MotorPasso" -library "MotorPasso" -name SLD_INFO "QSYS_NAME MotorPasso HAS_SOPCINFO 1 GENERATION_ID 1600884821"
+>>>>>>> 7245892e875a6bcfc53120e2288f75026a967ad8
 set_global_assignment -library "MotorPasso" -name SLD_FILE [file join $::quartus(qip_path) "MotorPasso.regmap"]
 set_global_assignment -library "MotorPasso" -name SLD_FILE [file join $::quartus(qip_path) "MotorPasso.debuginfo"]
 set_global_assignment -entity "MotorPasso" -library "MotorPasso" -name IP_TARGETED_DEVICE_FAMILY "Cyclone V"
@@ -15,7 +19,11 @@ set_global_assignment -entity "MotorPasso" -library "MotorPasso" -name IP_COMPON
 set_global_assignment -entity "MotorPasso" -library "MotorPasso" -name IP_COMPONENT_REPORT_HIERARCHY "On"
 set_global_assignment -entity "MotorPasso" -library "MotorPasso" -name IP_COMPONENT_INTERNAL "Off"
 set_global_assignment -entity "MotorPasso" -library "MotorPasso" -name IP_COMPONENT_VERSION "MS4w"
+<<<<<<< HEAD
 set_global_assignment -entity "MotorPasso" -library "MotorPasso" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTYwMTMzMDg3Nw==::QXV0byBHRU5FUkFUSU9OX0lE"
+=======
+set_global_assignment -entity "MotorPasso" -library "MotorPasso" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTYwMDg4NDgyMQ==::QXV0byBHRU5FUkFUSU9OX0lE"
+>>>>>>> 7245892e875a6bcfc53120e2288f75026a967ad8
 set_global_assignment -entity "MotorPasso" -library "MotorPasso" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfRkFNSUxZ::Q3ljbG9uZSBW::QXV0byBERVZJQ0VfRkFNSUxZ"
 set_global_assignment -entity "MotorPasso" -library "MotorPasso" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0U=::NUNTWEZDNkQ2RjMxQzY=::QXV0byBERVZJQ0U="
 set_global_assignment -entity "MotorPasso" -library "MotorPasso" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfU1BFRURHUkFERQ==::Nl9INg==::QXV0byBERVZJQ0VfU1BFRURHUkFERQ=="
@@ -1080,6 +1088,7 @@ set_global_assignment -library "MotorPasso" -name SOURCE_FILE [file join $::quar
 set_global_assignment -library "MotorPasso" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/MotorPasso_onchip_memory2_0.v"]
 set_global_assignment -library "MotorPasso" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/MotorPasso_nios2_gen2_0.v"]
 set_global_assignment -library "MotorPasso" -name SDC_FILE [file join $::quartus(qip_path) "submodules/MotorPasso_nios2_gen2_0_cpu.sdc"]
+<<<<<<< HEAD
 set_global_assignment -library "MotorPasso" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/MotorPasso_nios2_gen2_0_cpu_test_bench.v"]
 set_global_assignment -library "MotorPasso" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/MotorPasso_nios2_gen2_0_cpu.v"]
 set_global_assignment -library "MotorPasso" -name SOURCE_FILE [file join $::quartus(qip_path) "submodules/MotorPasso_nios2_gen2_0_cpu_rf_ram_a.mif"]
@@ -1088,6 +1097,16 @@ set_global_assignment -library "MotorPasso" -name VERILOG_FILE [file join $::qua
 set_global_assignment -library "MotorPasso" -name SOURCE_FILE [file join $::quartus(qip_path) "submodules/MotorPasso_nios2_gen2_0_cpu_ociram_default_contents.mif"]
 set_global_assignment -library "MotorPasso" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/MotorPasso_nios2_gen2_0_cpu_debug_slave_sysclk.v"]
 set_global_assignment -library "MotorPasso" -name SOURCE_FILE [file join $::quartus(qip_path) "submodules/MotorPasso_nios2_gen2_0_cpu_rf_ram_b.mif"]
+=======
+set_global_assignment -library "MotorPasso" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/MotorPasso_nios2_gen2_0_cpu_debug_slave_tck.v"]
+set_global_assignment -library "MotorPasso" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/MotorPasso_nios2_gen2_0_cpu_debug_slave_sysclk.v"]
+set_global_assignment -library "MotorPasso" -name SOURCE_FILE [file join $::quartus(qip_path) "submodules/MotorPasso_nios2_gen2_0_cpu_rf_ram_a.mif"]
+set_global_assignment -library "MotorPasso" -name SOURCE_FILE [file join $::quartus(qip_path) "submodules/MotorPasso_nios2_gen2_0_cpu_ociram_default_contents.mif"]
+set_global_assignment -library "MotorPasso" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/MotorPasso_nios2_gen2_0_cpu.v"]
+set_global_assignment -library "MotorPasso" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/MotorPasso_nios2_gen2_0_cpu_test_bench.v"]
+set_global_assignment -library "MotorPasso" -name SOURCE_FILE [file join $::quartus(qip_path) "submodules/MotorPasso_nios2_gen2_0_cpu_rf_ram_b.mif"]
+set_global_assignment -library "MotorPasso" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/MotorPasso_nios2_gen2_0_cpu_debug_slave_wrapper.v"]
+>>>>>>> 7245892e875a6bcfc53120e2288f75026a967ad8
 set_global_assignment -library "MotorPasso" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/MotorPasso_jtag_uart_0.v"]
 
 set_global_assignment -entity "altera_reset_controller" -library "MotorPasso" -name IP_TOOL_NAME "altera_reset_controller"

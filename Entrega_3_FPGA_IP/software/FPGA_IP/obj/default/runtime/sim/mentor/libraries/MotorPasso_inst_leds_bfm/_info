@@ -1,0 +1,91 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/software/FPGA_IP/obj/default/runtime/sim/mentor
+Ealtera_conduit_bfm_0002
+Z1 w1600885836
+Z2 DPx4 work 32 altera_conduit_bfm_0002_vhdl_pkg 0 22 4l>[;_MCK_U7d2Q[B^:b10
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z5 8/home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/altera_conduit_bfm_0002.vhd
+Z6 F/home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/altera_conduit_bfm_0002.vhd
+l0
+L42
+VLeCHzJi?gm4zHd5=CO1Wf2
+!s100 fJkdg_LifbOVO;X_:BLEK0
+Z7 OV;C;10.5b;63
+32
+Z8 !s110 1600885927
+!i10b 1
+Z9 !s108 1600885927.000000
+Z10 !s90 -reportprogress|300|/home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/altera_conduit_bfm_0002.vhd|-work|MotorPasso_inst_leds_bfm|
+Z11 !s107 /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/altera_conduit_bfm_0002.vhd|
+!i113 1
+Z12 o-work MotorPasso_inst_leds_bfm
+Z13 tExplicit 1 CvgOpt 0
+Aaltera_conduit_bfm_0002_arch
+R2
+R3
+R4
+Z14 DEx4 work 23 altera_conduit_bfm_0002 0 22 LeCHzJi?gm4zHd5=CO1Wf2
+l52
+L50
+Z15 Vj_Ye8Ec;SEYlbee_ZA73K2
+Z16 !s100 5lgi`EZEV2JF@gZon1ZQ92
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Paltera_conduit_bfm_0002_vhdl_pkg
+R3
+R4
+R1
+R0
+Z17 8/home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/altera_conduit_bfm_0002_vhdl_pkg.vhd
+Z18 F/home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/altera_conduit_bfm_0002_vhdl_pkg.vhd
+l0
+L42
+V4l>[;_MCK_U7d2Q[B^:b10
+!s100 kJdE1LVzg`KzEmXV94AWC3
+R7
+32
+b1
+R8
+!i10b 1
+R9
+Z19 !s90 -reportprogress|300|/home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/altera_conduit_bfm_0002_vhdl_pkg.vhd|-work|MotorPasso_inst_leds_bfm|
+Z20 !s107 /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/altera_conduit_bfm_0002_vhdl_pkg.vhd|
+!i113 1
+R12
+R13
+Bbody
+R2
+R3
+R4
+l0
+L61
+VVjHX7V2C:B_N97@EdF:QP3
+!s100 KO_lId=F6<HKb<iJ@n@CG3
+R7
+32
+R8
+!i10b 1
+R9
+R19
+R20
+!i113 1
+R12
+R13

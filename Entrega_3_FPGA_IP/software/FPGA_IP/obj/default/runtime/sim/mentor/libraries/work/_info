@@ -1,0 +1,115 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/software/FPGA_IP/obj/default/runtime/sim/mentor
+vMotorPasso_tb
+!s110 1600885535
+!i10b 1
+!s100 aVWb=i]IcdIDnS9e42l8=3
+IKhn[;?m9WXchD@PYDFbMd3
+VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1600885378
+8/home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/MotorPasso_tb.v
+F/home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/MotorPasso_tb.v
+L0 6
+OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1600885535.000000
+!s107 /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/MotorPasso_tb.v|
+!s90 -reportprogress|300|/home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/MotorPasso_tb.v|
+!i113 1
+tCvgOpt 0
+n@motor@passo_tb
+Emotorpasso_tb
+Z1 w1600885835
+Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z5 8/home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/MotorPasso_tb.vhd
+Z6 F/home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/MotorPasso_tb.vhd
+l0
+L9
+VRN0UkSXY06]3G6i1kaA8E0
+!s100 7<VdAN6:;99;M2jZ12lE00
+Z7 OV;C;10.5b;63
+32
+Z8 !s110 1600885927
+!i10b 1
+Z9 !s108 1600885927.000000
+Z10 !s90 -reportprogress|300|/home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/MotorPasso_tb.vhd|
+Z11 !s107 /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/MotorPasso_tb.vhd|
+!i113 1
+Z12 tExplicit 1 CvgOpt 0
+Artl
+R2
+R3
+R4
+Z13 DEx4 work 13 motorpasso_tb 0 22 RN0UkSXY06]3G6i1kaA8E0
+l62
+L12
+Z14 V[>KWnkL;7FQE_GD:5_X;O2
+Z15 !s100 j]R_NihcI=US`C]`J3TO[3
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+Eperipheral_led
+Z16 w1600869893
+R2
+Z17 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z18 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+R3
+R4
+R0
+Z19 8/home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/IP/peripheral_LED.vhd
+Z20 F/home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/IP/peripheral_LED.vhd
+l0
+L7
+VYTFNB`B?NP_T7CE`5>LT>0
+!s100 kd[QC2MadI;4ojGEcl<X`2
+R7
+32
+Z21 !s110 1600885744
+!i10b 1
+Z22 !s108 1600885744.000000
+Z23 !s90 -reportprogress|300|-work|work|/home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/IP/peripheral_LED.vhd|
+Z24 !s107 /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/IP/peripheral_LED.vhd|
+!i113 1
+Z25 o-work work
+R12
+Artl
+R2
+R17
+R18
+R3
+R4
+DEx4 work 14 peripheral_led 0 22 YTFNB`B?NP_T7CE`5>LT>0
+l29
+L28
+VU4WNR^:MC9G@<QTGz38^:1
+!s100 c`UnYneTcRGFXTV62IKX02
+R7
+32
+R21
+!i10b 1
+R22
+R23
+R24
+!i113 1
+R25
+R12

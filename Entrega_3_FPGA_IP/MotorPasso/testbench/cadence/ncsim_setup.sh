@@ -12,7 +12,11 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
+<<<<<<< HEAD
 # ACDS 18.1 625 linux 2020.09.23.18:23:18
+=======
+# ACDS 18.1 625 linux 2020.09.23.15:31:15
+>>>>>>> 7245892e875a6bcfc53120e2288f75026a967ad8
 
 # ----------------------------------------
 # ncsim - auto-generated simulation script
@@ -106,7 +110,11 @@
 # within the Quartus project, and generate a unified
 # script which supports all the Altera IP within the design.
 # ----------------------------------------
+<<<<<<< HEAD
 # ACDS 18.1 625 linux 2020.09.23.18:23:18
+=======
+# ACDS 18.1 625 linux 2020.09.23.15:31:15
+>>>>>>> 7245892e875a6bcfc53120e2288f75026a967ad8
 # ----------------------------------------
 # initialize variables
 TOP_LEVEL_NAME="MotorPasso_tb"

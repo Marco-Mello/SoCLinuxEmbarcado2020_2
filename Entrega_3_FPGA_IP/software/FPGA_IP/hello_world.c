@@ -20,7 +20,7 @@ int main(void){
       if (led < 4){
           *(p_led+REG_DATA_OFFSET) = (0x1 << led++);
 #ifndef SIM
-          usleep(500000); // remover durante a simulação
+          usleep(50000); // remover durante a simulação
 #endif
       }
       else{
