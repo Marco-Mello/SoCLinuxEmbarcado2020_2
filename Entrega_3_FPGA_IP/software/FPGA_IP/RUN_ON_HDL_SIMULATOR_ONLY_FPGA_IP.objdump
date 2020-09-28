@@ -297,10 +297,10 @@ int main(void){
    20058:	008001b4 	movhi	r2,6
    2005c:	10840004 	addi	r2,r2,4096
    20060:	e0bfff15 	stw	r2,-4(fp)
-
 #ifndef SIM
   printf("Embarcados++ \n");
 #endif
+
   while(1){
       if (led < 4){
    20064:	e0bffe17 	ldw	r2,-8(fp)

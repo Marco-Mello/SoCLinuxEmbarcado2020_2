@@ -1,6 +1,6 @@
-19:49:02 **** Incremental Build of configuration Nios II for project FPGA_IP_bsp ****
+18:26:11 **** Build of configuration Nios II for project FPGA_IP_bsp ****
 make all 
 [BSP build complete]
 
-19:49:02 Build Finished (took 613ms)
+18:26:11 Build Finished (took 562ms)
 

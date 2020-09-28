@@ -44,10 +44,10 @@
 
 module MotorPasso_mm_interconnect_0_router_default_decode
   #(
-     parameter DEFAULT_CHANNEL = 4,
+     parameter DEFAULT_CHANNEL = 5,
                DEFAULT_WR_CHANNEL = -1,
                DEFAULT_RD_CHANNEL = -1,
-               DEFAULT_DESTID = 2 
+               DEFAULT_DESTID = 3 
    )
   (output [81 - 79 : 0] default_destination_id,
    output [6-1 : 0] default_wr_channel,
@@ -135,16 +135,17 @@ module MotorPasso_mm_interconnect_0_router
     // during address decoding
     // -------------------------------------------------------
     localparam PAD0 = log2ceil(64'h40000 - 64'h20000); 
-    localparam PAD1 = log2ceil(64'h41000 - 64'h40800); 
-    localparam PAD2 = log2ceil(64'h41010 - 64'h41000); 
-    localparam PAD3 = log2ceil(64'h41020 - 64'h41010); 
-    localparam PAD4 = log2ceil(64'h41028 - 64'h41020); 
+    localparam PAD1 = log2ceil(64'h60000 - 64'h40000); 
+    localparam PAD2 = log2ceil(64'h61000 - 64'h60800); 
+    localparam PAD3 = log2ceil(64'h61040 - 64'h61000); 
+    localparam PAD4 = log2ceil(64'h61050 - 64'h61040); 
+    localparam PAD5 = log2ceil(64'h61058 - 64'h61050); 
     // -------------------------------------------------------
     // Work out which address bits are significant based on the
     // address range of the slaves. If the required width is too
     // large or too small, we use the address field width instead.
     // -------------------------------------------------------
-    localparam ADDR_RANGE = 64'h41028;
+    localparam ADDR_RANGE = 64'h61058;
     localparam RANGE_ADDR_WIDTH = log2ceil(ADDR_RANGE);
     localparam OPTIMIZED_ADDR_H = (RANGE_ADDR_WIDTH > PKT_ADDR_W) ||
                                   (RANGE_ADDR_WIDTH == 0) ?
@@ -173,11 +174,6 @@ module MotorPasso_mm_interconnect_0_router
 
 
 
-    // -------------------------------------------------------
-    // Write and read transaction signals
-    // -------------------------------------------------------
-    wire read_transaction;
-    assign read_transaction  = sink_data[PKT_TRANS_READ];
 
 
     MotorPasso_mm_interconnect_0_router_default_decode the_default_decode(
@@ -199,31 +195,37 @@ module MotorPasso_mm_interconnect_0_router
 
     // ( 0x20000 .. 0x40000 )
     if ( {address[RG:PAD0],{PAD0{1'b0}}} == 19'h20000   ) begin
-            src_channel = 6'b10000;
+            src_channel = 6'b100000;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 3;
+    end
+
+    // ( 0x40000 .. 0x60000 )
+    if ( {address[RG:PAD1],{PAD1{1'b0}}} == 19'h40000   ) begin
+            src_channel = 6'b010000;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 2;
     end
 
-    // ( 0x40800 .. 0x41000 )
-    if ( {address[RG:PAD1],{PAD1{1'b0}}} == 19'h40800   ) begin
-            src_channel = 6'b00010;
+    // ( 0x60800 .. 0x61000 )
+    if ( {address[RG:PAD2],{PAD2{1'b0}}} == 19'h60800   ) begin
+            src_channel = 6'b000100;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 1;
     end
 
-    // ( 0x41000 .. 0x41010 )
-    if ( {address[RG:PAD2],{PAD2{1'b0}}} == 19'h41000  && read_transaction  ) begin
-            src_channel = 6'b01000;
+    // ( 0x61000 .. 0x61040 )
+    if ( {address[RG:PAD3],{PAD3{1'b0}}} == 19'h61000   ) begin
+            src_channel = 6'b000010;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 4;
     end
 
-    // ( 0x41010 .. 0x41020 )
-    if ( {address[RG:PAD3],{PAD3{1'b0}}} == 19'h41010   ) begin
-            src_channel = 6'b00100;
+    // ( 0x61040 .. 0x61050 )
+    if ( {address[RG:PAD4],{PAD4{1'b0}}} == 19'h61040   ) begin
+            src_channel = 6'b001000;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 5;
     end
 
-    // ( 0x41020 .. 0x41028 )
-    if ( {address[RG:PAD4],{PAD4{1'b0}}} == 19'h41020   ) begin
-            src_channel = 6'b00001;
+    // ( 0x61050 .. 0x61058 )
+    if ( {address[RG:PAD5],{PAD5{1'b0}}} == 19'h61050   ) begin
+            src_channel = 6'b000001;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 0;
     end
 

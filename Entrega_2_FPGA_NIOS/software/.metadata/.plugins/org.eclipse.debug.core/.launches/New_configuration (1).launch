@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="com.altera.sbtgui.launch.modelsim.Nios2ModelsimLaunchConfiguration">
-<stringAttribute key="elfFile" value="/home/labarqcomp/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/software/FPGA_IP/RUN_ON_HDL_SIMULATOR_ONLY_FPGA_IP.elf"/>
+<stringAttribute key="elfFile" value="/home/labarqcomp/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/software/AgoraVai/RUN_ON_HDL_SIMULATOR_ONLY_AgoraVai.elf"/>
 <stringAttribute key="modelSimPath" value="/home/labarqcomp/intelFPGA/18.1/modelsim_ase/linuxaloem"/>
-<stringAttribute key="org.eclipse.cdt.launch.PROGRAM_NAME" value="RUN_ON_HDL_SIMULATOR_ONLY_FPGA_IP.elf"/>
-<stringAttribute key="org.eclipse.cdt.launch.PROJECT_ATTR" value="FPGA_IP"/>
+<stringAttribute key="org.eclipse.cdt.launch.PROGRAM_NAME" value="RUN_ON_HDL_SIMULATOR_ONLY_AgoraVai.elf"/>
+<stringAttribute key="org.eclipse.cdt.launch.PROJECT_ATTR" value="AgoraVai"/>
 <stringAttribute key="spdPath" value="/home/labarqcomp/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso_tb.spd"/>
 </launchConfiguration>

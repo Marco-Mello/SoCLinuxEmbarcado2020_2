@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <simPackage>
  <file
-   path="MotorPasso/testbench/MotorPasso_tb/simulation/submodules/verbosity_pkg.sv"
-   type="SYSTEM_VERILOG"
-   library="altera_common_sv_packages"
-   systemVerilogPackageName="avalon_vip_verbosity_pkg" />
- <file
    path="MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv"
    type="SYSTEM_VERILOG"
    library="error_adapter_0" />
  <file
-   path="MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_mm_interconnect_0_avalon_st_adapter.v"
-   type="VERILOG"
+   path="MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_mm_interconnect_0_avalon_st_adapter.vhd"
+   type="VHDL"
    library="avalon_st_adapter" />
  <file
    path="MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_mm_interconnect_0_rsp_mux_001.sv"
@@ -34,13 +29,13 @@
    type="SYSTEM_VERILOG"
    library="rsp_demux" />
  <file
-   path="MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_mm_interconnect_0_cmd_mux_001.sv"
+   path="MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_mm_interconnect_0_cmd_mux_002.sv"
    type="SYSTEM_VERILOG"
-   library="cmd_mux_001" />
+   library="cmd_mux_002" />
  <file
    path="MotorPasso/testbench/MotorPasso_tb/simulation/submodules/altera_merlin_arbitrator.sv"
    type="SYSTEM_VERILOG"
-   library="cmd_mux_001" />
+   library="cmd_mux_002" />
  <file
    path="MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_mm_interconnect_0_cmd_mux.sv"
    type="SYSTEM_VERILOG"
@@ -58,13 +53,9 @@
    type="SYSTEM_VERILOG"
    library="cmd_demux" />
  <file
-   path="MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_mm_interconnect_0_router_007.sv"
+   path="MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_mm_interconnect_0_router_004.sv"
    type="SYSTEM_VERILOG"
-   library="router_007" />
- <file
-   path="MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_mm_interconnect_0_router_003.sv"
-   type="SYSTEM_VERILOG"
-   library="router_003" />
+   library="router_004" />
  <file
    path="MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_mm_interconnect_0_router_002.sv"
    type="SYSTEM_VERILOG"
@@ -102,12 +93,52 @@
    type="SYSTEM_VERILOG"
    library="nios2_gen2_0_data_master_translator" />
  <file
+   path="MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu_rf_ram_b.hex"
+   type="HEX"
+   library="cpu" />
+ <file
+   path="MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu_rf_ram_a.dat"
+   type="DAT"
+   library="cpu" />
+ <file
    path="MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu.sdc"
    type="SDC"
    library="cpu" />
  <file
+   path="MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu_test_bench.v"
+   type="VERILOG"
+   library="cpu" />
+ <file
+   path="MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu.v"
+   type="VERILOG"
+   library="cpu" />
+ <file
+   path="MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu_rf_ram_a.mif"
+   type="MIF"
+   library="cpu" />
+ <file
+   path="MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu_debug_slave_wrapper.v"
+   type="VERILOG"
+   library="cpu" />
+ <file
    path="MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu_debug_slave_tck.v"
    type="VERILOG"
+   library="cpu" />
+ <file
+   path="MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu_rf_ram_a.hex"
+   type="HEX"
+   library="cpu" />
+ <file
+   path="MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu_ociram_default_contents.mif"
+   type="MIF"
+   library="cpu" />
+ <file
+   path="MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu_ociram_default_contents.hex"
+   type="HEX"
+   library="cpu" />
+ <file
+   path="MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu_ociram_default_contents.dat"
+   type="DAT"
    library="cpu" />
  <file
    path="MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu_debug_slave_sysclk.v"
@@ -118,51 +149,11 @@
    type="OTHER"
    library="cpu" />
  <file
-   path="MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu_rf_ram_a.mif"
-   type="MIF"
-   library="cpu" />
- <file
-   path="MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu_ociram_default_contents.hex"
-   type="HEX"
-   library="cpu" />
- <file
-   path="MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu_ociram_default_contents.mif"
-   type="MIF"
-   library="cpu" />
- <file
-   path="MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu.v"
-   type="VERILOG"
-   library="cpu" />
- <file
-   path="MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu_test_bench.v"
-   type="VERILOG"
-   library="cpu" />
- <file
-   path="MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu_rf_ram_a.hex"
-   type="HEX"
-   library="cpu" />
- <file
    path="MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu_rf_ram_b.mif"
    type="MIF"
    library="cpu" />
  <file
-   path="MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu_rf_ram_b.hex"
-   type="HEX"
-   library="cpu" />
- <file
-   path="MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu_ociram_default_contents.dat"
-   type="DAT"
-   library="cpu" />
- <file
    path="MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu_rf_ram_b.dat"
-   type="DAT"
-   library="cpu" />
- <file
-   path="MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu_debug_slave_wrapper.v"
-   type="VERILOG"
-   library="cpu" />
- <file
-   path="MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu_rf_ram_a.dat"
    type="DAT"
    library="cpu" />
  <file
@@ -186,60 +177,76 @@
    type="VERILOG"
    library="mm_interconnect_0" />
  <file
-   path="MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_pio_1.v"
-   type="VERILOG"
-   library="pio_1" />
- <file
-   path="MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_pio_0.v"
-   type="VERILOG"
+   path="MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_pio_0.vhd"
+   type="VHDL"
    library="pio_0" />
+ <file
+   path="MotorPasso/testbench/MotorPasso_tb/simulation/submodules/peripheral_LED.vhd"
+   type="VHDL"
+   library="peripheral_LED_0" />
  <file
    path="MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_onchip_memory2_1.hex"
    type="HEX"
    library="onchip_memory2_1" />
  <file
-   path="MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_onchip_memory2_1.v"
-   type="VERILOG"
+   path="MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_onchip_memory2_1.vhd"
+   type="VHDL"
    library="onchip_memory2_1" />
  <file
    path="MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_onchip_memory2_0.hex"
    type="HEX"
    library="onchip_memory2_0" />
  <file
-   path="MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_onchip_memory2_0.v"
-   type="VERILOG"
+   path="MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_onchip_memory2_0.vhd"
+   type="VHDL"
    library="onchip_memory2_0" />
  <file
    path="MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0.v"
    type="VERILOG"
    library="nios2_gen2_0" />
  <file
-   path="MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_jtag_uart_0.v"
-   type="VERILOG"
+   path="MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso_jtag_uart_0.vhd"
+   type="VHDL"
    library="jtag_uart_0" />
  <file
-   path="MotorPasso/testbench/MotorPasso_tb/simulation/submodules/altera_avalon_reset_source.sv"
-   type="SYSTEM_VERILOG"
+   path="MotorPasso/testbench/MotorPasso_tb/simulation/submodules/altera_avalon_reset_source.vhd"
+   type="VHDL"
    library="MotorPasso_inst_reset_bfm" />
  <file
-   path="MotorPasso/testbench/MotorPasso_tb/simulation/submodules/altera_conduit_bfm_0002.sv"
-   type="SYSTEM_VERILOG"
-   library="MotorPasso_inst_fases_bfm" />
+   path="MotorPasso/testbench/MotorPasso_tb/simulation/submodules/altera_conduit_bfm_0002_vhdl_pkg.vhd"
+   type="VHDL"
+   library="MotorPasso_inst_leds_bfm" />
  <file
-   path="MotorPasso/testbench/MotorPasso_tb/simulation/submodules/altera_avalon_clock_source.sv"
-   type="SYSTEM_VERILOG"
+   path="MotorPasso/testbench/MotorPasso_tb/simulation/submodules/altera_conduit_bfm_0002.vhd"
+   type="VHDL"
+   library="MotorPasso_inst_leds_bfm" />
+ <file
+   path="MotorPasso/testbench/MotorPasso_tb/simulation/submodules/altera_avalon_clock_source.vhd"
+   type="VHDL"
    library="MotorPasso_inst_clk_bfm" />
  <file
-   path="MotorPasso/testbench/MotorPasso_tb/simulation/submodules/altera_conduit_bfm.sv"
-   type="SYSTEM_VERILOG"
+   path="MotorPasso/testbench/MotorPasso_tb/simulation/submodules/altera_conduit_bfm_vhdl_pkg.vhd"
+   type="VHDL"
    library="MotorPasso_inst_chaves_bfm" />
  <file
-   path="MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso.v"
-   type="VERILOG"
+   path="MotorPasso/testbench/MotorPasso_tb/simulation/submodules/altera_conduit_bfm.vhd"
+   type="VHDL"
+   library="MotorPasso_inst_chaves_bfm" />
+ <file
+   path="MotorPasso/testbench/MotorPasso_tb/simulation/submodules/MotorPasso.vhd"
+   type="VHDL"
    library="MotorPasso_inst" />
  <file
-   path="MotorPasso/testbench/MotorPasso_tb/simulation/MotorPasso_tb.v"
-   type="VERILOG" />
+   path="MotorPasso/testbench/MotorPasso_tb/simulation/submodules/motorpasso_rst_controller.vhd"
+   type="VHDL"
+   library="MotorPasso_inst" />
+ <file
+   path="MotorPasso/testbench/MotorPasso_tb/simulation/submodules/motorpasso_rst_controller_001.vhd"
+   type="VHDL"
+   library="MotorPasso_inst" />
+ <file
+   path="MotorPasso/testbench/MotorPasso_tb/simulation/MotorPasso_tb.vhd"
+   type="VHDL" />
  <topLevel name="MotorPasso_tb" />
  <deviceFamily name="cyclonev" />
  <modelMap

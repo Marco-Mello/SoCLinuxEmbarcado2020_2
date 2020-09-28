@@ -15,6 +15,7 @@ int main(void){
 #ifndef SIM
   printf("Embarcados++ \n");
 #endif
+
   while(1){
       if (led < 4){
           *(p_led+REG_DATA_OFFSET) = (0x1 << led++);

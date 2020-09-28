@@ -1,0 +1,9 @@
+19:06:33 **** Incremental Build of configuration Nios II for project AgoraVai ****
+make all 
+Info: Building ../AgoraVai_bsp/
+make --no-print-directory -C ../AgoraVai_bsp/
+[BSP build complete]
+[RUN_ON_HDL_SIMULATOR_ONLY_AgoraVai build complete]
+
+19:06:34 Build Finished (took 623ms)
+

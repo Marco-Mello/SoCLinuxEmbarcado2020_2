@@ -1,12 +1,12 @@
-# system info MotorPasso on 2020.09.21.19:06:09
+# system info MotorPasso on 2020.09.28.18:46:24
 system_info:
 name,value
 DEVICE,5CSXFC6D6F31C6
 DEVICE_FAMILY,Cyclone V
-GENERATION_ID,1600725948
+GENERATION_ID,1601329541
 #
 #
-# Files generated for MotorPasso on 2020.09.21.19:06:09
+# Files generated for MotorPasso on 2020.09.28.18:46:24
 files:
 filepath,kind,attributes,module,is_top
 simulation/MotorPasso.vhd,VHDL,,MotorPasso,true
@@ -25,22 +25,22 @@ simulation/submodules/MotorPasso_irq_mapper.sv,SYSTEM_VERILOG,,MotorPasso_irq_ma
 simulation/submodules/altera_reset_controller.v,VERILOG,,altera_reset_controller,false
 simulation/submodules/altera_reset_synchronizer.v,VERILOG,,altera_reset_controller,false
 simulation/submodules/altera_reset_controller.sdc,SDC,,altera_reset_controller,false
-simulation/submodules/MotorPasso_nios2_gen2_0_cpu.sdc,SDC,,MotorPasso_nios2_gen2_0_cpu,false
-simulation/submodules/MotorPasso_nios2_gen2_0_cpu.v,VERILOG,,MotorPasso_nios2_gen2_0_cpu,false
-simulation/submodules/MotorPasso_nios2_gen2_0_cpu_debug_slave_sysclk.v,VERILOG,,MotorPasso_nios2_gen2_0_cpu,false
-simulation/submodules/MotorPasso_nios2_gen2_0_cpu_debug_slave_tck.v,VERILOG,,MotorPasso_nios2_gen2_0_cpu,false
-simulation/submodules/MotorPasso_nios2_gen2_0_cpu_debug_slave_wrapper.v,VERILOG,,MotorPasso_nios2_gen2_0_cpu,false
-simulation/submodules/MotorPasso_nios2_gen2_0_cpu_nios2_waves.do,OTHER,,MotorPasso_nios2_gen2_0_cpu,false
-simulation/submodules/MotorPasso_nios2_gen2_0_cpu_ociram_default_contents.dat,DAT,,MotorPasso_nios2_gen2_0_cpu,false
-simulation/submodules/MotorPasso_nios2_gen2_0_cpu_ociram_default_contents.hex,HEX,,MotorPasso_nios2_gen2_0_cpu,false
-simulation/submodules/MotorPasso_nios2_gen2_0_cpu_ociram_default_contents.mif,MIF,,MotorPasso_nios2_gen2_0_cpu,false
-simulation/submodules/MotorPasso_nios2_gen2_0_cpu_rf_ram_a.dat,DAT,,MotorPasso_nios2_gen2_0_cpu,false
-simulation/submodules/MotorPasso_nios2_gen2_0_cpu_rf_ram_a.hex,HEX,,MotorPasso_nios2_gen2_0_cpu,false
-simulation/submodules/MotorPasso_nios2_gen2_0_cpu_rf_ram_a.mif,MIF,,MotorPasso_nios2_gen2_0_cpu,false
-simulation/submodules/MotorPasso_nios2_gen2_0_cpu_rf_ram_b.dat,DAT,,MotorPasso_nios2_gen2_0_cpu,false
 simulation/submodules/MotorPasso_nios2_gen2_0_cpu_rf_ram_b.hex,HEX,,MotorPasso_nios2_gen2_0_cpu,false
-simulation/submodules/MotorPasso_nios2_gen2_0_cpu_rf_ram_b.mif,MIF,,MotorPasso_nios2_gen2_0_cpu,false
+simulation/submodules/MotorPasso_nios2_gen2_0_cpu_rf_ram_a.dat,DAT,,MotorPasso_nios2_gen2_0_cpu,false
+simulation/submodules/MotorPasso_nios2_gen2_0_cpu.sdc,SDC,,MotorPasso_nios2_gen2_0_cpu,false
 simulation/submodules/MotorPasso_nios2_gen2_0_cpu_test_bench.v,VERILOG,,MotorPasso_nios2_gen2_0_cpu,false
+simulation/submodules/MotorPasso_nios2_gen2_0_cpu.v,VERILOG,,MotorPasso_nios2_gen2_0_cpu,false
+simulation/submodules/MotorPasso_nios2_gen2_0_cpu_rf_ram_a.mif,MIF,,MotorPasso_nios2_gen2_0_cpu,false
+simulation/submodules/MotorPasso_nios2_gen2_0_cpu_debug_slave_wrapper.v,VERILOG,,MotorPasso_nios2_gen2_0_cpu,false
+simulation/submodules/MotorPasso_nios2_gen2_0_cpu_debug_slave_tck.v,VERILOG,,MotorPasso_nios2_gen2_0_cpu,false
+simulation/submodules/MotorPasso_nios2_gen2_0_cpu_rf_ram_a.hex,HEX,,MotorPasso_nios2_gen2_0_cpu,false
+simulation/submodules/MotorPasso_nios2_gen2_0_cpu_ociram_default_contents.mif,MIF,,MotorPasso_nios2_gen2_0_cpu,false
+simulation/submodules/MotorPasso_nios2_gen2_0_cpu_ociram_default_contents.hex,HEX,,MotorPasso_nios2_gen2_0_cpu,false
+simulation/submodules/MotorPasso_nios2_gen2_0_cpu_ociram_default_contents.dat,DAT,,MotorPasso_nios2_gen2_0_cpu,false
+simulation/submodules/MotorPasso_nios2_gen2_0_cpu_debug_slave_sysclk.v,VERILOG,,MotorPasso_nios2_gen2_0_cpu,false
+simulation/submodules/MotorPasso_nios2_gen2_0_cpu_nios2_waves.do,OTHER,,MotorPasso_nios2_gen2_0_cpu,false
+simulation/submodules/MotorPasso_nios2_gen2_0_cpu_rf_ram_b.mif,MIF,,MotorPasso_nios2_gen2_0_cpu,false
+simulation/submodules/MotorPasso_nios2_gen2_0_cpu_rf_ram_b.dat,DAT,,MotorPasso_nios2_gen2_0_cpu,false
 simulation/submodules/altera_merlin_master_translator.sv,SYSTEM_VERILOG,,altera_merlin_master_translator,false
 simulation/submodules/altera_merlin_slave_translator.sv,SYSTEM_VERILOG,,altera_merlin_slave_translator,false
 simulation/submodules/altera_merlin_master_agent.sv,SYSTEM_VERILOG,,altera_merlin_master_agent,false

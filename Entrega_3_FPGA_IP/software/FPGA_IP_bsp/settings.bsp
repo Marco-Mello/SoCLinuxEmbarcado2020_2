@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Sep 21, 2020 7:43:40 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1600728220209</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>Sep 23, 2020 6:25:58 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1600896358476</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>/home/labarqcomp/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/software/FPGA_IP_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>../../MotorPasso.sopcinfo</SopcDesignFile>
