@@ -2,11 +2,11 @@
 module MotorPasso (
 	chaves_export,
 	clk_clk,
-	leds_name,
-	reset_reset_n);	
+	reset_reset_n,
+	phases_phases);	
 
 	input	[3:0]	chaves_export;
 	input		clk_clk;
-	output	[3:0]	leds_name;
 	input		reset_reset_n;
+	output	[3:0]	phases_phases;
 endmodule

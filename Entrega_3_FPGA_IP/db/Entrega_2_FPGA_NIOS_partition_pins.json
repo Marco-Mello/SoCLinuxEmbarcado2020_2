@@ -4,43 +4,39 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "leds_name[0]",
+					"name" : "fpga_fases_pio[0]",
 					"strict" : false
 				},
 				{
-					"name" : "leds_name[1]",
+					"name" : "fpga_fases_pio[1]",
 					"strict" : false
 				},
 				{
-					"name" : "leds_name[2]",
+					"name" : "fpga_fases_pio[2]",
 					"strict" : false
 				},
 				{
-					"name" : "leds_name[3]",
+					"name" : "fpga_fases_pio[3]",
 					"strict" : false
 				},
 				{
-					"name" : "clk_clk",
+					"name" : "fpga_clk_50",
 					"strict" : false
 				},
 				{
-					"name" : "chaves_export[0]",
+					"name" : "fpga_chaves_pio[1]",
 					"strict" : false
 				},
 				{
-					"name" : "chaves_export[1]",
+					"name" : "fpga_chaves_pio[0]",
 					"strict" : false
 				},
 				{
-					"name" : "chaves_export[2]",
+					"name" : "fpga_chaves_pio[3]",
 					"strict" : false
 				},
 				{
-					"name" : "chaves_export[3]",
-					"strict" : false
-				},
-				{
-					"name" : "reset_reset_n",
+					"name" : "fpga_chaves_pio[2]",
 					"strict" : false
 				}
 			]

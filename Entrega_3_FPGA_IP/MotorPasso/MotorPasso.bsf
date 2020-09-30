@@ -4,9 +4,9 @@ editor if you plan to continue editing the block that represents it in
 the Block Editor! File corruption is VERY likely to occur.
 */
 /*
-Copyright (C) 2020  Intel Corporation. All rights reserved.
+Copyright (C) 2018  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
-and other software and tools, and any partner logic 
+and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
@@ -16,8 +16,7 @@ the Intel FPGA IP License Agreement, or other applicable license
 agreement, including, without limitation, that your use is for
 the sole purpose of programming logic devices manufactured by
 Intel and sold by Intel or its authorized distributors.  Please
-refer to the applicable agreement for further details, at
-https://fpgasoftware.intel.com/eula.
+refer to the applicable agreement for further details.
 */
 (header "symbol" (version "1.1"))
 (symbol
@@ -39,29 +38,29 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 0 112)(pt 112 112)(line_width 1))
 	)
 	(port
-		(pt 0 192)
+		(pt 0 152)
 		(input)
 		(text "reset_reset_n" (rect 0 0 56 12)(font "Arial" (font_size 8)))
-		(text "reset_reset_n" (rect 4 181 82 192)(font "Arial" (font_size 8)))
-		(line (pt 0 192)(pt 112 192)(line_width 1))
+		(text "reset_reset_n" (rect 4 141 82 152)(font "Arial" (font_size 8)))
+		(line (pt 0 152)(pt 112 152)(line_width 1))
 	)
 	(port
-		(pt 0 152)
+		(pt 0 192)
 		(output)
-		(text "leds_name[3..0]" (rect 0 0 63 12)(font "Arial" (font_size 8)))
-		(text "leds_name[3..0]" (rect 4 141 94 152)(font "Arial" (font_size 8)))
-		(line (pt 0 152)(pt 112 152)(line_width 3))
+		(text "phases_phases[3..0]" (rect 0 0 82 12)(font "Arial" (font_size 8)))
+		(text "phases_phases[3..0]" (rect 4 181 118 192)(font "Arial" (font_size 8)))
+		(line (pt 0 192)(pt 112 192)(line_width 3))
 	)
 	(drawing
 		(text "chaves" (rect 73 43 182 99)(font "Arial" (color 128 0 0)(font_size 9)))
 		(text "export" (rect 117 67 270 144)(font "Arial" (color 0 0 0)))
 		(text "clk" (rect 97 83 212 179)(font "Arial" (color 128 0 0)(font_size 9)))
 		(text "clk" (rect 117 107 252 224)(font "Arial" (color 0 0 0)))
-		(text "leds" (rect 89 123 202 259)(font "Arial" (color 128 0 0)(font_size 9)))
-		(text "name" (rect 117 147 258 304)(font "Arial" (color 0 0 0)))
-		(text "reset" (rect 83 163 196 339)(font "Arial" (color 128 0 0)(font_size 9)))
-		(text "reset_n" (rect 117 187 276 384)(font "Arial" (color 0 0 0)))
-		(text " MotorPasso " (rect 234 208 540 426)(font "Arial" ))
+		(text "reset" (rect 83 123 196 259)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "reset_n" (rect 117 147 276 304)(font "Arial" (color 0 0 0)))
+		(text "phases" (rect 71 163 178 339)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "phases" (rect 117 187 270 384)(font "Arial" (color 0 0 0)))
+		(text " system " (rect 253 208 554 426)(font "Arial" ))
 		(line (pt 112 32)(pt 176 32)(line_width 1))
 		(line (pt 176 32)(pt 176 208)(line_width 1))
 		(line (pt 112 208)(pt 176 208)(line_width 1))

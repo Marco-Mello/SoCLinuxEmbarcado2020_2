@@ -25,6 +25,22 @@
          type = "String";
       }
    }
+   element MotorPasso
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element MotorPasso
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
    element clk_0
    {
       datum _sortIndex
@@ -157,8 +173,8 @@
    dir="end" />
  <interface name="clk" internal="clk_0.clk_in" type="clock" dir="end" />
  <interface
-   name="leds"
-   internal="peripheral_LED_0.conduit_end"
+   name="phases"
+   internal="peripheral_LED_0.conduit"
    type="conduit"
    dir="end" />
  <interface name="reset" internal="clk_0.clk_in_reset" type="reset" dir="end" />
