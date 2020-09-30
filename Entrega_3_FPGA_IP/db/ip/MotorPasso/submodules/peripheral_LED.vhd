@@ -17,7 +17,7 @@ entity peripheral_LED is
         LEDs               : out std_logic_vector(LEN - 1 downto 0) := (others => '0');
 
         -- Avalion Memmory Mapped Slave
-        avs_address     : in  std_logic_vector(2 downto 0)  := (others => '0'); 
+        avs_address     : in  std_logic_vector(3 downto 0)  := (others => '0'); 
         avs_read        : in  std_logic                     := '0';             
         avs_readdata    : out std_logic_vector(31 downto 0) := (others => '0'); 
         avs_write       : in  std_logic                     := '0';             
@@ -26,8 +26,6 @@ entity peripheral_LED is
 end entity peripheral_LED;
 
 architecture rtl of peripheral_LED is
-
-signal reg_s
 begin
 
   process(clk)

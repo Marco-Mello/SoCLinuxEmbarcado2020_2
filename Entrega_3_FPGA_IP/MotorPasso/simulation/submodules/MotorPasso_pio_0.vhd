@@ -155,10 +155,20 @@ begin
   begin
     if reset_n = '0' then
       d1_data_in <= std_logic_vector'("0000");
-      d2_data_in <= std_logic_vector'("0000");
     elsif clk'event and clk = '1' then
       if std_logic'(clk_en) = '1' then 
         d1_data_in <= data_in;
+      end if;
+    end if;
+
+  end process;
+
+  process (clk, reset_n)
+  begin
+    if reset_n = '0' then
+      d2_data_in <= std_logic_vector'("0000");
+    elsif clk'event and clk = '1' then
+      if std_logic'(clk_en) = '1' then 
         d2_data_in <= d1_data_in;
       end if;
     end if;

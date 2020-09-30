@@ -256,20 +256,13 @@ int main(void){
   unsigned int led = 0;
    20048:	e03ffe15 	stw	zero,-8(fp)
   unsigned int *p_led = (unsigned int *) PERIPHERAL_LED_0_BASE;
-<<<<<<< HEAD
-   20058:	008001b4 	movhi	r2,6
-   2005c:	10840004 	addi	r2,r2,4096
-   20060:	e0bfff15 	stw	r2,-4(fp)
-=======
    2004c:	008001b4 	movhi	r2,6
    20050:	10840004 	addi	r2,r2,4096
    20054:	e0bfff15 	stw	r2,-4(fp)
 
->>>>>>> 7245892e875a6bcfc53120e2288f75026a967ad8
 #ifndef SIM
   printf("Embarcados++ \n");
 #endif
-
   while(1){
       if (led < 4){
    20058:	e0bffe17 	ldw	r2,-8(fp)

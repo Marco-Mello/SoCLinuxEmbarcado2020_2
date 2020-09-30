@@ -1,23 +1,13 @@
-<<<<<<< HEAD
-Fitter Status : Successful - Mon Sep 28 19:11:23 2020
-=======
 Fitter Status : Successful - Wed Sep 23 15:17:01 2020
->>>>>>> 7245892e875a6bcfc53120e2288f75026a967ad8
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 Revision Name : Entrega_2_FPGA_NIOS
-Top-level Entity Name : MotorPasso
+Top-level Entity Name : Lab3_FPGA_IP
 Family : Cyclone V
 Device : 5CSXFC6D6F31C6
 Timing Models : Final
-<<<<<<< HEAD
-Logic utilization (in ALMs) : 802 / 41,910 ( 2 % )
-Total registers : 979
-Total pins : 10 / 499 ( 2 % )
-=======
 Logic utilization (in ALMs) : 793 / 41,910 ( 2 % )
 Total registers : 993
 Total pins : 9 / 499 ( 2 % )
->>>>>>> 7245892e875a6bcfc53120e2288f75026a967ad8
 Total virtual pins : 0
 Total block memory bits : 2,108,416 / 5,662,720 ( 37 % )
 Total RAM Blocks : 261 / 553 ( 47 % )

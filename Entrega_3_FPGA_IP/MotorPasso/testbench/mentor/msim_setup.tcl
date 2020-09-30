@@ -94,11 +94,7 @@
 # within the Quartus project, and generate a unified
 # script which supports all the Altera IP within the design.
 # ----------------------------------------
-<<<<<<< HEAD
-# ACDS 18.1 625 linux 2020.09.23.18:23:18
-=======
 # ACDS 18.1 625 linux 2020.09.23.15:31:15
->>>>>>> 7245892e875a6bcfc53120e2288f75026a967ad8
 
 # ----------------------------------------
 # Initialize variables
@@ -145,15 +141,15 @@ if ![ string match "*-64 vsim*" [ vsim -version ] ] {
 # Copy ROM/RAM files to simulation directory
 alias file_copy {
   echo "\[exec\] file_copy"
-  file copy -force $QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu_rf_ram_b.hex ./
-  file copy -force $QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu_rf_ram_a.dat ./
   file copy -force $QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu_rf_ram_a.mif ./
-  file copy -force $QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu_rf_ram_a.hex ./
-  file copy -force $QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu_ociram_default_contents.mif ./
   file copy -force $QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu_ociram_default_contents.hex ./
-  file copy -force $QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu_ociram_default_contents.dat ./
+  file copy -force $QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu_ociram_default_contents.mif ./
+  file copy -force $QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu_rf_ram_a.hex ./
   file copy -force $QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu_rf_ram_b.mif ./
+  file copy -force $QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu_rf_ram_b.hex ./
+  file copy -force $QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu_ociram_default_contents.dat ./
   file copy -force $QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu_rf_ram_b.dat ./
+  file copy -force $QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu_rf_ram_a.dat ./
   file copy -force $QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/MotorPasso_onchip_memory2_1.hex ./
   file copy -force $QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/MotorPasso_onchip_memory2_0.hex ./
 }
@@ -326,19 +322,11 @@ alias com {
   eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/altera_merlin_master_agent.sv"                                     -work nios2_gen2_0_data_master_agent              
   eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/altera_merlin_slave_translator.sv"                                 -work jtag_uart_0_avalon_jtag_slave_translator    
   eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/altera_merlin_master_translator.sv"                                -work nios2_gen2_0_data_master_translator         
-<<<<<<< HEAD
-  eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu_test_bench.v"                          -work cpu                                         
-  eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu.v"                                     -work cpu                                         
-  eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu_debug_slave_wrapper.v"                 -work cpu                                         
-  eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu_debug_slave_tck.v"                     -work cpu                                         
-  eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu_debug_slave_sysclk.v"                  -work cpu                                         
-=======
   eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu_debug_slave_tck.v"                     -work cpu                                         
   eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu_debug_slave_sysclk.v"                  -work cpu                                         
   eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu.v"                                     -work cpu                                         
   eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu_test_bench.v"                          -work cpu                                         
   eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/MotorPasso_nios2_gen2_0_cpu_debug_slave_wrapper.v"                 -work cpu                                         
->>>>>>> 7245892e875a6bcfc53120e2288f75026a967ad8
   eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/altera_reset_controller.v"                                         -work rst_controller                              
   eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/altera_reset_synchronizer.v"                                       -work rst_controller                              
   eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/MotorPasso_tb/simulation/submodules/MotorPasso_irq_mapper.sv"                                          -work irq_mapper                                  
