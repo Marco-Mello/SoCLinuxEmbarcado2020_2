@@ -1,0 +1,45 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "PHASES[0]",
+					"strict" : false
+				},
+				{
+					"name" : "PHASES[1]",
+					"strict" : false
+				},
+				{
+					"name" : "PHASES[2]",
+					"strict" : false
+				},
+				{
+					"name" : "PHASES[3]",
+					"strict" : false
+				},
+				{
+					"name" : "DIR",
+					"strict" : false
+				},
+				{
+					"name" : "EN",
+					"strict" : false
+				},
+				{
+					"name" : "fpga_clk_50",
+					"strict" : false
+				},
+				{
+					"name" : "VEL[0]",
+					"strict" : false
+				},
+				{
+					"name" : "VEL[1]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,217 @@
+Info: Starting: Create simulation model
+Info: qsys-generate /home/labarqcomp/Entrega2_FPGA_NIOS/Entrega2_FPGA_NIOS.qsys --simulation=VHDL --allow-mixed-language-simulation --output-directory=/home/labarqcomp/Entrega2_FPGA_NIOS/Entrega2_FPGA_NIOS/simulation --family="Cyclone V" --part=5CSXFC6D6F31C6
+Progress: Loading Entrega2_FPGA_NIOS/Entrega2_FPGA_NIOS.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 18.1]
+Progress: Parameterizing module clk_0
+Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 18.1]
+Progress: Parameterizing module jtag_uart_0
+Progress: Adding nios2_gen2_0 [altera_nios2_gen2 18.1]
+Progress: Parameterizing module nios2_gen2_0
+Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 18.1]
+Progress: Parameterizing module onchip_memory2_0
+Progress: Adding onchip_memory2_1 [altera_avalon_onchip_memory2 18.1]
+Progress: Parameterizing module onchip_memory2_1
+Progress: Adding pio_0 [altera_avalon_pio 18.1]
+Progress: Parameterizing module pio_0
+Progress: Adding pio_1 [altera_avalon_pio 18.1]
+Progress: Parameterizing module pio_1
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: Entrega2_FPGA_NIOS.jtag_uart_0: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info: Entrega2_FPGA_NIOS.pio_1: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: Entrega2_FPGA_NIOS: Generating Entrega2_FPGA_NIOS "Entrega2_FPGA_NIOS" for SIM_VHDL
+Info: jtag_uart_0: Starting RTL generation for module 'Entrega2_FPGA_NIOS_jtag_uart_0'
+Info: jtag_uart_0:   Generation command is [exec /home/labarqcomp/intelFPGA/18.1/quartus/linux64/perl/bin/perl -I /home/labarqcomp/intelFPGA/18.1/quartus/linux64/perl/lib -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin/europa -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin/perl_lib -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin -I /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=Entrega2_FPGA_NIOS_jtag_uart_0 --dir=/tmp/alt8535_1533412049635403016.dir/0002_jtag_uart_0_gen/ --quartus_dir=/home/labarqcomp/intelFPGA/18.1/quartus --vhdl --config=/tmp/alt8535_1533412049635403016.dir/0002_jtag_uart_0_gen//Entrega2_FPGA_NIOS_jtag_uart_0_component_configuration.pl  --do_build_sim=1    --sim_dir=/tmp/alt8535_1533412049635403016.dir/0002_jtag_uart_0_gen/  ]
+Info: jtag_uart_0: Done RTL generation for module 'Entrega2_FPGA_NIOS_jtag_uart_0'
+Info: jtag_uart_0: "Entrega2_FPGA_NIOS" instantiated altera_avalon_jtag_uart "jtag_uart_0"
+Info: nios2_gen2_0: "Entrega2_FPGA_NIOS" instantiated altera_nios2_gen2 "nios2_gen2_0"
+Info: onchip_memory2_0: Starting RTL generation for module 'Entrega2_FPGA_NIOS_onchip_memory2_0'
+Info: onchip_memory2_0:   Generation command is [exec /home/labarqcomp/intelFPGA/18.1/quartus/linux64/perl/bin/perl -I /home/labarqcomp/intelFPGA/18.1/quartus/linux64/perl/lib -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin/europa -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin/perl_lib -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin -I /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=Entrega2_FPGA_NIOS_onchip_memory2_0 --dir=/tmp/alt8535_1533412049635403016.dir/0003_onchip_memory2_0_gen/ --quartus_dir=/home/labarqcomp/intelFPGA/18.1/quartus --vhdl --config=/tmp/alt8535_1533412049635403016.dir/0003_onchip_memory2_0_gen//Entrega2_FPGA_NIOS_onchip_memory2_0_component_configuration.pl  --do_build_sim=1    --sim_dir=/tmp/alt8535_1533412049635403016.dir/0003_onchip_memory2_0_gen/  ]
+Info: onchip_memory2_0: Done RTL generation for module 'Entrega2_FPGA_NIOS_onchip_memory2_0'
+Info: onchip_memory2_0: "Entrega2_FPGA_NIOS" instantiated altera_avalon_onchip_memory2 "onchip_memory2_0"
+Info: onchip_memory2_1: Starting RTL generation for module 'Entrega2_FPGA_NIOS_onchip_memory2_1'
+Info: onchip_memory2_1:   Generation command is [exec /home/labarqcomp/intelFPGA/18.1/quartus/linux64/perl/bin/perl -I /home/labarqcomp/intelFPGA/18.1/quartus/linux64/perl/lib -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin/europa -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin/perl_lib -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin -I /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=Entrega2_FPGA_NIOS_onchip_memory2_1 --dir=/tmp/alt8535_1533412049635403016.dir/0004_onchip_memory2_1_gen/ --quartus_dir=/home/labarqcomp/intelFPGA/18.1/quartus --vhdl --config=/tmp/alt8535_1533412049635403016.dir/0004_onchip_memory2_1_gen//Entrega2_FPGA_NIOS_onchip_memory2_1_component_configuration.pl  --do_build_sim=1    --sim_dir=/tmp/alt8535_1533412049635403016.dir/0004_onchip_memory2_1_gen/  ]
+Info: onchip_memory2_1: Done RTL generation for module 'Entrega2_FPGA_NIOS_onchip_memory2_1'
+Info: onchip_memory2_1: "Entrega2_FPGA_NIOS" instantiated altera_avalon_onchip_memory2 "onchip_memory2_1"
+Info: pio_0: Starting RTL generation for module 'Entrega2_FPGA_NIOS_pio_0'
+Info: pio_0:   Generation command is [exec /home/labarqcomp/intelFPGA/18.1/quartus/linux64/perl/bin/perl -I /home/labarqcomp/intelFPGA/18.1/quartus/linux64/perl/lib -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin/europa -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin/perl_lib -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin -I /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=Entrega2_FPGA_NIOS_pio_0 --dir=/tmp/alt8535_1533412049635403016.dir/0005_pio_0_gen/ --quartus_dir=/home/labarqcomp/intelFPGA/18.1/quartus --vhdl --config=/tmp/alt8535_1533412049635403016.dir/0005_pio_0_gen//Entrega2_FPGA_NIOS_pio_0_component_configuration.pl  --do_build_sim=1    --sim_dir=/tmp/alt8535_1533412049635403016.dir/0005_pio_0_gen/  ]
+Info: pio_0: Done RTL generation for module 'Entrega2_FPGA_NIOS_pio_0'
+Info: pio_0: "Entrega2_FPGA_NIOS" instantiated altera_avalon_pio "pio_0"
+Info: pio_1: Starting RTL generation for module 'Entrega2_FPGA_NIOS_pio_1'
+Info: pio_1:   Generation command is [exec /home/labarqcomp/intelFPGA/18.1/quartus/linux64/perl/bin/perl -I /home/labarqcomp/intelFPGA/18.1/quartus/linux64/perl/lib -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin/europa -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin/perl_lib -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin -I /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=Entrega2_FPGA_NIOS_pio_1 --dir=/tmp/alt8535_1533412049635403016.dir/0006_pio_1_gen/ --quartus_dir=/home/labarqcomp/intelFPGA/18.1/quartus --vhdl --config=/tmp/alt8535_1533412049635403016.dir/0006_pio_1_gen//Entrega2_FPGA_NIOS_pio_1_component_configuration.pl  --do_build_sim=1    --sim_dir=/tmp/alt8535_1533412049635403016.dir/0006_pio_1_gen/  ]
+Info: pio_1: Done RTL generation for module 'Entrega2_FPGA_NIOS_pio_1'
+Info: pio_1: "Entrega2_FPGA_NIOS" instantiated altera_avalon_pio "pio_1"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_003: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_004: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_005: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_0: "Entrega2_FPGA_NIOS" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: irq_mapper: "Entrega2_FPGA_NIOS" instantiated altera_irq_mapper "irq_mapper"
+Info: rst_controller: "Entrega2_FPGA_NIOS" instantiated altera_reset_controller "rst_controller"
+Info: cpu: Starting RTL generation for module 'Entrega2_FPGA_NIOS_nios2_gen2_0_cpu'
+Info: cpu:   Generation command is [exec /home/labarqcomp/intelFPGA/18.1/quartus/linux64//eperlcmd -I /home/labarqcomp/intelFPGA/18.1/quartus/linux64//perl/lib -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin/europa -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin/perl_lib -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin -I /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=Entrega2_FPGA_NIOS_nios2_gen2_0_cpu --dir=/tmp/alt8535_1533412049635403016.dir/0009_cpu_gen/ --quartus_bindir=/home/labarqcomp/intelFPGA/18.1/quartus/linux64/ --verilog --config=/tmp/alt8535_1533412049635403016.dir/0009_cpu_gen//Entrega2_FPGA_NIOS_nios2_gen2_0_cpu_processor_configuration.pl  --do_build_sim=1    --sim_dir=/tmp/alt8535_1533412049635403016.dir/0009_cpu_gen/  ]
+Info: cpu: # 2020.09.30 11:13:46 (*) Starting Nios II generation
+Info: cpu: # 2020.09.30 11:13:46 (*)   Checking for plaintext license.
+Info: cpu: # 2020.09.30 11:14:23 (*)   Plaintext license not found.
+Info: cpu: # 2020.09.30 11:14:23 (*)   No license required to generate encrypted Nios II/e.
+Info: cpu: # 2020.09.30 11:14:23 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2020.09.30 11:14:23 (*)   Creating all objects for CPU
+Info: cpu: # 2020.09.30 11:14:23 (*)   Creating '/tmp/alt8535_1533412049635403016.dir/0009_cpu_gen//Entrega2_FPGA_NIOS_nios2_gen2_0_cpu_nios2_waves.do'
+Info: cpu: # 2020.09.30 11:14:23 (*)   Generating RTL from CPU objects
+Info: cpu: # 2020.09.30 11:14:23 (*)   Creating plain-text RTL
+Info: cpu: # 2020.09.30 11:14:24 (*) Done Nios II generation
+Info: cpu: Done RTL generation for module 'Entrega2_FPGA_NIOS_nios2_gen2_0_cpu'
+Info: cpu: "nios2_gen2_0" instantiated altera_nios2_gen2_unit "cpu"
+Info: nios2_gen2_0_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "nios2_gen2_0_data_master_translator"
+Info: jtag_uart_0_avalon_jtag_slave_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "jtag_uart_0_avalon_jtag_slave_translator"
+Info: nios2_gen2_0_data_master_agent: "mm_interconnect_0" instantiated altera_merlin_master_agent "nios2_gen2_0_data_master_agent"
+Info: jtag_uart_0_avalon_jtag_slave_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "jtag_uart_0_avalon_jtag_slave_agent"
+Info: jtag_uart_0_avalon_jtag_slave_agent_rsp_fifo: "mm_interconnect_0" instantiated altera_avalon_sc_fifo "jtag_uart_0_avalon_jtag_slave_agent_rsp_fifo"
+Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_002: "mm_interconnect_0" instantiated altera_merlin_router "router_002"
+Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file /home/labarqcomp/Entrega2_FPGA_NIOS/Entrega2_FPGA_NIOS/simulation/submodules/altera_merlin_arbitrator.sv
+Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+Info: Entrega2_FPGA_NIOS: Done "Entrega2_FPGA_NIOS" with 24 modules, 45 files
+Info: qsys-generate succeeded.
+Info: Finished: Create simulation model
+Info: Starting: Create Modelsim Project.
+Info: sim-script-gen --spd=/home/labarqcomp/Entrega2_FPGA_NIOS/Entrega2_FPGA_NIOS/Entrega2_FPGA_NIOS.spd --output-directory=/home/labarqcomp/Entrega2_FPGA_NIOS/Entrega2_FPGA_NIOS/simulation/ --use-relative-paths=true
+Info: Doing: ip-make-simscript --spd=/home/labarqcomp/Entrega2_FPGA_NIOS/Entrega2_FPGA_NIOS/Entrega2_FPGA_NIOS.spd --output-directory=/home/labarqcomp/Entrega2_FPGA_NIOS/Entrega2_FPGA_NIOS/simulation/ --use-relative-paths=true
+Info: Generating the following file(s) for MODELSIM simulator in /home/labarqcomp/Entrega2_FPGA_NIOS/Entrega2_FPGA_NIOS/simulation/ directory:
+Info: 	mentor/msim_setup.tcl
+Info: Skipping VCS script generation since VHDL file $QUARTUS_INSTALL_DIR/eda/sim_lib/altera_syn_attributes.vhd is required for simulation
+Info: Generating the following file(s) for VCSMX simulator in /home/labarqcomp/Entrega2_FPGA_NIOS/Entrega2_FPGA_NIOS/simulation/ directory:
+Info: 	synopsys/vcsmx/synopsys_sim.setup
+Info: 	synopsys/vcsmx/vcsmx_setup.sh
+Info: Generating the following file(s) for NCSIM simulator in /home/labarqcomp/Entrega2_FPGA_NIOS/Entrega2_FPGA_NIOS/simulation/ directory:
+Info: 	cadence/cds.lib
+Info: 	cadence/hdl.var
+Info: 	cadence/ncsim_setup.sh
+Info: 	23 .cds.lib files in cadence/cds_libs/ directory
+Info: Generating the following file(s) for RIVIERA simulator in /home/labarqcomp/Entrega2_FPGA_NIOS/Entrega2_FPGA_NIOS/simulation/ directory:
+Info: 	aldec/rivierapro_setup.tcl
+Info: For information on how to simulate your IP, see the explanatory comments in the simulator-specific subdirectories under /home/labarqcomp/Entrega2_FPGA_NIOS/Entrega2_FPGA_NIOS/simulation/.
+Info: Regenerate these scripts whenever you make any change to any Quartus-generated IP in your project.
+Info: Finished: Create Modelsim Project.
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate /home/labarqcomp/Entrega2_FPGA_NIOS/Entrega2_FPGA_NIOS.qsys --block-symbol-file --output-directory=/home/labarqcomp/Entrega2_FPGA_NIOS/Entrega2_FPGA_NIOS --family="Cyclone V" --part=5CSXFC6D6F31C6
+Progress: Loading Entrega2_FPGA_NIOS/Entrega2_FPGA_NIOS.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 18.1]
+Progress: Parameterizing module clk_0
+Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 18.1]
+Progress: Parameterizing module jtag_uart_0
+Progress: Adding nios2_gen2_0 [altera_nios2_gen2 18.1]
+Progress: Parameterizing module nios2_gen2_0
+Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 18.1]
+Progress: Parameterizing module onchip_memory2_0
+Progress: Adding onchip_memory2_1 [altera_avalon_onchip_memory2 18.1]
+Progress: Parameterizing module onchip_memory2_1
+Progress: Adding pio_0 [altera_avalon_pio 18.1]
+Progress: Parameterizing module pio_0
+Progress: Adding pio_1 [altera_avalon_pio 18.1]
+Progress: Parameterizing module pio_1
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: Entrega2_FPGA_NIOS.jtag_uart_0: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info: Entrega2_FPGA_NIOS.pio_1: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate /home/labarqcomp/Entrega2_FPGA_NIOS/Entrega2_FPGA_NIOS.qsys --synthesis=VHDL --output-directory=/home/labarqcomp/Entrega2_FPGA_NIOS/Entrega2_FPGA_NIOS/synthesis --family="Cyclone V" --part=5CSXFC6D6F31C6
+Progress: Loading Entrega2_FPGA_NIOS/Entrega2_FPGA_NIOS.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 18.1]
+Progress: Parameterizing module clk_0
+Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 18.1]
+Progress: Parameterizing module jtag_uart_0
+Progress: Adding nios2_gen2_0 [altera_nios2_gen2 18.1]
+Progress: Parameterizing module nios2_gen2_0
+Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 18.1]
+Progress: Parameterizing module onchip_memory2_0
+Progress: Adding onchip_memory2_1 [altera_avalon_onchip_memory2 18.1]
+Progress: Parameterizing module onchip_memory2_1
+Progress: Adding pio_0 [altera_avalon_pio 18.1]
+Progress: Parameterizing module pio_0
+Progress: Adding pio_1 [altera_avalon_pio 18.1]
+Progress: Parameterizing module pio_1
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: Entrega2_FPGA_NIOS.jtag_uart_0: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info: Entrega2_FPGA_NIOS.pio_1: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: Entrega2_FPGA_NIOS: Generating Entrega2_FPGA_NIOS "Entrega2_FPGA_NIOS" for QUARTUS_SYNTH
+Info: jtag_uart_0: Starting RTL generation for module 'Entrega2_FPGA_NIOS_jtag_uart_0'
+Info: jtag_uart_0:   Generation command is [exec /home/labarqcomp/intelFPGA/18.1/quartus/linux64/perl/bin/perl -I /home/labarqcomp/intelFPGA/18.1/quartus/linux64/perl/lib -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin/europa -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin/perl_lib -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin -I /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=Entrega2_FPGA_NIOS_jtag_uart_0 --dir=/tmp/alt8535_1533412049635403016.dir/0023_jtag_uart_0_gen/ --quartus_dir=/home/labarqcomp/intelFPGA/18.1/quartus --verilog --config=/tmp/alt8535_1533412049635403016.dir/0023_jtag_uart_0_gen//Entrega2_FPGA_NIOS_jtag_uart_0_component_configuration.pl  --do_build_sim=0  ]
+Info: jtag_uart_0: Done RTL generation for module 'Entrega2_FPGA_NIOS_jtag_uart_0'
+Info: jtag_uart_0: "Entrega2_FPGA_NIOS" instantiated altera_avalon_jtag_uart "jtag_uart_0"
+Info: nios2_gen2_0: "Entrega2_FPGA_NIOS" instantiated altera_nios2_gen2 "nios2_gen2_0"
+Info: onchip_memory2_0: Starting RTL generation for module 'Entrega2_FPGA_NIOS_onchip_memory2_0'
+Info: onchip_memory2_0:   Generation command is [exec /home/labarqcomp/intelFPGA/18.1/quartus/linux64/perl/bin/perl -I /home/labarqcomp/intelFPGA/18.1/quartus/linux64/perl/lib -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin/europa -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin/perl_lib -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin -I /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=Entrega2_FPGA_NIOS_onchip_memory2_0 --dir=/tmp/alt8535_1533412049635403016.dir/0024_onchip_memory2_0_gen/ --quartus_dir=/home/labarqcomp/intelFPGA/18.1/quartus --verilog --config=/tmp/alt8535_1533412049635403016.dir/0024_onchip_memory2_0_gen//Entrega2_FPGA_NIOS_onchip_memory2_0_component_configuration.pl  --do_build_sim=0  ]
+Info: onchip_memory2_0: Done RTL generation for module 'Entrega2_FPGA_NIOS_onchip_memory2_0'
+Info: onchip_memory2_0: "Entrega2_FPGA_NIOS" instantiated altera_avalon_onchip_memory2 "onchip_memory2_0"
+Info: onchip_memory2_1: Starting RTL generation for module 'Entrega2_FPGA_NIOS_onchip_memory2_1'
+Info: onchip_memory2_1:   Generation command is [exec /home/labarqcomp/intelFPGA/18.1/quartus/linux64/perl/bin/perl -I /home/labarqcomp/intelFPGA/18.1/quartus/linux64/perl/lib -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin/europa -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin/perl_lib -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin -I /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=Entrega2_FPGA_NIOS_onchip_memory2_1 --dir=/tmp/alt8535_1533412049635403016.dir/0025_onchip_memory2_1_gen/ --quartus_dir=/home/labarqcomp/intelFPGA/18.1/quartus --verilog --config=/tmp/alt8535_1533412049635403016.dir/0025_onchip_memory2_1_gen//Entrega2_FPGA_NIOS_onchip_memory2_1_component_configuration.pl  --do_build_sim=0  ]
+Info: onchip_memory2_1: Done RTL generation for module 'Entrega2_FPGA_NIOS_onchip_memory2_1'
+Info: onchip_memory2_1: "Entrega2_FPGA_NIOS" instantiated altera_avalon_onchip_memory2 "onchip_memory2_1"
+Info: pio_0: Starting RTL generation for module 'Entrega2_FPGA_NIOS_pio_0'
+Info: pio_0:   Generation command is [exec /home/labarqcomp/intelFPGA/18.1/quartus/linux64/perl/bin/perl -I /home/labarqcomp/intelFPGA/18.1/quartus/linux64/perl/lib -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin/europa -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin/perl_lib -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin -I /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=Entrega2_FPGA_NIOS_pio_0 --dir=/tmp/alt8535_1533412049635403016.dir/0026_pio_0_gen/ --quartus_dir=/home/labarqcomp/intelFPGA/18.1/quartus --verilog --config=/tmp/alt8535_1533412049635403016.dir/0026_pio_0_gen//Entrega2_FPGA_NIOS_pio_0_component_configuration.pl  --do_build_sim=0  ]
+Info: pio_0: Done RTL generation for module 'Entrega2_FPGA_NIOS_pio_0'
+Info: pio_0: "Entrega2_FPGA_NIOS" instantiated altera_avalon_pio "pio_0"
+Info: pio_1: Starting RTL generation for module 'Entrega2_FPGA_NIOS_pio_1'
+Info: pio_1:   Generation command is [exec /home/labarqcomp/intelFPGA/18.1/quartus/linux64/perl/bin/perl -I /home/labarqcomp/intelFPGA/18.1/quartus/linux64/perl/lib -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin/europa -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin/perl_lib -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin -I /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=Entrega2_FPGA_NIOS_pio_1 --dir=/tmp/alt8535_1533412049635403016.dir/0027_pio_1_gen/ --quartus_dir=/home/labarqcomp/intelFPGA/18.1/quartus --verilog --config=/tmp/alt8535_1533412049635403016.dir/0027_pio_1_gen//Entrega2_FPGA_NIOS_pio_1_component_configuration.pl  --do_build_sim=0  ]
+Info: pio_1: Done RTL generation for module 'Entrega2_FPGA_NIOS_pio_1'
+Info: pio_1: "Entrega2_FPGA_NIOS" instantiated altera_avalon_pio "pio_1"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_003: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_004: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_005: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_0: "Entrega2_FPGA_NIOS" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: irq_mapper: "Entrega2_FPGA_NIOS" instantiated altera_irq_mapper "irq_mapper"
+Info: rst_controller: "Entrega2_FPGA_NIOS" instantiated altera_reset_controller "rst_controller"
+Info: cpu: Starting RTL generation for module 'Entrega2_FPGA_NIOS_nios2_gen2_0_cpu'
+Info: cpu:   Generation command is [exec /home/labarqcomp/intelFPGA/18.1/quartus/linux64//eperlcmd -I /home/labarqcomp/intelFPGA/18.1/quartus/linux64//perl/lib -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin/europa -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin/perl_lib -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin -I /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=Entrega2_FPGA_NIOS_nios2_gen2_0_cpu --dir=/tmp/alt8535_1533412049635403016.dir/0030_cpu_gen/ --quartus_bindir=/home/labarqcomp/intelFPGA/18.1/quartus/linux64/ --verilog --config=/tmp/alt8535_1533412049635403016.dir/0030_cpu_gen//Entrega2_FPGA_NIOS_nios2_gen2_0_cpu_processor_configuration.pl  --do_build_sim=0  ]
+Info: cpu: # 2020.09.30 11:14:29 (*) Starting Nios II generation
+Info: cpu: # 2020.09.30 11:14:29 (*)   Checking for plaintext license.
+Info: cpu: # 2020.09.30 11:15:06 (*)   Plaintext license not found.
+Info: cpu: # 2020.09.30 11:15:06 (*)   No license required to generate encrypted Nios II/e.
+Info: cpu: # 2020.09.30 11:15:06 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2020.09.30 11:15:06 (*)   Creating all objects for CPU
+Info: cpu: # 2020.09.30 11:15:07 (*)   Generating RTL from CPU objects
+Info: cpu: # 2020.09.30 11:15:07 (*)   Creating plain-text RTL
+Info: cpu: # 2020.09.30 11:15:07 (*) Done Nios II generation
+Info: cpu: Done RTL generation for module 'Entrega2_FPGA_NIOS_nios2_gen2_0_cpu'
+Info: cpu: "nios2_gen2_0" instantiated altera_nios2_gen2_unit "cpu"
+Info: nios2_gen2_0_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "nios2_gen2_0_data_master_translator"
+Info: jtag_uart_0_avalon_jtag_slave_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "jtag_uart_0_avalon_jtag_slave_translator"
+Info: nios2_gen2_0_data_master_agent: "mm_interconnect_0" instantiated altera_merlin_master_agent "nios2_gen2_0_data_master_agent"
+Info: jtag_uart_0_avalon_jtag_slave_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "jtag_uart_0_avalon_jtag_slave_agent"
+Info: jtag_uart_0_avalon_jtag_slave_agent_rsp_fifo: "mm_interconnect_0" instantiated altera_avalon_sc_fifo "jtag_uart_0_avalon_jtag_slave_agent_rsp_fifo"
+Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_002: "mm_interconnect_0" instantiated altera_merlin_router "router_002"
+Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file /home/labarqcomp/Entrega2_FPGA_NIOS/Entrega2_FPGA_NIOS/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+Info: Entrega2_FPGA_NIOS: Done "Entrega2_FPGA_NIOS" with 24 modules, 38 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis
