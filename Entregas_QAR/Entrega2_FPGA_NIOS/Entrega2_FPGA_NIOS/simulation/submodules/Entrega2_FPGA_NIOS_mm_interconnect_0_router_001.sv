@@ -173,11 +173,6 @@ module Entrega2_FPGA_NIOS_mm_interconnect_0_router_001
 
 
 
-    // -------------------------------------------------------
-    // Write and read transaction signals
-    // -------------------------------------------------------
-    wire read_transaction;
-    assign read_transaction  = sink_data[PKT_TRANS_READ];
 
 
     Entrega2_FPGA_NIOS_mm_interconnect_0_router_001_default_decode the_default_decode(
@@ -210,7 +205,7 @@ module Entrega2_FPGA_NIOS_mm_interconnect_0_router_001
     end
 
     // ( 0x41020 .. 0x41030 )
-    if ( {address[RG:PAD2],{PAD2{1'b0}}} == 19'h41020  && read_transaction  ) begin
+    if ( {address[RG:PAD2],{PAD2{1'b0}}} == 19'h41020   ) begin
             src_channel = 6'b01000;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 5;
     end

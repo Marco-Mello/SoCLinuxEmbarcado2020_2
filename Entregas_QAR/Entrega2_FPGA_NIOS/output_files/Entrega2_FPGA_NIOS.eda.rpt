@@ -1,5 +1,5 @@
 EDA Netlist Writer report for Entrega2_FPGA_NIOS
-Wed Sep 30 10:59:39 2020
+Tue Oct  6 16:57:02 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -36,7 +36,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Wed Sep 30 10:59:39 2020 ;
+; EDA Netlist Writer Status ; Successful - Tue Oct  6 16:57:02 2020 ;
 ; Revision Name             ; Entrega2_FPGA_NIOS                    ;
 ; Top-level Entity Name     ; Entrega2_FPGA_NIOS                    ;
 ; Family                    ; Cyclone V                             ;
@@ -66,13 +66,13 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------------------------------+------------------------+
 
 
-+--------------------------------------------------------------------------------+
-; Simulation Generated Files                                                     ;
-+--------------------------------------------------------------------------------+
-; Generated Files                                                                ;
-+--------------------------------------------------------------------------------+
-; /home/labarqcomp/Entrega2_FPGA_NIOS/simulation/modelsim/Entrega2_FPGA_NIOS.vho ;
-+--------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                                                                  ;
++-----------------------------------------------------------------------------------------------------------------------------+
+; Generated Files                                                                                                             ;
++-----------------------------------------------------------------------------------------------------------------------------+
+; /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entregas_QAR/Entrega2_FPGA_NIOS/simulation/modelsim/Entrega2_FPGA_NIOS.vho ;
++-----------------------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -81,14 +81,14 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
-    Info: Processing started: Wed Sep 30 10:59:00 2020
+    Info: Processing started: Tue Oct  6 16:56:26 2020
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off Entrega2_FPGA_NIOS -c Entrega2_FPGA_NIOS
 Warning (10905): Generated the EDA functional simulation netlist because it is the only supported netlist type for this device.
-Info (204019): Generated file Entrega2_FPGA_NIOS.vho in folder "/home/labarqcomp/Entrega2_FPGA_NIOS/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file Entrega2_FPGA_NIOS.vho in folder "/home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entregas_QAR/Entrega2_FPGA_NIOS/simulation/modelsim/" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 1139 megabytes
-    Info: Processing ended: Wed Sep 30 10:59:39 2020
-    Info: Elapsed time: 00:00:39
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Peak virtual memory: 1208 megabytes
+    Info: Processing ended: Tue Oct  6 16:57:02 2020
+    Info: Elapsed time: 00:00:36
+    Info: Total CPU time (on all processors): 00:00:03
 
 

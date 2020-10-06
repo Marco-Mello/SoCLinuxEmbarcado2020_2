@@ -44,10 +44,10 @@
 
 module Entrega2_FPGA_NIOS_mm_interconnect_0_router_default_decode
   #(
-     parameter DEFAULT_CHANNEL = 2,
+     parameter DEFAULT_CHANNEL = 5,
                DEFAULT_WR_CHANNEL = -1,
                DEFAULT_RD_CHANNEL = -1,
-               DEFAULT_DESTID = 2 
+               DEFAULT_DESTID = 3 
    )
   (output [81 - 79 : 0] default_destination_id,
    output [6-1 : 0] default_wr_channel,
@@ -134,11 +134,12 @@ module Entrega2_FPGA_NIOS_mm_interconnect_0_router
     // Figure out the number of bits to mask off for each slave span
     // during address decoding
     // -------------------------------------------------------
-    localparam PAD0 = log2ceil(64'h40000 - 64'h20000); 
-    localparam PAD1 = log2ceil(64'h41000 - 64'h40800); 
-    localparam PAD2 = log2ceil(64'h41030 - 64'h41020); 
-    localparam PAD3 = log2ceil(64'h41040 - 64'h41030); 
-    localparam PAD4 = log2ceil(64'h41050 - 64'h41048); 
+    localparam PAD0 = log2ceil(64'h20000 - 64'h0); 
+    localparam PAD1 = log2ceil(64'h40000 - 64'h20000); 
+    localparam PAD2 = log2ceil(64'h41000 - 64'h40800); 
+    localparam PAD3 = log2ceil(64'h41030 - 64'h41020); 
+    localparam PAD4 = log2ceil(64'h41040 - 64'h41030); 
+    localparam PAD5 = log2ceil(64'h41050 - 64'h41048); 
     // -------------------------------------------------------
     // Work out which address bits are significant based on the
     // address range of the slaves. If the required width is too
@@ -173,11 +174,6 @@ module Entrega2_FPGA_NIOS_mm_interconnect_0_router
 
 
 
-    // -------------------------------------------------------
-    // Write and read transaction signals
-    // -------------------------------------------------------
-    wire read_transaction;
-    assign read_transaction  = sink_data[PKT_TRANS_READ];
 
 
     Entrega2_FPGA_NIOS_mm_interconnect_0_router_default_decode the_default_decode(
@@ -197,33 +193,39 @@ module Entrega2_FPGA_NIOS_mm_interconnect_0_router
         // Sets the channel and destination ID based on the address
         // --------------------------------------------------
 
+    // ( 0x0 .. 0x20000 )
+    if ( {address[RG:PAD0],{PAD0{1'b0}}} == 19'h0   ) begin
+            src_channel = 6'b100000;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 3;
+    end
+
     // ( 0x20000 .. 0x40000 )
-    if ( {address[RG:PAD0],{PAD0{1'b0}}} == 19'h20000   ) begin
-            src_channel = 6'b00100;
+    if ( {address[RG:PAD1],{PAD1{1'b0}}} == 19'h20000   ) begin
+            src_channel = 6'b000100;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 2;
     end
 
     // ( 0x40800 .. 0x41000 )
-    if ( {address[RG:PAD1],{PAD1{1'b0}}} == 19'h40800   ) begin
-            src_channel = 6'b00010;
+    if ( {address[RG:PAD2],{PAD2{1'b0}}} == 19'h40800   ) begin
+            src_channel = 6'b000010;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 1;
     end
 
     // ( 0x41020 .. 0x41030 )
-    if ( {address[RG:PAD2],{PAD2{1'b0}}} == 19'h41020  && read_transaction  ) begin
-            src_channel = 6'b10000;
+    if ( {address[RG:PAD3],{PAD3{1'b0}}} == 19'h41020   ) begin
+            src_channel = 6'b010000;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 5;
     end
 
     // ( 0x41030 .. 0x41040 )
-    if ( {address[RG:PAD3],{PAD3{1'b0}}} == 19'h41030   ) begin
-            src_channel = 6'b01000;
+    if ( {address[RG:PAD4],{PAD4{1'b0}}} == 19'h41030   ) begin
+            src_channel = 6'b001000;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 4;
     end
 
     // ( 0x41048 .. 0x41050 )
-    if ( {address[RG:PAD4],{PAD4{1'b0}}} == 19'h41048   ) begin
-            src_channel = 6'b00001;
+    if ( {address[RG:PAD5],{PAD5{1'b0}}} == 19'h41048   ) begin
+            src_channel = 6'b000001;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 0;
     end
 

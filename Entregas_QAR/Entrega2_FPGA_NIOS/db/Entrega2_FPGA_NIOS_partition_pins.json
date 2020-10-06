@@ -4,39 +4,75 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "PHASES[0]",
+					"name" : "phases_export[0]",
 					"strict" : false
 				},
 				{
-					"name" : "PHASES[1]",
+					"name" : "phases_export[1]",
 					"strict" : false
 				},
 				{
-					"name" : "PHASES[2]",
+					"name" : "phases_export[2]",
 					"strict" : false
 				},
 				{
-					"name" : "PHASES[3]",
+					"name" : "phases_export[3]",
 					"strict" : false
 				},
 				{
-					"name" : "DIR",
+					"name" : "phases_export[4]",
 					"strict" : false
 				},
 				{
-					"name" : "EN",
+					"name" : "phases_export[5]",
 					"strict" : false
 				},
 				{
-					"name" : "fpga_clk_50",
+					"name" : "phases_export[6]",
 					"strict" : false
 				},
 				{
-					"name" : "VEL[0]",
+					"name" : "phases_export[7]",
 					"strict" : false
 				},
 				{
-					"name" : "VEL[1]",
+					"name" : "clk_clk",
+					"strict" : false
+				},
+				{
+					"name" : "switchs_export[0]",
+					"strict" : false
+				},
+				{
+					"name" : "switchs_export[1]",
+					"strict" : false
+				},
+				{
+					"name" : "switchs_export[2]",
+					"strict" : false
+				},
+				{
+					"name" : "switchs_export[3]",
+					"strict" : false
+				},
+				{
+					"name" : "switchs_export[4]",
+					"strict" : false
+				},
+				{
+					"name" : "switchs_export[5]",
+					"strict" : false
+				},
+				{
+					"name" : "switchs_export[6]",
+					"strict" : false
+				},
+				{
+					"name" : "switchs_export[7]",
+					"strict" : false
+				},
+				{
+					"name" : "reset_reset_n",
 					"strict" : false
 				}
 			]

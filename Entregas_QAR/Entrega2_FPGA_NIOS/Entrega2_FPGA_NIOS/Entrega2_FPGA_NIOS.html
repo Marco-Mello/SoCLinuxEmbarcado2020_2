@@ -67,7 +67,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
   </table>
   <table class="blueBar">
    <tr>
-    <td class="l">2020.09.30.11:20:57</td>
+    <td class="l">2020.10.06.14:55:06</td>
     <td class="r">Datasheet</td>
    </tr>
   </table>
@@ -161,7 +161,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
    <tr>
     <td class="slaveb">s1&#160;</td>
     <td class="addr"><span style="color:#989898">0x</span>00020000</td>
-    <td class="empty"></td>
+    <td class="addr"><span style="color:#989898">0x</span>00020000</td>
    </tr>
    <tr>
     <td class="slavemodule">&#160;
@@ -173,7 +173,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
    </tr>
    <tr>
     <td class="slaveb">s1&#160;</td>
-    <td class="empty"></td>
+    <td class="addr"><span style="color:#989898">0x</span>00000000</td>
     <td class="addr"><span style="color:#989898">0x</span>00000000</td>
    </tr>
    <tr>
@@ -426,7 +426,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        <a href="#module_clk_0">clk_0</a>
       </td>
       <td class="from">clk&#160;&#160;</td>
-      <td class="main" rowspan="36">nios2_gen2_0</td>
+      <td class="main" rowspan="42">nios2_gen2_0</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;clk</td>
@@ -487,9 +487,19 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <td></td>
       <td></td>
       <td class="from">data_master&#160;&#160;</td>
-      <td class="neighbor" rowspan="4">
+      <td class="neighbor" rowspan="6">
        <a href="#module_onchip_memory2_0">onchip_memory2_0</a>
       </td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="to">&#160;&#160;s1</td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="from">instruction_master&#160;&#160;</td>
      </tr>
      <tr>
       <td></td>
@@ -549,7 +559,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <td></td>
       <td></td>
       <td class="from">data_master&#160;&#160;</td>
-      <td class="neighbor" rowspan="6">
+      <td class="neighbor" rowspan="8">
        <a href="#module_pio_1">pio_1</a>
       </td>
      </tr>
@@ -571,6 +581,16 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
      <tr>
       <td></td>
       <td></td>
+      <td class="from">irq&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="to">&#160;&#160;irq</td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
       <td class="from">debug_reset_request&#160;&#160;</td>
      </tr>
      <tr>
@@ -584,10 +604,20 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
      <tr>
       <td></td>
       <td></td>
-      <td class="from">instruction_master&#160;&#160;</td>
-      <td class="neighbor" rowspan="4">
+      <td class="from">data_master&#160;&#160;</td>
+      <td class="neighbor" rowspan="6">
        <a href="#module_onchip_memory2_1">onchip_memory2_1</a>
       </td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="to">&#160;&#160;s1</td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="from">instruction_master&#160;&#160;</td>
      </tr>
      <tr>
       <td></td>
@@ -1295,7 +1325,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">instSlaveMapParam</td>
-        <td class="parametervalue">&lt;address-map&gt;&lt;slave name='onchip_memory2_1.s1' start='0x0' end='0x20000' type='altera_avalon_onchip_memory2.s1' /&gt;&lt;slave name='nios2_gen2_0.debug_mem_slave' start='0x40800' end='0x41000' type='altera_nios2_gen2.debug_mem_slave' /&gt;&lt;slave name='pio_1.s1' start='0x41020' end='0x41030' type='altera_avalon_pio.s1' /&gt;&lt;slave name='pio_0.s1' start='0x41030' end='0x41040' type='altera_avalon_pio.s1' /&gt;&lt;slave name='jtag_uart_0.avalon_jtag_slave' start='0x41048' end='0x41050' type='altera_avalon_jtag_uart.avalon_jtag_slave' /&gt;&lt;/address-map&gt;</td>
+        <td class="parametervalue">&lt;address-map&gt;&lt;slave name='onchip_memory2_1.s1' start='0x0' end='0x20000' type='altera_avalon_onchip_memory2.s1' /&gt;&lt;slave name='onchip_memory2_0.s1' start='0x20000' end='0x40000' type='altera_avalon_onchip_memory2.s1' /&gt;&lt;slave name='nios2_gen2_0.debug_mem_slave' start='0x40800' end='0x41000' type='altera_nios2_gen2.debug_mem_slave' /&gt;&lt;slave name='pio_1.s1' start='0x41020' end='0x41030' type='altera_avalon_pio.s1' /&gt;&lt;slave name='pio_0.s1' start='0x41030' end='0x41040' type='altera_avalon_pio.s1' /&gt;&lt;slave name='jtag_uart_0.avalon_jtag_slave' start='0x41048' end='0x41050' type='altera_avalon_jtag_uart.avalon_jtag_slave' /&gt;&lt;/address-map&gt;</td>
        </tr>
        <tr>
         <td class="parametername">faSlaveMapParam</td>
@@ -1303,7 +1333,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">dataSlaveMapParam</td>
-        <td class="parametervalue">&lt;address-map&gt;&lt;slave name='onchip_memory2_0.s1' start='0x20000' end='0x40000' type='altera_avalon_onchip_memory2.s1' /&gt;&lt;slave name='nios2_gen2_0.debug_mem_slave' start='0x40800' end='0x41000' type='altera_nios2_gen2.debug_mem_slave' /&gt;&lt;slave name='pio_1.s1' start='0x41020' end='0x41030' type='altera_avalon_pio.s1' /&gt;&lt;slave name='pio_0.s1' start='0x41030' end='0x41040' type='altera_avalon_pio.s1' /&gt;&lt;slave name='jtag_uart_0.avalon_jtag_slave' start='0x41048' end='0x41050' type='altera_avalon_jtag_uart.avalon_jtag_slave' /&gt;&lt;/address-map&gt;</td>
+        <td class="parametervalue">&lt;address-map&gt;&lt;slave name='onchip_memory2_1.s1' start='0x0' end='0x20000' type='altera_avalon_onchip_memory2.s1' /&gt;&lt;slave name='onchip_memory2_0.s1' start='0x20000' end='0x40000' type='altera_avalon_onchip_memory2.s1' /&gt;&lt;slave name='nios2_gen2_0.debug_mem_slave' start='0x40800' end='0x41000' type='altera_nios2_gen2.debug_mem_slave' /&gt;&lt;slave name='pio_1.s1' start='0x41020' end='0x41030' type='altera_avalon_pio.s1' /&gt;&lt;slave name='pio_0.s1' start='0x41030' end='0x41040' type='altera_avalon_pio.s1' /&gt;&lt;slave name='jtag_uart_0.avalon_jtag_slave' start='0x41048' end='0x41050' type='altera_avalon_jtag_uart.avalon_jtag_slave' /&gt;&lt;/address-map&gt;</td>
        </tr>
        <tr>
         <td class="parametername">tightlyCoupledDataMaster0MapParam</td>
@@ -1355,7 +1385,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">internalIrqMaskSystemInfo</td>
-        <td class="parametervalue">1</td>
+        <td class="parametervalue">3</td>
        </tr>
        <tr>
         <td class="parametername">customInstSlavesSystemInfo</td>
@@ -1535,11 +1565,17 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
    <div class="greydiv">
     <table class="connectionboxes">
      <tr>
-      <td class="neighbor" rowspan="4">
+      <td class="neighbor" rowspan="6">
        <a href="#module_nios2_gen2_0">nios2_gen2_0</a>
       </td>
       <td class="from">data_master&#160;&#160;</td>
-      <td class="main" rowspan="9">onchip_memory2_0</td>
+      <td class="main" rowspan="11">onchip_memory2_0</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;s1</td>
+     </tr>
+     <tr>
+      <td class="from">instruction_master&#160;&#160;</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;s1</td>
@@ -1803,11 +1839,17 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
    <div class="greydiv">
     <table class="connectionboxes">
      <tr>
-      <td class="neighbor" rowspan="4">
+      <td class="neighbor" rowspan="6">
        <a href="#module_nios2_gen2_0">nios2_gen2_0</a>
       </td>
+      <td class="from">data_master&#160;&#160;</td>
+      <td class="main" rowspan="11">onchip_memory2_1</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;s1</td>
+     </tr>
+     <tr>
       <td class="from">instruction_master&#160;&#160;</td>
-      <td class="main" rowspan="9">onchip_memory2_1</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;s1</td>
@@ -2281,11 +2323,11 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
    <div class="greydiv">
     <table class="connectionboxes">
      <tr>
-      <td class="neighbor" rowspan="6">
+      <td class="neighbor" rowspan="8">
        <a href="#module_nios2_gen2_0">nios2_gen2_0</a>
       </td>
       <td class="from">data_master&#160;&#160;</td>
-      <td class="main" rowspan="11">pio_1</td>
+      <td class="main" rowspan="13">pio_1</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;s1</td>
@@ -2295,6 +2337,12 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
      </tr>
      <tr>
       <td class="to">&#160;&#160;s1</td>
+     </tr>
+     <tr>
+      <td class="from">irq&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;irq</td>
      </tr>
      <tr>
       <td class="from">debug_reset_request&#160;&#160;</td>
@@ -2339,7 +2387,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">captureEdge</td>
-        <td class="parametervalue">false</td>
+        <td class="parametervalue">true</td>
        </tr>
        <tr>
         <td class="parametername">direction</td>
@@ -2351,7 +2399,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">generateIRQ</td>
-        <td class="parametervalue">false</td>
+        <td class="parametervalue">true</td>
        </tr>
        <tr>
         <td class="parametername">irqType</td>
@@ -2395,19 +2443,19 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">derived_capture</td>
-        <td class="parametervalue">false</td>
+        <td class="parametervalue">true</td>
        </tr>
        <tr>
         <td class="parametername">derived_edge_type</td>
-        <td class="parametervalue">NONE</td>
+        <td class="parametervalue">RISING</td>
        </tr>
        <tr>
         <td class="parametername">derived_irq_type</td>
-        <td class="parametervalue">NONE</td>
+        <td class="parametervalue">LEVEL</td>
        </tr>
        <tr>
         <td class="parametername">derived_has_irq</td>
-        <td class="parametervalue">false</td>
+        <td class="parametervalue">true</td>
        </tr>
        <tr>
         <td class="parametername">deviceFamily</td>
@@ -2436,7 +2484,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">CAPTURE</td>
-        <td class="parametervalue">0</td>
+        <td class="parametervalue">1</td>
        </tr>
        <tr>
         <td class="parametername">DATA_WIDTH</td>
@@ -2452,7 +2500,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">EDGE_TYPE</td>
-        <td class="parametervalue">NONE</td>
+        <td class="parametervalue">RISING</td>
        </tr>
        <tr>
         <td class="parametername">FREQ</td>
@@ -2472,7 +2520,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">IRQ_TYPE</td>
-        <td class="parametervalue">NONE</td>
+        <td class="parametervalue">LEVEL</td>
        </tr>
        <tr>
         <td class="parametername">RESET_VALUE</td>
@@ -2486,7 +2534,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
   <table class="blueBar">
    <tr>
     <td class="l">generation took 0.00 seconds</td>
-    <td class="r">rendering took 0.03 seconds</td>
+    <td class="r">rendering took 0.04 seconds</td>
    </tr>
   </table>
  </body>
