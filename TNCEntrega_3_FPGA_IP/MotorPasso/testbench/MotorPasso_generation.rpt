@@ -1,0 +1,315 @@
+Info: Starting: Create testbench Platform Designer system
+Info: /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso.ipx
+Info: qsys-generate /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso.qsys --testbench=STANDARD --output-directory=/home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP --family="Cyclone V" --part=5CSXFC6D6F31C6
+Progress: Loading Entrega_3_FPGA_IP/MotorPasso.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 18.1]
+Progress: Parameterizing module clk_0
+Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 18.1]
+Progress: Parameterizing module jtag_uart_0
+Progress: Adding nios2_gen2_0 [altera_nios2_gen2 18.1]
+Progress: Parameterizing module nios2_gen2_0
+Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 18.1]
+Progress: Parameterizing module onchip_memory2_0
+Progress: Adding onchip_memory2_1 [altera_avalon_onchip_memory2 18.1]
+Progress: Parameterizing module onchip_memory2_1
+Progress: Adding peripheral_LED_0 [peripheral_LED 0.1]
+Progress: Parameterizing module peripheral_LED_0
+Progress: Adding pio_0 [altera_avalon_pio 18.1]
+Progress: Parameterizing module pio_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: MotorPasso.jtag_uart_0: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info: MotorPasso.pio_0: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: qsys-generate succeeded.
+Info: Loading IP catalog for testbench.
+Progress: 
+Progress: 
+Progress: 
+Progress: (2) searching /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin/root_components.ipx (ipx file)
+Info: Reading index /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin/root_components.ipx
+Info: /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin/root_components.ipx: Loading now from components.ipx
+Info: Reading index /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin/ip_component_categories.ipx
+Info: /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin/ip_component_categories.ipx described 0 plugins, 0 paths, in 0.00 seconds
+Info: /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin/ip_component_categories.ipx matched 1 files in 0.00 seconds
+Info: /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/ip/**/* matched 0 files in 0.00 seconds
+Progress: Loading testbench/MotorPasso_tb.qsys
+Info: Reading index /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso.ipx
+Progress: Loading Entrega_3_FPGA_IP/MotorPasso.BAK.qsys
+Progress: Loading Entrega_3_FPGA_IP/MotorPasso.qsys
+Progress: Loading Entrega_3_FPGA_IP/IP.qsys
+Info: /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/* matched 24 files in 0.00 seconds
+Info: /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/ip/**/* matched 0 files in 0.00 seconds
+Progress: Loading IP/peripheral_LED_hw.tcl
+Info: /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/*/* matched 364 files in 0.03 seconds
+Info: /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso.ipx described 0 plugins, 3 paths, in 0.04 seconds
+Info: /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/* matched 12 files in 0.04 seconds
+Info: /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/*/* matched 9 files in 0.00 seconds
+Info: /home/labarqcomp/.altera.quartus/ip/18.1/**/* matched 0 files in 0.00 seconds
+Info: /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin/$$QUARTUS_IP_PROJECTDIR/* matched 0 files in 0.00 seconds
+Info: /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin/$$QUARTUS_IP_USERDIR/* matched 0 files in 0.00 seconds
+Info: /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin/$$QUARTUS_IP_GLOBALDIR/* matched 0 files in 0.00 seconds
+Info: Reading index /home/labarqcomp/intelFPGA/18.1/ip/altera/altera_components.ipx
+Info: /home/labarqcomp/intelFPGA/18.1/ip/altera/altera_components.ipx described 2035 plugins, 0 paths, in 0.10 seconds
+Info: /home/labarqcomp/intelFPGA/18.1/ip/**/* matched 139 files in 0.10 seconds
+Info: /home/labarqcomp/intelFPGA/ip/**/* matched 0 files in 0.00 seconds
+Info: Reading index /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/builtin.ipx
+Info: /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/builtin.ipx described 83 plugins, 0 paths, in 0.00 seconds
+Info: /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/**/* matched 9 files in 0.00 seconds
+Info: Reading index /home/labarqcomp/intelFPGA/18.1/quartus/common/librarian/factories/index.ipx
+Info: /home/labarqcomp/intelFPGA/18.1/quartus/common/librarian/factories/index.ipx described 151 plugins, 0 paths, in 0.01 seconds
+Info: /home/labarqcomp/intelFPGA/18.1/quartus/common/librarian/factories/**/* matched 4 files in 0.01 seconds
+Info: /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin/$IP_IPX_PATH matched 1 files in 0.00 seconds
+Info: /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin/root_components.ipx described 0 plugins, 13 paths, in 0.16 seconds
+Info: /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin/root_components.ipx matched 1 files in 0.16 seconds
+Progress: 
+Progress: 
+Progress: 
+Info: Running script /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin/tbgen.tcl
+Info: send_message Info TB_Gen: QSYS Testbench Generator Rev: $Revision: #1 $
+Info: TB_Gen: QSYS Testbench Generator Rev: $Revision: #1 $
+Info: get_module_property NAME
+Info: send_message Info TB_Gen: System design is: MotorPasso
+Info: TB_Gen: System design is: MotorPasso
+Info: get_interfaces 
+Info: get_connections 
+Info: get_interface_property chaves EXPORT_OF
+Info: get_instance_property pio_0 CLASS_NAME
+Info: get_instance_assignment pio_0 testbench.partner.map.external_connection
+Info: get_interface_property clk EXPORT_OF
+Info: get_instance_property clk_0 CLASS_NAME
+Info: get_instance_assignment clk_0 testbench.partner.map.clk_in
+Info: get_interface_property leds EXPORT_OF
+Info: get_instance_property peripheral_LED_0 CLASS_NAME
+Info: get_instance_assignment peripheral_LED_0 testbench.partner.map.conduit_end
+Info: get_interface_property reset EXPORT_OF
+Info: get_instance_property clk_0 CLASS_NAME
+Info: get_instance_assignment clk_0 testbench.partner.map.clk_in_reset
+Info: send_message Info TB_Gen: Creating testbench system : MotorPasso_tb with all standard BFMs
+Info: TB_Gen: Creating testbench system : MotorPasso_tb with all standard BFMs
+Info: create_system MotorPasso_tb
+Info: add_instance MotorPasso_inst MotorPasso 
+Info: set_use_testbench_naming_pattern true MotorPasso
+Info: get_instance_interfaces MotorPasso_inst
+Info: get_instance_interface_property MotorPasso_inst chaves CLASS_NAME
+Info: get_instance_interface_property MotorPasso_inst clk CLASS_NAME
+Info: get_instance_interface_property MotorPasso_inst leds CLASS_NAME
+Info: get_instance_interface_property MotorPasso_inst reset CLASS_NAME
+Info: get_instance_interface_property MotorPasso_inst clk CLASS_NAME
+Info: send_message Info TB_Gen: clock_sink found: clk
+Info: TB_Gen: clock_sink found: clk
+Info: get_instance_interface_property MotorPasso_inst clk CLASS_NAME
+Info: add_instance MotorPasso_inst_clk_bfm altera_avalon_clock_source 
+Info: get_instance_property MotorPasso_inst_clk_bfm CLASS_NAME
+Info: get_instance_interface_parameter_value MotorPasso_inst clk clockRate
+Info: set_instance_parameter_value MotorPasso_inst_clk_bfm CLOCK_RATE 50000000.0
+Info: set_instance_parameter_value MotorPasso_inst_clk_bfm CLOCK_UNIT 1
+Info: get_instance_property MotorPasso_inst_clk_bfm CLASS_NAME
+Info: get_instance_interface_property MotorPasso_inst clk CLASS_NAME
+Info: get_instance_interfaces MotorPasso_inst_clk_bfm
+Info: get_instance_interface_property MotorPasso_inst_clk_bfm clk CLASS_NAME
+Info: add_connection MotorPasso_inst_clk_bfm.clk MotorPasso_inst.clk
+Info: get_instance_interface_property MotorPasso_inst reset CLASS_NAME
+Info: send_message Info TB_Gen: reset_sink found: reset
+Info: TB_Gen: reset_sink found: reset
+Info: get_instance_interface_property MotorPasso_inst reset CLASS_NAME
+Info: add_instance MotorPasso_inst_reset_bfm altera_avalon_reset_source 
+Info: get_instance_property MotorPasso_inst_reset_bfm CLASS_NAME
+Info: get_instance_interface_ports MotorPasso_inst reset
+Info: get_instance_interface_port_property MotorPasso_inst reset reset_reset_n ROLE
+Info: get_instance_interface_port_property MotorPasso_inst reset reset_reset_n ROLE
+Info: set_instance_parameter_value MotorPasso_inst_reset_bfm ASSERT_HIGH_RESET 0
+Info: set_instance_parameter_value MotorPasso_inst_reset_bfm INITIAL_RESET_CYCLES 50
+Info: get_instance_property MotorPasso_inst_reset_bfm CLASS_NAME
+Info: get_instance_interfaces MotorPasso_inst_reset_bfm
+Info: get_instance_interface_property MotorPasso_inst_reset_bfm clk CLASS_NAME
+Info: get_instance_interface_property MotorPasso_inst_reset_bfm reset CLASS_NAME
+Info: get_instance_property MotorPasso_inst_reset_bfm CLASS_NAME
+Info: get_instance_interface_parameter_value MotorPasso_inst reset associatedClock
+Info: get_instance_interfaces MotorPasso_inst_clk_bfm
+Info: get_instance_interface_property MotorPasso_inst_clk_bfm clk CLASS_NAME
+Info: send_message Warning TB_Gen: MotorPasso_inst_reset_bfm is not associated to any clock; connecting MotorPasso_inst_reset_bfm to 'MotorPasso_inst_clk_bfm.clk'
+Warning: TB_Gen: MotorPasso_inst_reset_bfm is not associated to any clock; connecting MotorPasso_inst_reset_bfm to 'MotorPasso_inst_clk_bfm.clk'
+Info: add_connection MotorPasso_inst_clk_bfm.clk MotorPasso_inst_reset_bfm.clk
+Info: get_instance_interface_property MotorPasso_inst reset CLASS_NAME
+Info: get_instance_interfaces MotorPasso_inst_reset_bfm
+Info: get_instance_interface_property MotorPasso_inst_reset_bfm clk CLASS_NAME
+Info: get_instance_interface_property MotorPasso_inst_reset_bfm reset CLASS_NAME
+Info: add_connection MotorPasso_inst_reset_bfm.reset MotorPasso_inst.reset
+Info: get_instance_interface_property MotorPasso_inst chaves CLASS_NAME
+Info: send_message Info TB_Gen: conduit_end found: chaves
+Info: TB_Gen: conduit_end found: chaves
+Info: get_instance_interface_property MotorPasso_inst chaves CLASS_NAME
+Info: add_instance MotorPasso_inst_chaves_bfm altera_conduit_bfm 
+Info: get_instance_property MotorPasso_inst_chaves_bfm CLASS_NAME
+Info: get_instance_interface_parameter_value MotorPasso_inst chaves associatedClock
+Info: get_instance_interface_parameter_value MotorPasso_inst chaves associatedReset
+Info: get_instance_interface_ports MotorPasso_inst chaves
+Info: get_instance_interface_port_property MotorPasso_inst chaves chaves_export ROLE
+Info: get_instance_interface_port_property MotorPasso_inst chaves chaves_export WIDTH
+Info: get_instance_interface_port_property MotorPasso_inst chaves chaves_export DIRECTION
+Info: set_instance_parameter_value MotorPasso_inst_chaves_bfm CLOCKED_SIGNAL 0
+Info: set_instance_parameter_value MotorPasso_inst_chaves_bfm ENABLE_RESET 0
+Info: set_instance_parameter_value MotorPasso_inst_chaves_bfm SIGNAL_ROLES export
+Info: set_instance_parameter_value MotorPasso_inst_chaves_bfm SIGNAL_WIDTHS 4
+Info: set_instance_parameter_value MotorPasso_inst_chaves_bfm SIGNAL_DIRECTIONS output
+Info: get_instance_property MotorPasso_inst_chaves_bfm CLASS_NAME
+Info: get_instance_interface_property MotorPasso_inst chaves CLASS_NAME
+Info: get_instance_interfaces MotorPasso_inst_chaves_bfm
+Info: get_instance_interface_property MotorPasso_inst_chaves_bfm conduit CLASS_NAME
+Info: add_connection MotorPasso_inst_chaves_bfm.conduit MotorPasso_inst.chaves
+Info: get_instance_interface_property MotorPasso_inst leds CLASS_NAME
+Info: send_message Info TB_Gen: conduit_end found: leds
+Info: TB_Gen: conduit_end found: leds
+Info: get_instance_interface_property MotorPasso_inst leds CLASS_NAME
+Info: add_instance MotorPasso_inst_leds_bfm altera_conduit_bfm 
+Info: get_instance_property MotorPasso_inst_leds_bfm CLASS_NAME
+Info: get_instance_interface_parameter_value MotorPasso_inst leds associatedClock
+Info: get_instance_interface_parameter_value MotorPasso_inst leds associatedReset
+Info: get_instance_interface_ports MotorPasso_inst leds
+Info: get_instance_interface_port_property MotorPasso_inst leds leds_name ROLE
+Info: get_instance_interface_port_property MotorPasso_inst leds leds_name WIDTH
+Info: get_instance_interface_port_property MotorPasso_inst leds leds_name DIRECTION
+Info: set_instance_parameter_value MotorPasso_inst_leds_bfm CLOCKED_SIGNAL 1
+Info: set_instance_parameter_value MotorPasso_inst_leds_bfm ENABLE_RESET 0
+Info: set_instance_parameter_value MotorPasso_inst_leds_bfm SIGNAL_ROLES name
+Info: set_instance_parameter_value MotorPasso_inst_leds_bfm SIGNAL_WIDTHS 4
+Info: set_instance_parameter_value MotorPasso_inst_leds_bfm SIGNAL_DIRECTIONS input
+Info: get_instance_property MotorPasso_inst_leds_bfm CLASS_NAME
+Info: get_instance_interfaces MotorPasso_inst_leds_bfm
+Info: get_instance_interface_property MotorPasso_inst_leds_bfm clk CLASS_NAME
+Info: get_instance_interface_property MotorPasso_inst_leds_bfm conduit CLASS_NAME
+Info: get_instance_property MotorPasso_inst_leds_bfm CLASS_NAME
+Info: get_instance_interface_parameter_value MotorPasso_inst leds associatedClock
+Info: get_instance_interface_property MotorPasso_inst clk CLASS_NAME
+Info: get_instance_interfaces MotorPasso_inst_clk_bfm
+Info: get_instance_interface_property MotorPasso_inst_clk_bfm clk CLASS_NAME
+Info: add_connection MotorPasso_inst_clk_bfm.clk MotorPasso_inst_leds_bfm.clk
+Info: get_instance_interface_property MotorPasso_inst leds CLASS_NAME
+Info: get_instance_interfaces MotorPasso_inst_leds_bfm
+Info: get_instance_interface_property MotorPasso_inst_leds_bfm clk CLASS_NAME
+Info: get_instance_interface_property MotorPasso_inst_leds_bfm conduit CLASS_NAME
+Info: add_connection MotorPasso_inst_leds_bfm.conduit MotorPasso_inst.leds
+Info: send_message Info TB_Gen: Saving testbench system: MotorPasso_tb.qsys
+Info: TB_Gen: Saving testbench system: MotorPasso_tb.qsys
+Info: save_system MotorPasso_tb.qsys
+Info: send_message Info TB_Gen: TBGEN SUCCESSFUL
+Info: TB_Gen: TBGEN SUCCESSFUL
+Info: Testbench system: /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb.qsys
+Info: Done
+Info: qsys-generate /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso.qsys --simulation=VHDL --allow-mixed-language-simulation --testbench=STANDARD --testbench-simulation=VHDL --allow-mixed-language-testbench-simulation --output-directory=/home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation --family="Cyclone V" --part=5CSXFC6D6F31C6
+Progress: Loading testbench/MotorPasso_tb.qsys
+Progress: Reading input file
+Progress: Adding MotorPasso_inst [MotorPasso 1.0]
+Progress: Parameterizing module MotorPasso_inst
+Progress: Adding MotorPasso_inst_chaves_bfm [altera_conduit_bfm 18.1]
+Progress: Parameterizing module MotorPasso_inst_chaves_bfm
+Progress: Adding MotorPasso_inst_clk_bfm [altera_avalon_clock_source 18.1]
+Progress: Parameterizing module MotorPasso_inst_clk_bfm
+Progress: Adding MotorPasso_inst_leds_bfm [altera_conduit_bfm 18.1]
+Progress: Parameterizing module MotorPasso_inst_leds_bfm
+Progress: Adding MotorPasso_inst_reset_bfm [altera_avalon_reset_source 18.1]
+Progress: Parameterizing module MotorPasso_inst_reset_bfm
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: MotorPasso_tb.MotorPasso_inst.jtag_uart_0: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info: MotorPasso_tb.MotorPasso_inst.pio_0: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: MotorPasso_tb.MotorPasso_inst_clk_bfm: Elaborate: altera_clock_source
+Info: MotorPasso_tb.MotorPasso_inst_clk_bfm:            $Revision: #1 $
+Info: MotorPasso_tb.MotorPasso_inst_clk_bfm:            $Date: 2018/07/18 $
+Info: MotorPasso_tb.MotorPasso_inst_reset_bfm: Elaborate: altera_reset_source
+Info: MotorPasso_tb.MotorPasso_inst_reset_bfm:            $Revision: #1 $
+Info: MotorPasso_tb.MotorPasso_inst_reset_bfm:            $Date: 2018/07/18 $
+Info: MotorPasso_tb.MotorPasso_inst_reset_bfm: Reset is negatively asserted.
+Info: MotorPasso_tb: Generating MotorPasso_tb "MotorPasso_tb" for SIM_VHDL
+Info: MotorPasso_inst: "MotorPasso_tb" instantiated MotorPasso "MotorPasso_inst"
+Info: MotorPasso_inst_chaves_bfm: "MotorPasso_tb" instantiated altera_conduit_bfm "MotorPasso_inst_chaves_bfm"
+Info: MotorPasso_inst_clk_bfm: "MotorPasso_tb" instantiated altera_avalon_clock_source "MotorPasso_inst_clk_bfm"
+Info: MotorPasso_inst_leds_bfm: "MotorPasso_tb" instantiated altera_conduit_bfm "MotorPasso_inst_leds_bfm"
+Info: MotorPasso_inst_reset_bfm: "MotorPasso_tb" instantiated altera_avalon_reset_source "MotorPasso_inst_reset_bfm"
+Info: jtag_uart_0: Starting RTL generation for module 'MotorPasso_jtag_uart_0'
+Info: jtag_uart_0:   Generation command is [exec /home/labarqcomp/intelFPGA/18.1/quartus/linux64/perl/bin/perl -I /home/labarqcomp/intelFPGA/18.1/quartus/linux64/perl/lib -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin/europa -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin/perl_lib -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin -I /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=MotorPasso_jtag_uart_0 --dir=/tmp/alt8528_3501538581318775488.dir/0066_jtag_uart_0_gen/ --quartus_dir=/home/labarqcomp/intelFPGA/18.1/quartus --vhdl --config=/tmp/alt8528_3501538581318775488.dir/0066_jtag_uart_0_gen//MotorPasso_jtag_uart_0_component_configuration.pl  --do_build_sim=1    --sim_dir=/tmp/alt8528_3501538581318775488.dir/0066_jtag_uart_0_gen/  ]
+Info: jtag_uart_0: Done RTL generation for module 'MotorPasso_jtag_uart_0'
+Info: jtag_uart_0: "MotorPasso_inst" instantiated altera_avalon_jtag_uart "jtag_uart_0"
+Info: nios2_gen2_0: "MotorPasso_inst" instantiated altera_nios2_gen2 "nios2_gen2_0"
+Info: onchip_memory2_0: Starting RTL generation for module 'MotorPasso_onchip_memory2_0'
+Info: onchip_memory2_0:   Generation command is [exec /home/labarqcomp/intelFPGA/18.1/quartus/linux64/perl/bin/perl -I /home/labarqcomp/intelFPGA/18.1/quartus/linux64/perl/lib -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin/europa -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin/perl_lib -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin -I /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=MotorPasso_onchip_memory2_0 --dir=/tmp/alt8528_3501538581318775488.dir/0067_onchip_memory2_0_gen/ --quartus_dir=/home/labarqcomp/intelFPGA/18.1/quartus --vhdl --config=/tmp/alt8528_3501538581318775488.dir/0067_onchip_memory2_0_gen//MotorPasso_onchip_memory2_0_component_configuration.pl  --do_build_sim=1    --sim_dir=/tmp/alt8528_3501538581318775488.dir/0067_onchip_memory2_0_gen/  ]
+Info: onchip_memory2_0: Done RTL generation for module 'MotorPasso_onchip_memory2_0'
+Info: onchip_memory2_0: "MotorPasso_inst" instantiated altera_avalon_onchip_memory2 "onchip_memory2_0"
+Info: onchip_memory2_1: Starting RTL generation for module 'MotorPasso_onchip_memory2_1'
+Info: onchip_memory2_1:   Generation command is [exec /home/labarqcomp/intelFPGA/18.1/quartus/linux64/perl/bin/perl -I /home/labarqcomp/intelFPGA/18.1/quartus/linux64/perl/lib -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin/europa -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin/perl_lib -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin -I /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=MotorPasso_onchip_memory2_1 --dir=/tmp/alt8528_3501538581318775488.dir/0068_onchip_memory2_1_gen/ --quartus_dir=/home/labarqcomp/intelFPGA/18.1/quartus --vhdl --config=/tmp/alt8528_3501538581318775488.dir/0068_onchip_memory2_1_gen//MotorPasso_onchip_memory2_1_component_configuration.pl  --do_build_sim=1    --sim_dir=/tmp/alt8528_3501538581318775488.dir/0068_onchip_memory2_1_gen/  ]
+Info: onchip_memory2_1: Done RTL generation for module 'MotorPasso_onchip_memory2_1'
+Info: onchip_memory2_1: "MotorPasso_inst" instantiated altera_avalon_onchip_memory2 "onchip_memory2_1"
+Info: peripheral_LED_0: "MotorPasso_inst" instantiated peripheral_LED "peripheral_LED_0"
+Info: pio_0: Starting RTL generation for module 'MotorPasso_pio_0'
+Info: pio_0:   Generation command is [exec /home/labarqcomp/intelFPGA/18.1/quartus/linux64/perl/bin/perl -I /home/labarqcomp/intelFPGA/18.1/quartus/linux64/perl/lib -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin/europa -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin/perl_lib -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin -I /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=MotorPasso_pio_0 --dir=/tmp/alt8528_3501538581318775488.dir/0070_pio_0_gen/ --quartus_dir=/home/labarqcomp/intelFPGA/18.1/quartus --vhdl --config=/tmp/alt8528_3501538581318775488.dir/0070_pio_0_gen//MotorPasso_pio_0_component_configuration.pl  --do_build_sim=1    --sim_dir=/tmp/alt8528_3501538581318775488.dir/0070_pio_0_gen/  ]
+Info: pio_0: Done RTL generation for module 'MotorPasso_pio_0'
+Info: pio_0: "MotorPasso_inst" instantiated altera_avalon_pio "pio_0"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_003: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_004: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_005: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_0: "MotorPasso_inst" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: irq_mapper: "MotorPasso_inst" instantiated altera_irq_mapper "irq_mapper"
+Info: rst_controller: "MotorPasso_inst" instantiated altera_reset_controller "rst_controller"
+Info: cpu: Starting RTL generation for module 'MotorPasso_nios2_gen2_0_cpu'
+Info: cpu:   Generation command is [exec /home/labarqcomp/intelFPGA/18.1/quartus/linux64//eperlcmd -I /home/labarqcomp/intelFPGA/18.1/quartus/linux64//perl/lib -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin/europa -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin/perl_lib -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin -I /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=MotorPasso_nios2_gen2_0_cpu --dir=/tmp/alt8528_3501538581318775488.dir/0073_cpu_gen/ --quartus_bindir=/home/labarqcomp/intelFPGA/18.1/quartus/linux64/ --verilog --config=/tmp/alt8528_3501538581318775488.dir/0073_cpu_gen//MotorPasso_nios2_gen2_0_cpu_processor_configuration.pl  --do_build_sim=1    --sim_dir=/tmp/alt8528_3501538581318775488.dir/0073_cpu_gen/  ]
+Info: cpu: # 2020.09.23 15:30:38 (*) Starting Nios II generation
+Info: cpu: # 2020.09.23 15:30:38 (*)   Checking for plaintext license.
+Info: cpu: # 2020.09.23 15:31:13 (*)   Plaintext license not found.
+Info: cpu: # 2020.09.23 15:31:13 (*)   No license required to generate encrypted Nios II/e.
+Info: cpu: # 2020.09.23 15:31:13 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2020.09.23 15:31:13 (*)   Creating all objects for CPU
+Info: cpu: # 2020.09.23 15:31:14 (*)   Creating '/tmp/alt8528_3501538581318775488.dir/0073_cpu_gen//MotorPasso_nios2_gen2_0_cpu_nios2_waves.do'
+Info: cpu: # 2020.09.23 15:31:14 (*)   Generating RTL from CPU objects
+Info: cpu: # 2020.09.23 15:31:14 (*)   Creating plain-text RTL
+Info: cpu: # 2020.09.23 15:31:15 (*) Done Nios II generation
+Info: cpu: Done RTL generation for module 'MotorPasso_nios2_gen2_0_cpu'
+Info: cpu: "nios2_gen2_0" instantiated altera_nios2_gen2_unit "cpu"
+Info: nios2_gen2_0_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "nios2_gen2_0_data_master_translator"
+Info: jtag_uart_0_avalon_jtag_slave_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "jtag_uart_0_avalon_jtag_slave_translator"
+Info: nios2_gen2_0_data_master_agent: "mm_interconnect_0" instantiated altera_merlin_master_agent "nios2_gen2_0_data_master_agent"
+Info: jtag_uart_0_avalon_jtag_slave_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "jtag_uart_0_avalon_jtag_slave_agent"
+Info: jtag_uart_0_avalon_jtag_slave_agent_rsp_fifo: "mm_interconnect_0" instantiated altera_avalon_sc_fifo "jtag_uart_0_avalon_jtag_slave_agent_rsp_fifo"
+Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_001: "mm_interconnect_0" instantiated altera_merlin_router "router_001"
+Info: router_002: "mm_interconnect_0" instantiated altera_merlin_router "router_002"
+Info: router_004: "mm_interconnect_0" instantiated altera_merlin_router "router_004"
+Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux_001"
+Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: cmd_mux_002: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_002"
+Info: Reusing file /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/altera_merlin_arbitrator.sv
+Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/altera_merlin_arbitrator.sv
+Info: rsp_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux_001"
+Info: Reusing file /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/MotorPasso_tb/simulation/submodules/altera_merlin_arbitrator.sv
+Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+Info: MotorPasso_tb: Done "MotorPasso_tb" with 34 modules, 59 files
+Info: qsys-generate succeeded.
+Info: sim-script-gen --spd=/home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso_tb.spd --output-directory=/home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/ --use-relative-paths=true
+Info: Doing: ip-make-simscript --spd=/home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso_tb.spd --output-directory=/home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/ --use-relative-paths=true
+Info: Generating the following file(s) for MODELSIM simulator in /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/ directory:
+Info: 	mentor/msim_setup.tcl
+Info: Skipping VCS script generation since VHDL file $QUARTUS_INSTALL_DIR/eda/sim_lib/altera_syn_attributes.vhd is required for simulation
+Info: Generating the following file(s) for VCSMX simulator in /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/ directory:
+Info: 	synopsys/vcsmx/synopsys_sim.setup
+Info: 	synopsys/vcsmx/vcsmx_setup.sh
+Info: Generating the following file(s) for NCSIM simulator in /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/ directory:
+Info: 	cadence/cds.lib
+Info: 	cadence/hdl.var
+Info: 	cadence/ncsim_setup.sh
+Info: 	33 .cds.lib files in cadence/cds_libs/ directory
+Info: Generating the following file(s) for RIVIERA simulator in /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/ directory:
+Info: 	aldec/rivierapro_setup.tcl
+Info: For information on how to simulate your IP, see the explanatory comments in the simulator-specific subdirectories under /home/labarqcomp/Desktop/SoCLinuxEmbarcado2020_2/Entrega_3_FPGA_IP/MotorPasso/testbench/.
+Info: Regenerate these scripts whenever you make any change to any Quartus-generated IP in your project.
+Info: Finished: Create testbench Platform Designer system

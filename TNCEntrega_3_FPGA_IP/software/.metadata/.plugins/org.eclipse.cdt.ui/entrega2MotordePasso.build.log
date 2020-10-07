@@ -1,0 +1,9 @@
+18:33:14 **** Incremental Build of configuration Nios II for project entrega2MotordePasso ****
+make all 
+Info: Building ../entrega2MotordePasso_bsp/
+make --no-print-directory -C ../entrega2MotordePasso_bsp/
+[BSP build complete]
+[entrega2MotordePasso build complete]
+
+18:33:15 Build Finished (took 617ms)
+
